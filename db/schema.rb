@@ -10,10 +10,65 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305141505) do
+ActiveRecord::Schema.define(version: 20180305144822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "farms", force: :cascade do |t|
+    t.string "location"
+    t.string "farm_name"
+    t.string "farmers_name"
+    t.string "avatar_photo"
+    t.string "farm_photo"
+    t.string "farmer_email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "photo"
+    t.integer "price"
+    t.string "category"
+    t.string "main_category"
+    t.integer "rating"
+    t.integer "available_quantity"
+    t.string "price_type"
+    t.bigint "farm_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["farm_id"], name: "index_ingredients_on_farm_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.date "date"
+    t.integer "order_quantity"
+    t.integer "price_paid"
+    t.bigint "ingredient_id"
+    t.bigint "shopping_basket_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ingredient_id"], name: "index_orders_on_ingredient_id"
+    t.index ["shopping_basket_id"], name: "index_orders_on_shopping_basket_id"
+  end
+
+  create_table "restaurants", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.string "avatar_photo"
+    t.string "restaurant_email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shopping_baskets", force: :cascade do |t|
+    t.bigint "restaurant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["restaurant_id"], name: "index_shopping_baskets_on_restaurant_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -32,4 +87,8 @@ ActiveRecord::Schema.define(version: 20180305141505) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "ingredients", "farms"
+  add_foreign_key "orders", "ingredients"
+  add_foreign_key "orders", "shopping_baskets"
+  add_foreign_key "shopping_baskets", "restaurants"
 end
