@@ -1,4 +1,6 @@
 class IngredientsController < ApplicationController
+# for installation of stripe
+  skip_before_action :authenticate_user!
 
   def index
     @ingredients = Ingredient.all
