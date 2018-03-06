@@ -1,11 +1,11 @@
 <h1>Welcome to ingredients index</h1>
 
-
  <% @ingredients.each do |ingredient| %>
       <h3>  <%= ingredient.name %></h3>
       <%= ingredient.description %>
       <%= ingredient.photo %>
       <%= ingredient.price %><br />
+      <%= ingredient.rating %><br />
       <%= ingredient.main_category %>
       <%= ingredient.category %><br />
       <%= ingredient.available_quantity %>
