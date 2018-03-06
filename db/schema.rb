@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180306114746) do
+ActiveRecord::Schema.define(version: 20180306161348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20180306114746) do
     t.bigint "farm_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "sku"
+    t.integer "price_cents", default: 0, null: false
     t.index ["farm_id"], name: "index_ingredients_on_farm_id"
   end
 
@@ -51,6 +53,10 @@ ActiveRecord::Schema.define(version: 20180306114746) do
     t.bigint "shopping_basket_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "state"
+    t.string "ingredient_sku"
+    t.integer "amount_cents", default: 0, null: false
+    t.jsonb "payment"
     t.index ["ingredient_id"], name: "index_orders_on_ingredient_id"
     t.index ["shopping_basket_id"], name: "index_orders_on_shopping_basket_id"
   end
