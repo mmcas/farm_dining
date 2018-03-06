@@ -40,3 +40,4 @@ ingr2 = Ingredient.new( name: "Test Strawberry"  ,description: "Mixed colors"   
   available_quantity: 500000, farm_id: farm1.id  ,price_type: "per kg"   )
 
 ingr2.save!
+
