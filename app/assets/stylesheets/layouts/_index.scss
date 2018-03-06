@@ -3,3 +3,34 @@
 // @import "dashboard";
 // @import "profile";
 // @import "map";
+
+// font style header quicksand paragraph loira
+
+h1, h2, h3 {
+  font-family: 'Quicksand', sans-serif;
+  color: #7ECBA1;
+}
+
+p {
+  font-family: 'Lora', serif;
+  color: #333333;
+}
+a {
+  color: #215B63;
+  text-decoration:none;
+}
+a:hover{
+    color: #7ECBA1;
+    text-decoration:none;
+    font-weight: bold;
+  }
+.btn-farm{
+  background-color: #7ECBA1;
+  font-family: 'Lora', serif;
+}
+.btn-farm-submit{
+  background-color: #215B63;
+  font-family: 'Lora', serif;
+  color:white;
+}
+
