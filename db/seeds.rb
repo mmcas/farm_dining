@@ -15,6 +15,7 @@ mads = User.new(
   password: "password")
 
 
+
 # Saves new user
 
 mads.save!
