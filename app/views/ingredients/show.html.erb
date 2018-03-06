@@ -1,1 +1,12 @@
-<h1>Welcome to the show page</h1>
+<h1>Meet tasty <%= @ingredient.name %> </h1>
+<h6>from farm: <%= @ingredient.farm.farm_name %></h6>
+
+      <%= @ingredient.name %><br />
+      <%= @ingredient.description %>
+      <%= @ingredient.photo %>
+      <%= @ingredient.price %><br />
+      <%= @ingredient.main_category %>
+      <%= @ingredient.category %><br />
+      <%= @ingredient.available_quantity %>
+      <%= @ingredient.price_type %><br />
+      <%= @ingredient.farm.farm_name %>
