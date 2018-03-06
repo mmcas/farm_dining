@@ -1,5 +1,5 @@
 <h1>Meet tasty <%= @ingredient.name %> </h1>
-<h6>from farm: <%= @ingredient.farm_id %></h6>
+<h6>from farm: <%= @ingredient.farm.farm_name %></h6>
 
       <%= @ingredient.name %><br />
       <%= @ingredient.description %>
@@ -9,4 +9,4 @@
       <%= @ingredient.category %><br />
       <%= @ingredient.available_quantity %>
       <%= @ingredient.price_type %><br />
-      <%= @ingredient.farm_id %>
+      <%= @ingredient.farm.farm_name %>
