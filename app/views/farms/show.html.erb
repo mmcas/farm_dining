@@ -1,4 +1,23 @@
+
 <h1>Here we show a farm</h1>
 
 <%= cl_image_tag @farm.photo, height: 300, width: 400, crop: :fill %>
+
+<h1>Welcome to <%=@farm.farm_name%>, <%=@farm.farmers_name%>'s farm.</h1>
+
+<%= image_tag "farm.jpeg", alt: "farm", height: 400, width: 800 %>
+
+<p>Here is some text about the farm: <%= @farm.description%></p>
+
+<p><%= "Here we find all the ingredients that the farm offers." %></p>
+
+<ul>
+  <% @ingredients.each do |ingredient| %>
+    <li>Name: <%= ingredient.name %>, Price: <%= ingredient.price %>, Rating: <%= ingredient.rating %> </li>
+    <%= link_to "Link", ingredient_path(ingredient) %>
+  <% end %>
+</ul>
+
+<p><%= "TO DO: Underneath the ingredients we insert the map." %></p>
+
 

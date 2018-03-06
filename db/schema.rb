@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20180306125615) do
     t.string "farmer_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description"
   end
 
   create_table "ingredients", force: :cascade do |t|
