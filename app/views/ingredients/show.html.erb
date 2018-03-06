@@ -1,3 +1,9 @@
+<h1>Welcome to the show page</h1>
+
+<%= cl_image_tag @ingredient.photo, height: 300, width: 400, crop: :fill %>
+
+
+
 <h1>Meet tasty <%= @ingredient.name %> </h1>
 <h6>from farm: <%= @ingredient.farm.farm_name %></h6>
 
@@ -10,3 +16,4 @@
       <%= @ingredient.available_quantity %>
       <%= @ingredient.price_type %><br />
       <%= @ingredient.farm.farm_name %>
+
