@@ -14,7 +14,8 @@ class OrdersController < ApplicationController
     @order.price_paid = @ingredient.price * params[:order][:order_quantity].to_i
     @order.shopping_basket = @shopping_basket
     @order.save!
-    redirect_to ingredients_path
+    # redirect_to ingredients_path
+      redirect_back(fallback_location: ingredients_path)
   end
 
   private
