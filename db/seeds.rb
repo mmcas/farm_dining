@@ -27,11 +27,11 @@ mads.remote_photo_url = "https://images.pexels.com/photos/262978/pexels-photo-26
 # Saves new user
 mads.save!
 
-restaurant2 = Restaurant.new(location: "Bos en Lommer", user: mads)
+restaurant2 = Restaurant.new(location: "Bos en Lommerplein 2, Amsterdam", user: mads)
 restaurant2.save!
 
 puts 'Creating farm 1'
-farm1= Farm.new(  location: "test"  ,farm_name: "farm 1" ,farmers_name: "Piet de Boer")
+farm1= Farm.new(  location: "Overhoeksplein 2, Amsterdam"  ,farm_name: "farm 1" ,farmers_name: "Piet de Boer")
 farm1.save!
 
 puts 'Creating ingredients..test carrot,potato and Strawberry,etc.'
@@ -64,4 +64,6 @@ ingr2 = Ingredient.new( name: "Test Strawberry"  ,description: "Sweet sweet tast
 ingr2.save!
 
 puts "Finished, yeah!"
+
+
 

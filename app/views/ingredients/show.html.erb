@@ -16,4 +16,6 @@
       <%= @ingredient.available_quantity %>
       <%= @ingredient.price_type %><br />
       <%= @ingredient.farm.farm_name %>
+      <%= @ingredient.farm.farm_name %>
 
+<%= link_to "farm", farm_path(@ingredient.farm) %>
