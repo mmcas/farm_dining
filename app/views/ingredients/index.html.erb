@@ -1,7 +1,30 @@
 <h1>Welcome to ingredients index</h1>
 
+ <%= cl_image_tag @user.photo, :class => "avatar-large" %>
+
+ <% @ingredients.each do |ingredient| %>
+      <h3>  <%= ingredient.name %></h3>
+      <%= ingredient.description %>
+      <%= ingredient.photo %>
+      <%= ingredient.price %><br />
+      <%= ingredient.main_category %>
+      <%= ingredient.category %><br />
+      <%= ingredient.available_quantity %>
+      <%= ingredient.price_type %><br />
+      <%= ingredient.farm.farm_name %><br />
+
+      <%= link_to "Link", ingredient_path(ingredient) %>
 
 
-<%#= cl_image_tag @ingredient.farm.avatar_photo, :class => "avatar-large" %>
+    <hr>
+<% end %>
+
+
+
+
+
+
+
 
  <%= cl_image_tag(@user.photo) %>
+
