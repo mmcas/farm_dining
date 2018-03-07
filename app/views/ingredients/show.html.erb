@@ -18,7 +18,10 @@
       <%= @ingredient.available_quantity %><br />
       <br />
       <%= @ingredient.farm.farm_name %>
+      <%= @ingredient.farm.farm_name %>
 
+
+<%= link_to "farm", farm_path(@ingredient.farm) %>
 
       <p> SKU: <%= @ingredient.sku %></p>
 
@@ -31,4 +34,3 @@
   <%= order.submit "add to basket", class: "btn btn-primary" %>
 
 <% end %>
-

@@ -34,12 +34,9 @@
     <hr>
 <% end %>
 
-
-
-
-
-
-
-
- <%#= cl_image_tag(@user.photo) %>
-
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+></div>

@@ -1,7 +1,7 @@
 
 <h1>Here we show a farm</h1>
 
-<%= cl_image_tag @farm.photo, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag @farm.farm_photo, height: 300, width: 400, crop: :fill %>
 
 <h1>Welcome to <%=@farm.farm_name%>, <%=@farm.farmers_name%>'s farm.</h1>
 
@@ -19,5 +19,12 @@
 </ul>
 
 <p><%= "TO DO: Underneath the ingredients we insert the map." %></p>
+
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+></div>
 
 
