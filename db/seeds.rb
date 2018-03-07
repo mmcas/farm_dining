@@ -27,8 +27,22 @@ mads.remote_photo_url = "https://images.pexels.com/photos/262978/pexels-photo-26
 # Saves new user
 mads.save!
 
+puts 'add user floor'
+floor = User.new(
+  email: "floor@gmail.com",
+  password: "password"
+)
+floor.remote_photo_url = "http://res.cloudinary.com/dnejf9j73/image/upload/v1520436403/qug4mgngihtwzk01sxd6.jpg"
+# Saves new user
+floor.save!
+
+puts 'add restaurant user mads'
 restaurant2 = Restaurant.new(location: "Bos en Lommer", user: mads)
 restaurant2.save!
+
+puts 'add restaurant user floor'
+restaurant3 = Restaurant.new(location: "Bos en Lommer", user: floor)
+restaurant3.save!
 
 puts 'Creating farm 1'
 farm1= Farm.new(  location: "test"  ,farm_name: "farm 1" ,farmers_name: "Piet de Boer")
