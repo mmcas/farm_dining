@@ -7,6 +7,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 # New user MADS
 puts 'Cleaning DB....'
 User.destroy_all
@@ -17,6 +18,7 @@ puts 'add user mads'
 mads = User.new(
   email: "mads@gmail.com",
   password: "password")
+
 # Saves new user
 mads.save!
 
@@ -53,6 +55,7 @@ ingr2 = Ingredient.new( name: "Test Strawberry"  ,description: "Sweet sweet tast
   available_quantity: 500000, farm_id: farm1.id  ,price_type: "per kg"  )
 
 ingr2.save!
+
 
 puts "Finished, yeah!"
 

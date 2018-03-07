@@ -8,6 +8,8 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.1.5'
 gem 'redis'
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
@@ -18,6 +20,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'money-rails'
 gem 'stripe'
+gem 'pg_search'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'

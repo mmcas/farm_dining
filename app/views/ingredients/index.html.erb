@@ -1,12 +1,18 @@
 <h1>Welcome to ingredients index</h1>
 
+ <%= cl_image_tag @user.photo, :class => "avatar-large" %>
 
  <% @ingredients.each do |ingredient| %>
       <h3>  <%= ingredient.name %></h3>
       <%= ingredient.description %>
       <%= ingredient.photo %>
+
       <p>Price: <%= humanized_money_with_symbol(ingredient.price) %>
         <%= ingredient.price_type %></p>
+
+      <%= ingredient.price %><br />
+      <%= ingredient.rating %><br />
+
       <%= ingredient.main_category %>
       <%= ingredient.category %><br />
       <%= ingredient.available_quantity %><br />
@@ -18,9 +24,16 @@
 
       <%= link_to "Link", ingredient_path(ingredient) %>
 
+      <%= simple_form_for @order do |order| %>
+        <%= order.input :order_quantity %>
+        <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => ingredient.id }  %>
+        <%= order.input :price_paid, :as => :hidden, :input_html => { :value => ingredient.price  }  %>
+        <%= order.submit "add to basket", class: "btn btn-primary" %>
+      <% end %>
 
     <hr>
 <% end %>
+
 
 
 
