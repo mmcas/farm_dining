@@ -1,6 +1,8 @@
 class IngredientsController < ApplicationController
 
   def index
+    @order = Order.new
+
     # Search
     if params[:query].present?
       @ingredients = Ingredient.search_by_category_and_main_category(params[:query])
@@ -20,6 +22,7 @@ class IngredientsController < ApplicationController
 
   def show
     @ingredient = Ingredient.find(params[:id])
+    @order = Order.new
   end
 
 end

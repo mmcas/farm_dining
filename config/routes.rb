@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   resources :restaurants, only: [] do
     resources :shopping_baskets, only: :show
   end
+
+  resources :orders, only: [:new, :create]
+
 end
