@@ -10,14 +10,18 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <% if user_signed_in? %>
-      <% if current_user.restaurant.shopping_baskets.where(status: 0) %>
-      SB: <%#= current_user.restaurant.shopping_baskets.where(status: 0).first.orders.count %>
+
+      <% if current_user.restaurant.shopping_baskets.where(status: 0).any? %>
+      SB: <%= current_user.restaurant.shopping_baskets.where(status: 0).first.orders.count %>
+
       <% end %>
       <!-- Links when logged in -->
       <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-
+        <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+              <% end %>
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">

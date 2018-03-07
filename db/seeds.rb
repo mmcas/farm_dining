@@ -7,25 +7,28 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Saves new user
 
 # New user MADS
 puts 'Cleaning DB....'
-User.destroy_all
+Order.destroy_all
 Ingredient.destroy_all
 Farm.destroy_all
+ShoppingBasket.destroy_all
+Restaurant.destroy_all
+User.destroy_all
 
 puts 'add user mads'
 mads = User.new(
   email: "mads@gmail.com",
-  password: "password")
-
+  password: "password"
+)
+mads.remote_photo_url = "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
 # Saves new user
 mads.save!
 
-order = Order.new(id: nil, order_quantity: 5,
-ingredient_id: 1, shopping_basket_id: 1, created_at: nil, ingredient_sku: nil,
- amount_cents: 0, payment: nil)
-order.save!
+restaurant2 = Restaurant.new(location: "Bos en Lommer", user: mads)
+restaurant2.save!
 
 puts 'Creating farm 1'
 farm1= Farm.new(  location: "test"  ,farm_name: "farm 1" ,farmers_name: "Piet de Boer")
@@ -34,18 +37,18 @@ farm1.save!
 puts 'Creating ingredients..test carrot,potato and Strawberry,etc.'
 ingr = Ingredient.new( name: "Test carrot"  ,
   description: "Mixed colors",
-  sku: "car-01",
   main_category: "Fruits & Vegetables "  ,
   category: "Carrots"   ,
   price: 5,
   rating: "1",
-  available_quantity: 500000, farm_id: farm1.id  ,price_type: "per unit1"  )
+  available_quantity: 500000,
+  farm_id: farm1.id,
+  price_type: "per unit1"  )
 
 ingr.save!
 
 ingr1 = Ingredient.new( name: "Test Potato"  ,
   description: "Mixed colors"   ,
-  sku: "pot-01",
   main_category: "Fruits & Vegetables "   ,
   category: "Potatoes" ,
   price: 500,
@@ -55,11 +58,9 @@ ingr1 = Ingredient.new( name: "Test Potato"  ,
 ingr1.save!
 
 ingr2 = Ingredient.new( name: "Test Strawberry"  ,description: "Sweet sweet taste  and colors"  ,
-  sku: "stra-01",   main_category: "Fruits & Vegetables "   ,category: "Strawberry"   ,price: 500,  rating: "1",
+  main_category: "Fruits & Vegetables "   ,category: "Strawberry"   ,price: 500,  rating: "1",
   available_quantity: 500000, farm_id: farm1.id  ,price_type: "per kg"  )
 
 ingr2.save!
 
-
 puts "Finished, yeah!"
-
