@@ -30,8 +30,6 @@ mads.save!
 restaurant2= Restaurant.new(  location: "Bos en Lommer",  user: mads)
 restaurant2.save!
 
-
-
 puts 'Creating farm 1'
 farm1= Farm.new(  location: "test"  ,farm_name: "farm 1" ,farmers_name: "Piet de Boer")
 farm1.save!
@@ -64,7 +62,6 @@ ingr2 = Ingredient.new( name: "Test Strawberry"  ,description: "Sweet sweet tast
   available_quantity: 500000, farm_id: farm1.id  ,price_type: "per kg"  )
 
 ingr2.save!
-
 
 puts "Finished, yeah!"
 
