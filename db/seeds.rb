@@ -22,6 +22,10 @@ mads = User.new(
 # Saves new user
 mads.save!
 
+order = Order.new(id: nil, order_quantity: 5,
+ingredient_id: 1, shopping_basket_id: 1, created_at: nil, ingredient_sku: nil,
+ amount_cents: 0, payment: nil)
+order.save!
 
 puts 'Creating farm 1'
 farm1= Farm.new(  location: "test"  ,farm_name: "farm 1" ,farmers_name: "Piet de Boer")

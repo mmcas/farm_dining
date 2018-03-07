@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources :shopping_baskets, only: :show
   end
 
-  resources :orders, only: [:new, :show, :create]
+  resources :orders, only: [:new, :show, :create] do
+    resources :payments, only: [:new, :create]
+  end
 
 end

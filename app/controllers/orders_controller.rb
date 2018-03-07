@@ -3,6 +3,10 @@ class OrdersController < ApplicationController
   def new
   end
 
+  def show
+  @order = Order.where(state: 'paid').find(params[:id])
+  end
+
   def save
   end
 
