@@ -9,26 +9,59 @@
 
 # Saves new user
 
+# New user MADS
+puts 'Cleaning DB....'
+Order.destroy_all
+Ingredient.destroy_all
+Farm.destroy_all
+ShoppingBasket.destroy_all
+Restaurant.destroy_all
+User.destroy_all
+
+puts 'add user mads'
+mads = User.new(
+  email: "mads@gmail.com",
+  password: "password"
+)
+mads.remote_photo_url = "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
+# Saves new user
 mads.save!
 
+restaurant2 = Restaurant.new(location: "Bos en Lommer", user: mads)
+restaurant2.save!
+
+puts 'Creating farm 1'
 farm1= Farm.new(  location: "test"  ,farm_name: "farm 1" ,farmers_name: "Piet de Boer")
 farm1.save!
 
-
-ingr = Ingredient.new( name: "Test carrot"  ,description: "Mixed colors"   ,
-  main_category: "Fruits & Vegetables "  ,category: "Carrots"   ,price: 500,  rating: "1",
-  available_quantity: 500000, farm_id: farm1.id  ,price_type: "per unit1"   )
+puts 'Creating ingredients..test carrot,potato and Strawberry,etc.'
+ingr = Ingredient.new( name: "Test carrot"  ,
+  description: "Mixed colors",
+  main_category: "Fruits & Vegetables "  ,
+  category: "Carrots"   ,
+  price: 5,
+  rating: "1",
+  available_quantity: 500000,
+  farm_id: farm1.id,
+  price_type: "per unit1"  )
 
 ingr.save!
 
-ingr1 = Ingredient.new( name: "Test Potato"  ,description: "Mixed colors"   ,
-  main_category: "Fruits & Vegetables "   ,category: "Potatoes"   ,price: 500,  rating: "1",
-  available_quantity: 500000, farm_id: farm1.id  ,price_type: "per unit1"   )
+ingr1 = Ingredient.new( name: "Test Potato"  ,
+  description: "Mixed colors"   ,
+  main_category: "Fruits & Vegetables "   ,
+  category: "Potatoes" ,
+  price: 500,
+  rating: "1",
+  available_quantity: 500000, farm_id: farm1.id  , price_type: "per unit1"  )
 
 ingr1.save!
 
-ingr2 = Ingredient.new( name: "Test Strawberry"  ,description: "Mixed colors"   ,
+ingr2 = Ingredient.new( name: "Test Strawberry"  ,description: "Sweet sweet taste  and colors"  ,
   main_category: "Fruits & Vegetables "   ,category: "Strawberry"   ,price: 500,  rating: "1",
-  available_quantity: 500000, farm_id: farm1.id  ,price_type: "per kg"   )
+  available_quantity: 500000, farm_id: farm1.id  ,price_type: "per kg"  )
 
 ingr2.save!
+
+puts "Finished, yeah!"
+
