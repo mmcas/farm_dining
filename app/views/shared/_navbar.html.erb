@@ -10,7 +10,7 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <% if user_signed_in? %>
-      <% if current_user.restaurant.shopping_baskets.where(status: 0) %>
+      <% if current_user.restaurant.shopping_baskets.where(status: 0).any? %>
       SB: <%= current_user.restaurant.shopping_baskets.where(status: 0).first.orders.count %>
       <% end %>
       <!-- Links when logged in -->
