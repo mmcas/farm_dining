@@ -8,11 +8,6 @@ class OrdersController < ApplicationController
 
   def create
     @shopping_basket = ShoppingBasket.find_or_create_by(restaurant: current_user.restaurant, status: 0)
-
-    # @shopping_basket = ShoppingBasket.where(restaurant: current_user.restaurant, status: 0).first
-    # if @shopping_basket.nil?
-    #   @shopping_basket = ShoppingBasket.create(restaurant: current_user.restaurant, status: 0)
-    # end
     @ingredient = Ingredient.find(params[:order][:ingredient_id])
     @order = Order.new(order_params)
     @order.ingredient = @ingredient
