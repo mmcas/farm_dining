@@ -20,7 +20,6 @@
         <%= order.input :order_quantity %>
         <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => ingredient.id }  %>
         <%= order.input :price_paid, :as => :hidden, :input_html => { :value => ingredient.price  }  %>
-
         <%= order.submit "add to basket", class: "btn btn-primary" %>
       <% end %>
 
