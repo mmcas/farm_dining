@@ -19,6 +19,15 @@ class IngredientsController < ApplicationController
         @ingredients = @ingredients.sort_by { |ingredient| ingredient.price }
       end
     end
+
+    @farms = Farm.where.not(latitude: nil, longitude: nil)
+    @markers = @farms.map do |farm|
+      {
+        lat: farm.latitude,
+        lng: farm.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/farms/map_box", locals: { farm: farm }) }
+      }
+    end
   end
 
   def show
