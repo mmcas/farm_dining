@@ -15,7 +15,7 @@ class OrdersController < ApplicationController
     @ingredient = Ingredient.find(params[:order][:ingredient_id])
     @order = Order.new(order_params)
     @order.ingredient = @ingredient
-    @order.price_paid = @ingredient.price * params[:order][:order_quantity].to_i
+    @order.amount = @ingredient.price * params[:order][:order_quantity].to_i
     @order.shopping_basket = @shopping_basket
     @order.save!
     redirect_back(fallback_location: root_path)

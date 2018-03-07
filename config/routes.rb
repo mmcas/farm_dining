@@ -8,11 +8,14 @@ Rails.application.routes.draw do
   end
 
   resources :restaurants, only: [] do
-    resources :shopping_baskets, only: :show
   end
 
-  resources :orders, only: [:new, :show, :create] do
-    resources :payments, only: [:new, :create]
+  resources :orders, only: [:new, :show, :create]
+
+  resources :shopping_baskets, only: [] do
+    resources :payments, only: [:create]
   end
+
+  get '/checkout', to: "shopping_baskets#show", as: :checkout
 
 end
