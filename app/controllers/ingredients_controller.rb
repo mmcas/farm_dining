@@ -1,6 +1,7 @@
 class IngredientsController < ApplicationController
 
   def index
+    @user = current_user
     @order = Order.new
 
     # Search
@@ -24,5 +25,4 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.find(params[:id])
     @order = Order.new
   end
-
 end
