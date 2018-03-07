@@ -7,6 +7,7 @@
       <%= ingredient.description %>
       <%= ingredient.photo %>
       <%= ingredient.price %><br />
+      <%= ingredient.rating %><br />
       <%= ingredient.main_category %>
       <%= ingredient.category %><br />
       <%= ingredient.available_quantity %>
@@ -15,6 +16,12 @@
 
       <%= link_to "Link", ingredient_path(ingredient) %>
 
+      <%= simple_form_for @order do |order| %>
+        <%= order.input :order_quantity %>
+        <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => ingredient.id }  %>
+        <%= order.input :price_paid, :as => :hidden, :input_html => { :value => ingredient.price  }  %>
+        <%= order.submit "add to basket", class: "btn btn-primary" %>
+      <% end %>
 
     <hr>
 <% end %>
