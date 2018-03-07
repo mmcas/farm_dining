@@ -10,7 +10,12 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <% if user_signed_in? %>
+
       <% if current_user.restaurant.shopping_baskets.where(status: 0).any? %>
+
+      SB: <%= current_user.restaurant.shopping_baskets.where(status: 0).first.orders.count %>
+
+
         <div id="shopping_basket">
           <span class="p1 fa-stack fa-2x has-badge" data-count=<%= current_user.restaurant.shopping_baskets.where(status: 0).first.orders.count %> >
           <!--<i class="p2 fa fa-circle fa-stack-2x"></i>-->
@@ -19,6 +24,7 @@
         </div>
 
        <%#= current_user.restaurant.shopping_baskets.where(status: 0).first.orders.count %>
+
       <% end %>
       <!-- Links when logged in -->
       <%#= link_to destroy_user_session_path, method: :delete do %>

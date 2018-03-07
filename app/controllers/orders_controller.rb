@@ -3,6 +3,10 @@ class OrdersController < ApplicationController
   def new
   end
 
+  def show
+  @order = Order.where(state: 'paid').find(params[:id])
+  end
+
   def save
   end
 
@@ -11,11 +15,13 @@ class OrdersController < ApplicationController
     @ingredient = Ingredient.find(params[:order][:ingredient_id])
     @order = Order.new(order_params)
     @order.ingredient = @ingredient
-    @order.price_paid = @ingredient.price * params[:order][:order_quantity].to_i
+    @order.amount = @ingredient.price * params[:order][:order_quantity].to_i
     @order.shopping_basket = @shopping_basket
     @order.save!
+
     # redirect_to ingredients_path
       redirect_back(fallback_location: ingredients_path)
+
   end
 
   private
@@ -24,5 +30,4 @@ class OrdersController < ApplicationController
     params.require(:order).permit(:order_quantity, :price_paid)
   end
 end
-
 
