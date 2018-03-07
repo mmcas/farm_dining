@@ -27,7 +27,7 @@ mads.remote_photo_url = "https://images.pexels.com/photos/262978/pexels-photo-26
 # Saves new user
 mads.save!
 
-restaurant2= Restaurant.new(  location: "Bos en Lommer",  user: mads)
+restaurant2 = Restaurant.new(location: "Bos en Lommer", user: mads)
 restaurant2.save!
 
 puts 'Creating farm 1'
