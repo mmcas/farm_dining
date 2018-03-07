@@ -7,9 +7,14 @@ Rails.application.routes.draw do
   resources :farms, only: :show
 
   resources :restaurants, only: [] do
-    resources :shopping_baskets, only: :show
   end
 
-  resources :orders, only: [:new, :create]
+  resources :orders, only: [:new, :show, :create]
+
+  resources :shopping_baskets, only: [] do
+    resources :payments, only: [:create]
+  end
+
+  get '/checkout', to: "shopping_baskets#show", as: :checkout
 
 end

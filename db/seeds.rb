@@ -27,17 +27,33 @@ mads.remote_photo_url = "https://images.pexels.com/photos/262978/pexels-photo-26
 # Saves new user
 mads.save!
 
+
+puts 'add user floor'
+floor = User.new(
+  email: "floor@gmail.com",
+  password: "password"
+)
+floor.remote_photo_url = "http://res.cloudinary.com/dnejf9j73/image/upload/v1520436403/qug4mgngihtwzk01sxd6.jpg"
+# Saves new user
+floor.save!
+
+puts 'add restaurant user mads'
 restaurant2 = Restaurant.new(location: "Bos en Lommerplein 2, Amsterdam", user: mads)
+
 restaurant2.save!
+
+puts 'add restaurant user floor'
+restaurant3 = Restaurant.new(location: "Bos en Lommer", user: floor)
+restaurant3.save!
 
 puts 'Creating farm 1'
 farm1= Farm.new(  location: "Overhoeksplein 2, Amsterdam"  ,farm_name: "farm 1" ,farmers_name: "Piet de Boer")
 farm1.save!
 
 puts 'Creating ingredients..test carrot,potato and Strawberry,etc.'
-ingr = Ingredient.new( name: "Test carrot"  ,
+ingr = Ingredient.new( name: "Test carrot" ,
   description: "Mixed colors",
-  main_category: "Fruits & Vegetables "  ,
+  main_category: "Fruits & Vegetables "  ,sku:"car-01",
   category: "Carrots"   ,
   price: 5,
   rating: "1",
@@ -49,7 +65,7 @@ ingr.save!
 
 ingr1 = Ingredient.new( name: "Test Potato"  ,
   description: "Mixed colors"   ,
-  main_category: "Fruits & Vegetables "   ,
+  main_category: "Fruits & Vegetables " ,sku:"pot-01",
   category: "Potatoes" ,
   price: 500,
   rating: "1",
@@ -58,12 +74,9 @@ ingr1 = Ingredient.new( name: "Test Potato"  ,
 ingr1.save!
 
 ingr2 = Ingredient.new( name: "Test Strawberry"  ,description: "Sweet sweet taste  and colors"  ,
-  main_category: "Fruits & Vegetables "   ,category: "Strawberry"   ,price: 500,  rating: "1",
+  main_category: "Fruits & Vegetables ",sku:"straw-01" ,category: "Strawberry"   ,price: 500,  rating: "1",
   available_quantity: 500000, farm_id: farm1.id  ,price_type: "per kg"  )
 
 ingr2.save!
 
 puts "Finished, yeah!"
-
-
-
