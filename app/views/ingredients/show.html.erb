@@ -19,12 +19,16 @@
       <br />
       <%= @ingredient.farm.farm_name %>
 
+
       <p> SKU: <%= @ingredient.sku %></p>
 
       <p>$$$</p>
 
-      <%= form_tag orders_path do %>
-  <%= hidden_field_tag 'ingredient_id', @ingredient.id %>
-  <%= submit_tag 'Purchase', class: 'btn btn-farm-submit' %>
+<%= simple_form_for @order do |order| %>
+  <%= order.input :order_quantity %>
+  <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => @ingredient.id }  %>
+  <%= order.input :price_paid, :as => :hidden, :input_html => { :value => @ingredient.price  }  %>
+  <%= order.submit "add to basket", class: "btn btn-primary" %>
+
 <% end %>
 
