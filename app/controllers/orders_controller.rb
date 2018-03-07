@@ -7,15 +7,17 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @shopping_basket = ShoppingBasket.where(restaurant: current_user.restaurant, status: 0)
-    if @shopping_basket.empty?
-      @shopping_basket = ShoppingBasket.create(restaurant: current_user.restaurant, status: 0)
-    end
+    @shopping_basket = ShoppingBasket.find_or_create_by(restaurant: current_user.restaurant, status: 0)
+
+    # @shopping_basket = ShoppingBasket.where(restaurant: current_user.restaurant, status: 0).first
+    # if @shopping_basket.nil?
+    #   @shopping_basket = ShoppingBasket.create(restaurant: current_user.restaurant, status: 0)
+    # end
     @ingredient = Ingredient.find(params[:order][:ingredient_id])
     @order = Order.new(order_params)
     @order.ingredient = @ingredient
     @order.price_paid = @ingredient.price * params[:order][:order_quantity].to_i
-    @order.shopping_basket = @shopping_basket.first
+    @order.shopping_basket = @shopping_basket
     @order.save!
     redirect_to ingredients_path
   end

@@ -21,8 +21,9 @@ User.destroy_all
 puts 'add user mads'
 mads = User.new(
   email: "mads@gmail.com",
-  password: "password",
-  remote_photo_url: "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg")
+  password: "password"
+)
+mads.remote_photo_url = "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
 # Saves new user
 mads.save!
 
@@ -42,7 +43,9 @@ ingr = Ingredient.new( name: "Test carrot"  ,
   category: "Carrots"   ,
   price: 5,
   rating: "1",
-  available_quantity: 500000, farm_id: farm1.id  ,price_type: "per unit1"  )
+  available_quantity: 500000,
+  farm_id: farm1.id,
+  price_type: "per unit1"  )
 
 ingr.save!
 
