@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_one :restaurant
   mount_uploader :photo, PhotoUploader
 
-  # after_create :create_restaurant_and_give_it_user_id
+  after_create :create_restaurant_and_give_it_user_id
 
   private
 
