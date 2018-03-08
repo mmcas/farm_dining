@@ -15,15 +15,3 @@ class User < ApplicationRecord
     Restaurant.create(name: restaurant_name, location: restaurant_location, avatar_photo: File.new(photo.path), restaurant_email: email, user: self)
   end
 end
-
-# Restaurant:
-#     t.string "name"
-#     t.string "location"
-#     t.string "avatar_photo"
-#     t.string "restaurant_email"
-
-# User:
-    # t.string "restaurant_name"
-    # t.string "restaurant_location"
-    # t.string "photo"
-
