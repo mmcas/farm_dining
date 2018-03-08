@@ -10,6 +10,9 @@
 # Saves new user
 
 # New user MADS
+require "cloudinary"
+include CloudinaryHelper
+
 puts 'Cleaning DB....'
 Order.destroy_all
 Ingredient.destroy_all
@@ -47,7 +50,8 @@ restaurant3 = Restaurant.new(location: "Bos en Lommer", user: floor)
 restaurant3.save!
 
 puts 'Creating farm 1'
-farm1= Farm.new(  location: "Overhoeksplein 2, Amsterdam"  ,farm_name: "farm 1" ,farmers_name: "Piet de Boer")
+farm1= Farm.new(  location: "Overhoeksplein 2, Amsterdam"  ,farm_name: "farm 1" ,farmers_name: "Piet de Boer",
+  remote_farm_photo_url: cl_image_path("patrick-fore-412796-unsplash.jpg"))
 farm1.save!
 
 puts 'Creating ingredients..test carrot,potato and Strawberry,etc.'
@@ -59,7 +63,8 @@ ingr = Ingredient.new( name: "Test carrot" ,
   rating: "1",
   available_quantity: 500000,
   farm_id: farm1.id,
-  price_type: "per unit1"  )
+  price_type: "per unit1",
+  remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg"))
 
 ingr.save!
 
@@ -69,13 +74,14 @@ ingr1 = Ingredient.new( name: "Test Potato"  ,
   category: "Potatoes" ,
   price: 500,
   rating: "1",
-  available_quantity: 500000, farm_id: farm1.id  , price_type: "per unit1"  )
+  available_quantity: 500000, farm_id: farm1.id  , price_type: "per unit1",
+  remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg"))
 
 ingr1.save!
 
 ingr2 = Ingredient.new( name: "Test Strawberry"  ,description: "Sweet sweet taste  and colors"  ,
   main_category: "Fruits & Vegetables ",sku:"straw-01" ,category: "Strawberry"   ,price: 500,  rating: "1",
-  available_quantity: 500000, farm_id: farm1.id  ,price_type: "per kg"  )
+  available_quantity: 500000, farm_id: farm1.id  ,price_type: "per kg", remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg"))
 
 ingr2.save!
 
