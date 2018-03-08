@@ -77,3 +77,58 @@
     margin-top: 25px;
 
   }
+
+  .card-show {
+  margin-top: 125px;
+  margin-left: 115px;
+  position: relative;
+  height: 350px;
+  width: 450px;
+}
+
+.card-show-scnd {
+  margin-top: 125px;
+  margin-left: 250px;
+  position: relative;
+  padding-top: 25px;
+}
+
+.card-show-text{
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+
+#card-show-first-button {
+  margin-top: 5px;
+  float: left;
+  margin-right: 15px;
+}
+
+#card-show-scnd-button {
+  margin-top: 5px;
+
+}
+
+.button-reserve input {
+  background-color: #499F68;
+  border: 1px solid #499F68;}
+
+.button-category {
+  padding: 0px 10px;
+}
+
+
+.fas, span, .far {
+  color: #499F68
+}
+
+.avatar-large {
+  width: 70px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+
