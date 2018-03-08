@@ -1,5 +1,33 @@
 <h1>Welcome to ingredients index</h1>
 
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 thin-padding" >
+      <div class="category-card">
+        <%= cl_image_tag("Fruits_and_veg.jpg", :alt => "Picture of fruits and vegetables") %>
+      </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 thin-padding" >
+      <div class="category-card">
+        <%= cl_image_tag("Whole_Grain_Cracker_Whole_Grains_and_Fiber.jpg", :alt => "Picture of whole grains and fibers") %>
+      </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 thin-padding" >
+      <div class="category-card">
+        <%= cl_image_tag("meat-products.jpg", :alt => "picture of a range of meats") %>
+      </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 thin-padding" >
+      <div class="category-card">
+        <%= cl_image_tag("table-of-dairy-products.jpg", :alt => "picture of dairy products") %>
+      </div>
+    </div>
+  </div>
+
  <% @ingredients.each do |ingredient| %>
       <h3>  <%= ingredient.name %></h3>
       <%= ingredient.description %>
@@ -38,3 +66,4 @@
   height: 600px;"
   data-markers="<%= @markers.to_json %>"
 ></div>
+</div>
