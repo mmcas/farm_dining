@@ -1,10 +1,12 @@
 // Import page-specific CSS files here.
 @import "home";
 
-.main-container {
-  display: flex;
-  width: auto;
-  height: auto;
+.container {
+  position: relative;
+}
+
+.category-card:hover .middle {
+  opacity: 1;
 }
 
 #map {
@@ -12,22 +14,49 @@
   height: 100vh;
   position: sticky !important;
   top: 0 !important;
-  }
+}
 
-  .category-card {
-    // height: 100%;
-    // width: 100%;
+.category-card {
+    height: 100%;
+    width: 100%;
     position: relative;
     margin: 5px;
     padding: auto;
     background-size: cover;
- img {
-    height: 100%;
-    width: 100%;
-    overflow:hidden
-  }
+    img {
+      height: 100%;
+      width: 100%;
+      overflow:hidden;
+      opacity: 1;
+      display: block;
+      transition: .5s ease;
+      &:hover {
+        opacity: 0.4;
+      }
+    }
   }
 
-.thin-padding {
-  padding: 5px !important;
+  .thin-padding {
+    padding: 5px !important;
+  }
+
+  .category-text {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    text: bold;
+  }
+
+  .middle {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header h1 {
+  text-align: center;
 }
