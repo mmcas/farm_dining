@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :restaurants, only: [] do
   end
 
-  resources :orders, only: [:new, :show, :create]
+  resources :orders, only: [:new, :show, :create, :destroy, :update, :edit ]
 
   resources :shopping_baskets, only: [] do
     resources :payments, only: [:create]
