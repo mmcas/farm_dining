@@ -20,7 +20,7 @@ Geocoder.configure(
    units: :km,                 # :km for kilometers or :mi for miles
   # distances: :linear          # :spherical or :linear
   lookup:    :google,
-  api_key:   ENV['AIzaSyA7Iiw-TjxeeS_ZMXkjv7d81KfxgIHdF6A'],
+  api_key:   ENV['GOOGLE_API_SERVER_KEY'],
   use_https: true,
 
 )

@@ -49,6 +49,7 @@ puts 'add restaurant user floor'
 restaurant3 = Restaurant.new(location: "Bos en Lommer", user: floor)
 restaurant3.save!
 
+
 # New user Mark
 mark = User.new(
   email: "mark@gmail.com",
@@ -82,6 +83,7 @@ farm1= Farm.new(location: "Overhoeksplein 2, Amsterdam"  ,farm_name: "farm 1" ,f
 farm1.save!
 
 farm1= Farm.new(location:'Schapenlaan 20, 1862 PW Bergen',farm_name:'Van de Stolp',farmers_name:'Greetje koren')
+
 farm1.save!
 
 farm1= Farm.new(location:'Schapenlaan 20, 1862 PW Bergen',farm_name:'Van der Stolp',farmers_name:'Greetje koren')
@@ -117,7 +119,8 @@ ingr = Ingredient.new( name: "Test carrot" ,
   available_quantity: 500000,
   farm_id: farm1.id,
   price_type: "per unit1",
-  remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg") )
+
+  remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg"))
 
 ingr.save!
 
@@ -128,14 +131,17 @@ ingr1 = Ingredient.new( name: "Test Potato"  ,
   price: 500,
   rating: "1",
   available_quantity: 500000, farm_id: farm1.id  , price_type: "per unit1",
-  remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg") )
+  remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg"))
+
 
 ingr1.save!
 
 ingr2 = Ingredient.new( name: "Test Strawberry"  ,description: "Sweet sweet taste  and colors"  ,
   main_category: "Fruits & Vegetables ",sku:"straw-01" ,category: "Strawberry"   ,price: 500,  rating: "1",
+
   available_quantity: 500000, farm_id: farm1.id  ,price_type: "per kg",
   remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg") )
+
 
 ingr2.save!
 
