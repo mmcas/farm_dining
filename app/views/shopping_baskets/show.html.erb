@@ -1,3 +1,5 @@
+<% if @cart  %>
+
 <h1>Total amount:</h1>
 <%= form_tag shopping_basket_payments_path(@cart) do %>
   <article>
@@ -17,3 +19,12 @@
   </script>
 
 <% end %>
+<% else  %>
+<p>TODO  display Previous Purchases.<br />
+ All purchases have been paid.<br />
+Your Shopping Basket is empty<br />
+<%= link_to "Order New Ingredients", ingredients_path %>
+
+
+</p>
+<% end  %>
