@@ -6,13 +6,24 @@ class User < ApplicationRecord
   has_one :restaurant
   mount_uploader :photo, PhotoUploader
 
-  after_save :create_restaurant_and_give_it_user_id, on: :create
+  after_create :create_restaurant_and_give_it_user_id
 
   private
 
   def create_restaurant_and_give_it_user_id
     # Create a new restaurant and give it the id of the signed up user
-    restaurant = Restaurant.create!(user: self)
+    Restaurant.create(name: restaurant_name, location: restaurant_location, avatar_photo: File.new(photo.path), restaurant_email: email, user: self)
   end
 end
+
+# Restaurant:
+#     t.string "name"
+#     t.string "location"
+#     t.string "avatar_photo"
+#     t.string "restaurant_email"
+
+# User:
+    # t.string "restaurant_name"
+    # t.string "restaurant_location"
+    # t.string "photo"
 
