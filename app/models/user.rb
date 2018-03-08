@@ -5,4 +5,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_one :restaurant
   mount_uploader :photo, PhotoUploader
+
+  after_create :create_restaurant_and_give_it_user_id
+
+  private
+
+  def create_restaurant_and_give_it_user_id
+    # Create a new restaurant and give it the id of the signed up user
+    Restaurant.create(name: restaurant_name, location: restaurant_location, avatar_photo: File.new(photo.path), restaurant_email: email, user: self)
+  end
 end
