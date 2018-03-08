@@ -34,6 +34,7 @@ class IngredientsController < ApplicationController
 
   def show
     @ingredient = Ingredient.find(params[:id])
+    @farm = @ingredient.farm
     @order = Order.new
   end
 end
