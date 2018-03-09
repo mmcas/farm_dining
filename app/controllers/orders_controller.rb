@@ -33,6 +33,7 @@ class OrdersController < ApplicationController
 
   def update
     @order = Order.find(params[:id])
+    # @ingredient = Ingredient.find(@order.ingredient_id)
     @order = @order.update(order_params)
     redirect_back(fallback_location: checkout_path)
   end

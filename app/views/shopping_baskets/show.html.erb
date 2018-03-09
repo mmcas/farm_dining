@@ -16,9 +16,11 @@
         <% end %>
       </div>
       <p>  <%= order.order_quantity %> units</p>
-      <p>Price: <%= humanized_money_with_symbol(ingredient.price) %>
+      <p><%= humanized_money_with_symbol(ingredient.price) %>
       <%= ingredient.price_type %></p>
-      <%= ingredient.price %><br />
+      <p> € <%= order.amount %>
+      </p>
+      <br />
       <div id='editShoppingBasket'>
         <i class="far fa-edit"> </i>
       </div>
