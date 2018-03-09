@@ -1,36 +1,39 @@
-<h1>Welcome to the show page</h1>
-
-<%#= cl_image_tag @ingredient.photo, height: 300, width: 400, crop: :fill %>
-
-
-
-<h1>Meet tasty <%= @ingredient.name %> </h1>
-<h6>from farm: <%= @ingredient.farm.farm_name %></h6>
-
-      <%= @ingredient.name %><br />
-      <%= @ingredient.description %>
-      <%= @ingredient.photo %>
-      <p>Price: <%= humanized_money_with_symbol(@ingredient.price) %>
-        <%= @ingredient.price_type %>
-      </p>
-      <%= @ingredient.main_category %>
-      <%= @ingredient.category %><br />
-      <%= @ingredient.available_quantity %><br />
-      <br />
-      <%= @ingredient.farm.farm_name %>
-      <%= @ingredient.farm.farm_name %>
-
-
-<%= link_to "farm", farm_path(@ingredient.farm) %>
-
-      <p> SKU: <%= @ingredient.sku %></p>
-
-      <p>$$$</p>
-
-<%= simple_form_for @order do |order| %>
-  <%= order.input :order_quantity %>
-  <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => @ingredient.id }  %>
-  <%= order.input :price_paid, :as => :hidden, :input_html => { :value => @ingredient.price  }  %>
-  <%= order.submit "add to basket", class: "btn btn-primary" %>
-
-<% end %>
+<div class="container">
+  <h1> <%= @ingredient.name %> </h1>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="columns">
+          <%= cl_image_tag @ingredient.photo , :class => "style_image"%>
+          <div class="textbox">
+            <h4>Description Ingredient</h4>
+            Description: <%= @ingredient.description %>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="columns">
+          <div class="textbox">
+          <h4>Description Ingredient + Farm</h4>
+            From farm: <%= link_to @ingredient.farm.farm_name, farm_path(@ingredient.farm) %><br>
+            Main category: <%= @ingredient.main_category %><br>
+            Ingredient: <%= @ingredient.category %><br>
+            Available_quantity: <%= @ingredient.available_quantity %><br>
+            SKU: <%= @ingredient.sku %><br>
+            Price: <%= humanized_money_with_symbol(@ingredient.price) %>
+              <%= @ingredient.price_type %>
+          </div>
+          <%= cl_image_tag @farm.farm_photo, :class => "style_image" %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6  col-sm-offset-3">
+        <%= simple_form_for @order do |order| %>
+          <%= order.input :order_quantity %>
+          <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => @ingredient.id }  %>
+          <%= order.input :price_paid, :as => :hidden, :input_html => { :value => @ingredient.price  }  %>
+          <%= order.submit "add to basket", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+</div>

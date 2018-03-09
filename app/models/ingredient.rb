@@ -7,6 +7,8 @@ class Ingredient < ApplicationRecord
 
   monetize :price_cents
 
+  mount_uploader :photo, PhotoUploader
+
   include PgSearch
   pg_search_scope :search_by_category_and_main_category,
     against: [ :category, :main_category ],

@@ -82,7 +82,7 @@
   top:8%;
   content: attr(data-count);
   font-size:40%;
-  padding:.2em;
+  padding:.4em;
   border-radius:50%;
   line-height:1em;
   color: white;
@@ -90,4 +90,8 @@
   text-align:center;
   min-width: 1em;
   //font-weight:bold;
+}
+
+.fa-shopping-basket {
+  color:  #474744;
 }

@@ -18,10 +18,23 @@ class OrdersController < ApplicationController
     @order.amount = @ingredient.price * params[:order][:order_quantity].to_i
     @order.shopping_basket = @shopping_basket
     @order.save!
+    redirect_back(fallback_location: ingredients_path)
+  end
 
-    # redirect_to ingredients_path
-      redirect_back(fallback_location: ingredients_path)
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+    redirect_back(fallback_location: checkout_path)
+  end
 
+  def edit
+    @order = Order.find(params[:id])
+  end
+
+  def update
+    @order = Order.find(params[:id])
+    @order = @order.update(order_params)
+    redirect_back(fallback_location: checkout_path)
   end
 
   private
