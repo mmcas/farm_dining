@@ -1,10 +1,15 @@
-
+<%= link_to "BACK TO INDEX", ingredients_path, class: "btn btn-farm" %>
+<% if @ingredient %>
+  <%= link_to "BACK TO INGREDIENT", ingredient_path(@ingredient), class: "btn btn-farm" %>
+<% end %>
 <div class="container">
+  <%#= link_to "BACK TO FARM", farm_path(@farm), class: "btn btn-farm" %>
   <% if @shopping_basket  %>
 
     <% @shopping_basket.orders.each do |order| %>
       <%= order.ingredient.photo %>
-      <p>  <%= order.ingredient.name %></p>
+      <p>  <%= link_to order.ingredient.name, ingredient_path(order.ingredient) %></p>
+      <p>  <%= link_to order.ingredient.farm.farm_name, farm_path(order.ingredient.farm) %></p>
       <div id="lol">
         <%= simple_form_for order do |order| %>
           <%= order.input :order_quantity %>

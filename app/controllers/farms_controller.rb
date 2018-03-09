@@ -1,8 +1,10 @@
 class FarmsController < ApplicationController
 
   def show
-    # Access to the Farm
+    # We need to acces the farm through the ingredient id
     @farm = Farm.find(params[:id])
+    @ingredient = Ingredient.find(params[:ingredient_id]) if params[:ingredient_id]
+    # @farm = @ingredient.farm
     # Access to the Farm's Ingredients
     @ingredients = @farm.ingredients
 

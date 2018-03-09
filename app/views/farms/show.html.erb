@@ -1,11 +1,7 @@
-
-<h1>Here we show a farm</h1>
-
-<%= cl_image_tag @farm.farm_photo, height: 300, width: 400, crop: :fill %>
-
+<%= link_to "BACK TO INDEX", ingredients_path, class: "btn btn-farm" %>
 <h1>Welcome to <%=@farm.farm_name%>, <%=@farm.farmers_name%>'s farm.</h1>
 
-<%= image_tag "farm.jpeg", alt: "farm", height: 400, width: 800 %>
+<%= cl_image_tag @farm.farm_photo, height: 300, width: 400, crop: :fill %>
 
 <p>Here is some text about the farm: <%= @farm.description%></p>
 
@@ -17,8 +13,6 @@
     <%= link_to "Link", ingredient_path(ingredient) %>
   <% end %>
 </ul>
-
-<p><%= "TO DO: Underneath the ingredients we insert the map." %></p>
 
 <div
   id="map"
