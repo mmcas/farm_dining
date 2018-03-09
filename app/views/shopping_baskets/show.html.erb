@@ -3,18 +3,19 @@
   <% if @shopping_basket  %>
 
     <% @shopping_basket.orders.each do |order| %>
-      <%= order.ingredient.photo %>
-      <p>  <%= order.ingredient.name %></p>
+      <% ingredient = order.ingredient %>
+      <%= cl_image_tag ingredient.photo, :width=>100, :height=>100  %>
+      <p><%=  ingredient.name %></p>
       <div id="lol">
         <%= simple_form_for order do |order| %>
-          <%= order.input :order_quantity %>
+          <%= order.input :order_quantity, collection: (1..[ingredient.available_quantity, 100].min)%>
           <%= order.submit "update", class: "btn btn-primary" %>
         <% end %>
       </div>
       <p>  <%= order.order_quantity %> units</p>
-      <p>Price: <%= humanized_money_with_symbol(order.ingredient.price) %>
-      <%= order.ingredient.price_type %></p>
-      <%= order.ingredient.price %><br />
+      <p>Price: <%= humanized_money_with_symbol(ingredient.price) %>
+      <%= ingredient.price_type %></p>
+      <%= ingredient.price %><br />
       <div id='editShoppingBasket'>
         <i class="far fa-edit"> </i>
       </div>
