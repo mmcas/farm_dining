@@ -71,75 +71,47 @@
 
 
         <% @ingredients.each do |ingredient| %>
-          <div class="col-xs-12 col-sm-4">
+          <div class="col-xs-6 col-sm- col-lg-3" >
             <div class="card-text">
               <%= link_to '#' do %>
                 <%#= cl_image_path ingredient.photo %>
                 <%#= link_to "", ingredient_path(ingredient), class: "card-link" %>
-              <% end %>
+
+              <%# end %>
+
 
             <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%=cl_image_path ingredient.photo%>');">
 
-              <div class="card-category"><h2><%= ingredient.name %></h2>
+              <div class="lettering">
+                <h2><%= ingredient.name %></h2>
               </div>
 
-              <%# unless current_user.photo.nil? %>
-               <!--  <div class="card-user"> -->
-                <%#= cl_image_tag current_user.photo, height: 40, width: 40, crop: :fill %>
-               <!--  </div> -->
-              <%# end %>
+
 
                 <%= link_to "", ingredient_path(ingredient), class: "card-link" %>
-            </div><p><%#= ingredient.category %></p>
+            </div>
+<div class="card-show-text">
+               <%# @ingredients.each do |ingredient| %>
+        <p>Price: <%= humanized_money_with_symbol(ingredient.price) %>
+          <%= ingredient.price_type %></p>
+          <p><%= ingredient.available_quantity %></p>
+          <%= ingredient.farm.farm_name %><br />
+          <%= simple_form_for @order do |order| %>
+          <%= order.input :order_quantity, collection: (1..[ingredient.available_quantity, 100].min)%>
+          <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => ingredient.id }  %>
+          <%= order.input :price_paid, :as => :hidden, :input_html => { :value => ingredient.price  }  %>
+          <%= order.submit "add to basket", class: "btn btn-primary" %>
+          <% end %>
+          <% end %>
 
+</div>
 
       </div>
     </div>
   <% end %>
 
-<div id="map" style="width: 100%; height: 400px;" data-markers="<%= @markersto_json %>">
+<!-- <div id="map" style="width: 100%; height: 400px;" data-markers="<%= @markersto_json %>"> -->
+
 
 </div>
 </div>
-
-
-  <!--       <%# @ingredients.each do |ingredient| %>
-        <h3>  <%#= ingredient.name %></h3>
-        <%#= ingredient.description %>
-        <%#= ingredient.photo %>
-
-        <p>Price: <%#= humanized_money_with_symbol(ingredient.price) %>
-          <%#= ingredient.price_type %></p>
-
-          <%#= ingredient.price %><br />
-          <%#= ingredient.rating %><br />
-
-          <%#= ingredient.main_category %>
-          <%#= ingredient.category %><br />
-          <%#= ingredient.available_quantity %><br />
-          <br />
-          <%#= ingredient.farm.farm_name %><br />
-          <p> SKU: <%#= ingredient.sku %></p>
-
-          <p>$$$</p>
-
-          <%#= link_to "Link", ingredient_path(ingredient) %>
-
-          <%#= simple_form_for @order do |order| %>
-          <%#= order.input :order_quantity %>
-          <%#= order.input :ingredient_id, :as => :hidden, :input_html => { :value => ingredient.id }  %>
-          <%#= order.input :price_paid, :as => :hidden, :input_html => { :value => ingredient.price  }  %>
-          <%#= order.submit "add to basket", class: "btn btn-primary" %>
-          <%# end %>
-
-          <hr>
-          <%# end %>
-
-          <div
-          id="map"
-          style="width: 100%;
-          height: 600px;"
-          data-markers="<%= @markers.to_json %>"
-          ></div>
-        </div>
- -->
