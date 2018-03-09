@@ -1,2 +1,130 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.category-card:hover .middle {
+  opacity: 1;
+}
+
+#map {
+  flex: 0 0 450px;
+  height: 100vh;
+  position: sticky !important;
+  top: 0 !important;
+}
+
+.category-card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 5px;
+    padding: auto;
+    background-size: cover;
+    img {
+      height: 100%;
+      width: 100%;
+      overflow:hidden;
+      opacity: 1;
+      display: block;
+      transition: .5s ease;
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  .thin-padding {
+    padding: 5px !important;
+  }
+
+  .category-text {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    text: bold;
+  }
+
+  .middle {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header h1 {
+  text-align: center;
+}
+
+.btn-filter-submit {
+    background-color: #499F68;
+    font-family: 'Lora', serif;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 5px;
+  }
+
+  .filter {
+    // margin: 5px;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    margin-top: 25px;
+
+  }
+
+  .card-show {
+  margin-top: 125px;
+  margin-left: 115px;
+  position: relative;
+  height: 350px;
+  width: 450px;
+}
+
+.card-show-scnd {
+  margin-top: 125px;
+  margin-left: 250px;
+  position: relative;
+  padding-top: 25px;
+}
+
+.card-show-text{
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+
+#card-show-first-button {
+  margin-top: 5px;
+  float: left;
+  margin-right: 15px;
+}
+
+#card-show-scnd-button {
+  margin-top: 5px;
+
+}
+
+.button-reserve input {
+  background-color: #499F68;
+  border: 1px solid #499F68;}
+
+.button-category {
+  padding: 0px 10px;
+}
+
+
+.fas, span, .far {
+  color: #499F68
+}
+
+.avatar-large {
+  width: 70px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+

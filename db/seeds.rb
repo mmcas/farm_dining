@@ -13,7 +13,6 @@
 require "cloudinary"
 include CloudinaryHelper
 
-
 puts 'Cleaning DB....'
 Order.destroy_all
 Ingredient.destroy_all
@@ -49,7 +48,6 @@ puts 'add restaurant user floor'
 restaurant3 = Restaurant.new(location: "Bos en Lommer", user: floor)
 restaurant3.save!
 
-
 # New user Mark
 mark = User.new(
   email: "mark@gmail.com",
@@ -76,8 +74,6 @@ puts 'add restaurant user iris'
 restaurant5 = Restaurant.new(location: "Zaandam", user: iris)
 restaurant5.save!
 
-
-
 puts 'Creating farms'
 farm1= Farm.new(location: "Overhoeksplein 2, Amsterdam"  ,farm_name: "farm 1" ,farmers_name: "Piet de Boer")
 farm1.save!
@@ -87,6 +83,7 @@ farm1= Farm.new(location:'Schapenlaan 20, 1862 PW Bergen',farm_name:'Van de Stol
 farm1.save!
 
 farm1= Farm.new(location:'Schapenlaan 20, 1862 PW Bergen',farm_name:'Van der Stolp',farmers_name:'Greetje koren')
+
 farm1.save!
 farm2= Farm.new(location:'Hoofdvaart, Hoofddorp',farm_name:'De Witte Boerderij',farmers_name:'Bert Spruitjes')
 farm2.save!
@@ -105,10 +102,6 @@ farm8.save!
 farm9= Farm.new(location:'Waverveen',farm_name:'The Big Barn',farmers_name:'Maik de Boer')
 farm9.save!
 
-
-
-
-
 puts 'Creating ingredients..test carrot,potato and Strawberry,etc.'
 ingr = Ingredient.new( name: "Test carrot" ,
   description: "Mixed colors",
@@ -119,7 +112,6 @@ ingr = Ingredient.new( name: "Test carrot" ,
   available_quantity: 500000,
   farm_id: farm1.id,
   price_type: "per unit1",
-
   remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg"))
 
 ingr.save!
@@ -132,7 +124,6 @@ ingr1 = Ingredient.new( name: "Test Potato"  ,
   rating: "1",
   available_quantity: 500000, farm_id: farm1.id  , price_type: "per unit1",
   remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg"))
-
 
 ingr1.save!
 
