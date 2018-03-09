@@ -13,7 +13,7 @@
 require "cloudinary"
 include CloudinaryHelper
 
-puts 'Cleaning DB....'
+puts 'Cleaning DB..'
 Order.destroy_all
 Ingredient.destroy_all
 Farm.destroy_all
