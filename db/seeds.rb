@@ -103,7 +103,7 @@ farm9= Farm.new(location:'Waverveen',farm_name:'The Big Barn',farmers_name:'Maik
 farm9.save!
 
 puts 'Creating ingredients..test carrot,potato and Strawberry,etc.'
-ingr = Ingredient.new( name: "Test carrot" ,
+ingr = Ingredient.new( name: "Carrots" ,
   description: "Mixed colors",
   main_category: "Fruits & Vegetables "  ,sku:"car-01",
   category: "Carrots"   ,
@@ -116,24 +116,80 @@ ingr = Ingredient.new( name: "Test carrot" ,
 
 ingr.save!
 
-ingr1 = Ingredient.new( name: "Test Potato"  ,
+ingr1 = Ingredient.new( name: "Potatoes"  ,
   description: "Mixed colors"   ,
   main_category: "Fruits & Vegetables " ,sku:"pot-01",
   category: "Potatoes" ,
   price: 500,
   rating: "1",
   available_quantity: 500000, farm_id: farm1.id  , price_type: "per unit1",
-  remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg"))
+  remote_photo_url: cl_image_path("Potatoes_Red.png") )
 
 ingr1.save!
 
-ingr2 = Ingredient.new( name: "Test Strawberry"  ,description: "Sweet sweet taste  and colors"  ,
+ingr2 = Ingredient.new( name: "Strawberries"  ,description: "Sweet sweet taste  and colors"  ,
   main_category: "Fruits & Vegetables ",sku:"straw-01" ,category: "Strawberry"   ,price: 500,  rating: "1",
 
   available_quantity: 500000, farm_id: farm1.id  ,price_type: "per kg",
-  remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg") )
-
+  remote_photo_url: cl_image_path("Strawberries.png") )
 
 ingr2.save!
+
+ingr3 = Ingredient.new( name: "Potatoes"  ,
+  description: "Mixed colors"   ,
+  main_category: "Fruits & Vegetables " ,sku:"pot-02",
+  category: "Potatoes" ,
+  price: 500,
+  rating: "1",
+  available_quantity: 500000, farm_id: farm1.id  , price_type: "per unit1",
+  remote_photo_url: cl_image_path("Potatoes_Yellow.png"))
+
+ingr3.save!
+
+ingr4 = Ingredient.new( name: "Red Beans"  ,
+  description: "Mixed colors"   ,
+  main_category: "Fruits & Vegetables " ,sku:"bea-01",
+  category: "Potatoes" ,
+  price: 500,
+  rating: "1",
+  available_quantity: 500000, farm_id: farm2.id  , price_type: "per unit1",
+  remote_photo_url: cl_image_path("Red_Beans.png"))
+
+ingr4.save!
+
+ingr5 = Ingredient.new( name: "Lettuces"  ,
+  description: "Mixed colors"   ,
+  main_category: "Fruits & Vegetables " ,sku:"let-01",
+  category: "Potatoes" ,
+  price: 500,
+  rating: "1",
+  available_quantity: 500000, farm_id: farm2.id  , price_type: "per unit1",
+  remote_photo_url: cl_image_path("Lettuce.png"))
+
+ingr5.save!
+
+ingr6 = Ingredient.new( name: "Boontjes"  ,
+  description: "Mixed colors"   ,
+  main_category: "Fruits & Vegetables " ,sku:"bon-01",
+  category: "Potatoes" ,
+  price: 500,
+  rating: "1",
+  available_quantity: 500000, farm_id: farm3.id  , price_type: "per unit1",
+  remote_photo_url: cl_image_path("Boontjes.png"))
+
+ingr6.save!
+
+ingr7 = Ingredient.new( name: "Carrots" ,
+  description: "Mixed colors",
+  main_category: "Fruits & Vegetables "  ,sku:"car-02",
+  category: "Carrots"   ,
+  price: 5,
+  rating: "1",
+  available_quantity: 500000,
+  farm_id: farm3.id,
+  price_type: "per unit1",
+  remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg"))
+
+ingr7.save!
 
 puts "Finished, yeah!"
