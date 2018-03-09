@@ -54,7 +54,16 @@
   <div class="row filter">
       <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" >
         <%= simple_form_for @order do |o| %>
-        <%= o.input :order_quantity, label: false, input_html: { text: "TO DO: Add filter code" } %>
+
+<div class="form-inline">
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find an ingredient"
+    %>
+  </div>
+
+        <%#= o.input :order_quantity, label: false, input_html: { text: "TO DO: Add filter code" } %>
         <% end %>
       </div>
 
@@ -110,7 +119,7 @@
     </div>
   <% end %>
 
-<!-- <div id="map" style="width: 100%; height: 400px;" data-markers="<%= @markersto_json %>"> -->
+<div id="map" style="width: 100%; height: 400px;" data-markers="<%= @markersto_json %>">
 
 
 </div>
