@@ -91,6 +91,7 @@ farm3= Farm.new(location:'Burgemeester Peereboomweg, Zuiderwoude',farm_name:'de 
 farm3.save!
 farm4= Farm.new(location:'Laan, Broek in Waterland',farm_name:'Under The Willows',farmers_name:'')
 farm4.save!
+
 # farm5= Farm.new(location:'Den Ilp 63, 1127 PE Den Ilp',farm_name:'Harvest Art',farmers_name:'Anton Heyboer')
 # farm5.save!
 # farm6= Farm.new(location:'Het Twiske',farm_name:'Our Little place',farmers_name:'Piet de Kleine')
@@ -128,6 +129,7 @@ ingr.save!
 ingr = Ingredient.new(name:'Wheat grains',description:'fresh eggs Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',main_category:'Grains & Legumes',category:'Grains',price:50,rating:1,sku:'7',farm_id:farm2.id,  available_quantity:20,price_type:'per kg',  remote_photo_url: cl_image_path('Cabbage-vegetable-power-green.jpg'))
 ingr.save!
 ingr = Ingredient.new(name:'Kale',description:'Sausages lorem ipsum  and so on ',main_category:'Grains & Legumes',category:'Vegetables',price:50,rating:1,sku:'8',farm_id:farm2.id,  available_quantity:30,price_type:'per kg',  remote_photo_url: cl_image_path('Kale-vegetables-brassica-oleracea-var-sabellica-l-51372.jpg'))
+
 ingr.save!
 ingr = Ingredient.new(name:'Sausages',description:'Kale lorem ipsum  and so on ',main_category:'Meat',category:'Porc',price:50,rating:1,sku:'9',farm_id:farm2.id,  available_quantity:20,price_type:'Per 10',  remote_photo_url: cl_image_path('meat-fridge-food-sausage-84267.jpg'))
 ingr.save!
@@ -148,12 +150,15 @@ ingr.save!
 
 
 
+
 ingr1 = Ingredient.new( name: "Sweet Carrots"  ,
+
   description: "Mixed colors"   ,
   main_category: "Fruits & Vegetables " ,sku:"pot-01",
   category: "Carrots" ,
   price: 500,
   rating: "1",
+
   available_quantity: 50, farm_id: farm1.id  , price_type: "per unit",
   remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg"))
 
