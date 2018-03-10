@@ -1,22 +1,35 @@
 .banner-farm {
   color: white;
   text-align: center;
-  height: 300px;
+  height: 400px;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
 }
-.banner-farm h1 {
-  font-size: 50px;
-  font-weight: bold;
-  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-}
+
 .banner-farm p {
   font-size: 25px;
-  font-weight: lighter;
-  color: rgb(255, 255, 255);
   opacity: 0.6;
   margin-bottom: 30px;
+}
+
+.farm-description{
+  background-color: white;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 100px;
+  width: 550px;
+}
+
+.farm-picture-farmer{
+  background-color: white;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 300px;
+  width: 550px;
 }
