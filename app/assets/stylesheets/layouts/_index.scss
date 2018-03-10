@@ -4,49 +4,8 @@
 // @import "profile";
 // @import "map";
 
-// font style header quicksand paragraph loira
-
-h1, h2, h3 {
-  font-family: 'Quicksand', sans-serif;
-
-}
-
-body, p {
-  font-family: 'Lora', serif;
-  color: #333333;
-}
-a {
-  color: #215B63;
-  text-decoration:none;
-}
-a:hover{
-    color: #7ECBA1;
-    text-decoration:none;
-
-  }
-.btn-farm{
-  background-color: #77B28C;
-  font-family: 'Lora', serif;
-  padding: 10px 15px;
-  color: #065143; /* was #f2f2f2; */
-  border-radius:5px;
-}
-.btn-farm-submit{
-  background-color: #499F68; /*was #215B63;*/
-  font-family: 'Lora', serif;
-  color:white;
-  padding: 10px 15px;
-  border-radius:5px;
-}
-
-.btn-farm:hover{
- color: #065143; /* was #f2f2f2; */
-}
 
 
-.btn-farm-submit:hover{
-  color: white;
-}
 
 
 
