@@ -1,24 +1,52 @@
-<%= link_to "BACK TO INDEX", ingredients_path, class: "btn btn-farm" %>
-<h1>Welcome to <%=@farm.farm_name%>, <%=@farm.farmers_name%>'s farm.</h1>
+<div class="container">
+  <div class="banner-farm" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1485801378227-e82f6a4be23a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b2d020d670d86e677ad8ce269a6e0e5e&auto=format&fit=crop&w=1049&q=80');">
+    <!-- url('<%#= cl_image_tag @farm.farm_photo %>') -->
+    <div class="banner-content">
+      <h1><%=@farm.farm_name%></h1>
+      <p>A warm welcome from <%=@farm.farmers_name=%>.</p>
+    </div>
+  </div>
 
-<%= cl_image_tag @farm.farm_photo, height: 300, width: 400, crop: :fill %>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="farm-description">
+        <p class="text-long">Here is some text about the farm: <%= @farm.description%></p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <div class="farm-picture-farmer">
+        <p class="text-long">Here we will have the picture of the farmer</p>
+      </div>
+    </div>
+  </div>
 
-<p>Here is some text about the farm: <%= @farm.description%></p>
+  <h3><%= "Here we find all the ingredients that the farm offers." %></h3>
 
-<p><%= "Here we find all the ingredients that the farm offers." %></p>
+  <div class="row">
+    <% @ingredients.each do |ingredient| %>
+      <div class="col-xs-12 col-sm-3">
+        <div class="category-card">
+          <%=cl_image_tag ingredient.photo%>
+          <%= link_to ingredient.name, ingredient_path(ingredient) %> |
+          <%= ingredient.price %> |
+          <%= ingredient.rating %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
-<ul>
-  <% @ingredients.each do |ingredient| %>
-    <li>Name: <%= ingredient.name %>, Price: <%= ingredient.price %>, Rating: <%= ingredient.rating %> </li>
-    <%= link_to "Link", ingredient_path(ingredient) %>
-  <% end %>
-</ul>
+  <%#= cl_image_tag @farm.farm_photo, height: 300, width: 400, crop: :fill %>
 
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-></div>
+  <%= link_to "BACK TO INDEX", ingredients_path, class: "btn btn-farm" %>
+
+  <div
+    id="map"
+    style="width: 100%;
+    height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+  ></div>
+</div>
+
+
 
 
