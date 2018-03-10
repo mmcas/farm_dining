@@ -1,0 +1,38 @@
+.btn-farm{
+  background-color: $lighter-green;
+  font-family: 'Quicksand', sans-serif;
+  padding: 10px 15px;
+  color: #065143; /* was #f2f2f2; */
+  border-radius:5px;
+}
+.btn-farm-submit{
+  background-color: $green; /*was #215B63;*/
+  font-family: 'Quicksand', sans-serif;
+  color:white;
+  padding: 10px 15px;
+  border-radius:5px;
+}
+
+.btn-farm:hover{
+ color: #065143; /* was #f2f2f2; */
+}
+
+.btn-farm-submit:hover{
+  color: white;
+}
+
+.button-reserve input {
+  background-color: $green;
+  border: 1px solid $green;}
+
+.button-category {
+  padding: 0px 10px;
+}
+
+.btn-filter-submit {
+    background-color: $green;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 5px;
+  }
