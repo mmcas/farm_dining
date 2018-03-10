@@ -31,7 +31,7 @@
         <%= order.input :order_quantity, collection: (1..[@ingredient.available_quantity, 100].min)%>
         <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => @ingredient.id }  %>
         <%= order.input :price_paid, :as => :hidden, :input_html => { :value => @ingredient.price  }  %>
-        <%= order.submit "add to basket", class: "btn btn-primary" %>
+        <%= order.submit "add to basket", class: "btn btn-farm-submit" %>
       <% end %>
     </div>
     <div class="col-xs-12 col-sm-6">
