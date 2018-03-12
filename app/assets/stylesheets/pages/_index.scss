@@ -13,7 +13,7 @@
   }
 
   .category-text {
-    background-color: #4CAF50;
+   /* background-color: white; /*#4CAF50;*/
     color: white;
     font-size: 16px;
     padding: 16px 32px;
@@ -21,7 +21,7 @@
   }
 
   .middle {
-    opacity: 0;
+    opacity: 0.5;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -34,13 +34,19 @@
 }
 
   .filter {
-    // margin: 5px;
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: center;
+    margin: 5px;/*was commented out till justcontent*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin-top: 25px;
   }
-
+// .filter2 {
+//     /*margin: 5px;/*was commented out till justcontent*/
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//    /* margin-top: 25px;*/
+//   }
 
 .fas, span, .far {
   color: $green;
