@@ -82,11 +82,23 @@ h2 {
   max-width: 25%;
   margin: 10px auto;
 }
+
 .mycontainer .row {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+}
+
+.carousel{
+  width:100%;
+  height: 75vh;
+  background: image-url("carousel_ph.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #06514317;
 }
 
 .mycontainer .col-xs-12, .mycontainer .col-sm-4 {
@@ -98,7 +110,7 @@ h2 {
 
 }
 
-.about .textbox{
+.about.textbox{
   width:60%;
   padding: 10px 20px;
   margin: 15px auto;

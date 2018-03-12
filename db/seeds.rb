@@ -40,12 +40,12 @@ floor = User.new(
   email: "floor@gmail.com",
   password: "password"
 )
-floor.remote_photo_url = "http://res.cloudinary.com/dnejf9j73/image/upload/v1520436403/qug4mgngihtwzk01sxd6.jpg"
+floor.remote_photo_url = cl_image_path("eksfh0ibso2p5idyqarw.jpg")
 # Saves new user
 floor.save!
 
 puts 'add restaurants to users '
-restaurant3 = Restaurant.new(location: "Bos en Lommer", user: floor)
+restaurant3 = Restaurant.new(location: "Willem de Zwijgerlaan 100, Amsterdam", user: floor)
 restaurant3.save!
 
 # New user Mark
@@ -85,9 +85,23 @@ farm1.save!
 farm1= Farm.new(location:'Schapenlaan 20, 1862 PW Bergen',farm_name:'Van der Stolp',farmers_name:'Greetje koren')
 
 farm1.save!
-farm2= Farm.new(location:'Hoofdvaart, Hoofddorp',farm_name:'De Witte Boerderij',farmers_name:'Bert Spruitjes')
+farm2= Farm.new(
+  location:'Hoofdvaart, Hoofddorp',
+  farm_name:'De Witte Boerderij',
+  farmers_name:'Bert Spruitjes',
+  description: 'This farm is a biological farm. We treat our plants with love and only harvest them when they are ready to shine.
+  You are always welcome to see this for yourself. We make our own cheeses. Also, we produce our own sausages. They are very
+  popular. Feel free to contact us, to share ideas or just for a cup of coffee.',
+  remote_farm_photo_url: cl_image_path("netherlands-landscape-sky-clouds-70846.jpg"),
+  remote_avatar_photo_url: cl_image_path("pexels-photo.jpg"))
+
 farm2.save!
-farm3= Farm.new(location:'Burgemeester Peereboomweg, Zuiderwoude',farm_name:'de Kas',farmers_name:'Annelies de Jong')
+farm3= Farm.new(
+  location:'Burgemeester Peereboomweg, Zuiderwoude',
+  farm_name:'de Kas',
+  farmers_name:'Annelies de Jong',
+  remote_farm_photo_url: cl_image_path("pexels-photo-219376.jpg"),
+  remote_avatar_photo_url: cl_image_path("pexels-photo-478541.jpg"))
 farm3.save!
 farm4= Farm.new(location:'Laan, Broek in Waterland',farm_name:'Under The Willows',farmers_name:'')
 farm4.save!
@@ -158,7 +172,6 @@ ingr1 = Ingredient.new( name: "Sweet Carrots"  ,
   category: "Carrots" ,
   price: 4,
   rating: "1",
-
   available_quantity: 50, farm_id: farm1.id  , price_type: "kg",
   remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg"))
 
@@ -168,7 +181,7 @@ ingr2 = Ingredient.new( name: "Sweet Strawberry"  ,description: "Sweet sweet tas
   main_category: "Fruits & Vegetables ",sku:"straw-01" ,category: "Strawberry"   ,price: 8,  rating: "1",
 
   available_quantity: 50, farm_id: farm1.id  ,price_type: "kg",
-  remote_photo_url: cl_image_path("sygmleuye6nujdaurh3w.png") )
+  remote_photo_url: cl_image_path("rexnm5rdwtqb35nphkcg.png") )
 
 
 ingr2.save!
