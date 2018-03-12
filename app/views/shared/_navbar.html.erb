@@ -7,10 +7,8 @@
   <% unless current_page?(root_path) || current_page?(ingredients_path) %>
     <%= render 'shared/search-and-filter' %>
   <% end %>
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <% if user_signed_in? %>
+   <% if user_signed_in? %>
     <% if current_user.restaurant.shopping_baskets.where(status: 0).any? %>
       <%= link_to checkout_path do %>
         <div id="shopping_basket">
@@ -23,6 +21,11 @@
        <%#= current_user.restaurant.shopping_baskets.where(status: 0).first.orders.count %>
 
     <% end %>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+
       <!-- Links when logged in -->
       <%#= link_to destroy_user_session_path, method: :delete do %>
         <!-- <i class="fa fa-sign-out"></i>  <%#= t(".sign_out", default: "Log out") %> -->
