@@ -1,5 +1,4 @@
 // Specific CSS for your home-page
-
 h2 {
   font-size: 32px;
  }
@@ -56,7 +55,7 @@ h2 {
   100% { opacity: 0}
 }
 
-.rounded-circle {
+.mycontainer .rounded-circle {
     border-radius: 50% !important;
 }
 
@@ -69,6 +68,7 @@ h2 {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    padding-top:2px;
 }
 .mycontainer.team {background-color: #06514317;}
 
@@ -76,10 +76,12 @@ h2 {
     margin-bottom: 1.5rem;
     text-align: center;
 
+
 }
 .mycontainer .col-lg-3 {
   flex: 0 0 25%;
   max-width: 25%;
+  margin: 10px auto;
 }
 .mycontainer .row {
   display: flex;
@@ -88,19 +90,24 @@ h2 {
   margin-left: -15px;
 }
 
-
 .mycontainer .col-xs-12, .col-sm-4 {
     margin-bottom:2em;
     flex: 0 0 20%;
     max-width: 20%;}
 
-.about.textbox{
+.selected_ingredients {
+
+}
+
+.about .textbox{
   width:60%;
   padding: 10px 20px;
   margin: 15px auto;
   border: 1px solid #06514317;
   background-color:white;
+  height:auto;
 }
+
 .banner {
   width:100%;
   display: flex;
@@ -110,8 +117,10 @@ h2 {
 }
 
 .onslider{
-
   text-align:center;
   flex: 0 1 100%;
+}
 
+.centered-img{
+ align:middle;
 }
