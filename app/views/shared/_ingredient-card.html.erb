@@ -1,0 +1,22 @@
+<div class="ingredient-card">
+  <%= link_to ingredient_path(ingredient) do %>
+    <div class="ingredient-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%=cl_image_path ingredient.photo%>');">
+    </div>
+  <% end %>
+  <div class="ingredient-card-text">
+    <p><%= link_to "#{ingredient.name}", ingredient_path(ingredient) %> </p>
+    <!-- <p><i class="fas fa-map-marker-alt"></i>
+    <%#= ingredient.farm.farm_name %> </p> -->
+    <div class="add-to-basket">
+      <p> <%= humanized_money_with_symbol(ingredient.price) %>
+      <%= ingredient.price_type %>  </p>
+      <%= simple_form_for @order do |order| %>
+        <%= order.input :order_quantity, :label => false, collection: (1..[ingredient.available_quantity, 100].min)%>
+        <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => ingredient.id }  %>
+        <%= order.input :price_paid, :as => :hidden, :input_html => { :value => ingredient.price  }  %>
+        <%= order.submit :class => "fas fa-plus" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

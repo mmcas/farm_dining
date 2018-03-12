@@ -1,3 +1,4 @@
+
 // Ingredients card used on the ingredient show page
 .card-show {
   margin-top: 125px;
@@ -55,15 +56,64 @@
   opacity: 1;
 }
 
-// Card used on the landing page for now
-.card {
+//====================================
+
+// Ingredient card styling
+
+.cards-container {
+  margin: 50px auto;
+}
+.ingredient-card {
+  background-color: white;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.ingredient-card-image {
   height: 175px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  width: 100%;
   background-size: cover !important;
   background-position: center;
   color: white;
   position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
+
+.ingredient-card-text {
+  padding-left: 10px;
+}
+
+.form-group.select.optional.order_order_quantity {
+  width: 45px;
+  float: left;
+}
+
+.form-control.select.optional{
+  font-size: 16px;
+  height: 30px;
+  border-radius: 10px;
+}
+.add-to-basket {
+  display: flex;
+  line-height: 80%;
+  p {
+    margin-right: 8%;
+    font-size: 16px;
+  }
+}
+
+.fa-plus{
+  margin-left: 5px;
+  margin-top: 6px;
+  color:#555555;
+}
+
+
+
+//====================================
+
+//  card previously used for ingredient index page
+
 .card-user {
   position: absolute;
   right: 10px;
