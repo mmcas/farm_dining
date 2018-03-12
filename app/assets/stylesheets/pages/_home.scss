@@ -1,60 +1,68 @@
 // Specific CSS for your home-page
 
-.card {
-  height: 175px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-size: cover !important;
-  background-position: center;
-  color: white;
+h2 {
+  font-size: 32px;
+ }
+ h3 {
+  font-size: 24px;
+ }
+
+ .carousel {
+  height: 75vh;
   position: relative;
 }
-.card-user {
+.carousel-first,.carousel-second,.carousel-third {
   position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
-}
-.card-category {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 15px;
-  text-transform: uppercase;
-}
-.card-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
-.card-description h2 {
-  font-size: 24px;
-}
-.card-description p {
-  font-size: 14px;
-  opacity: 0.7;
-  font-weight: lighter;
-}
-.card-link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
   width: 100%;
-  z-index: 2;
-  background: black;
-  opacity: 0;
+  height: 100%;
 }
-.card-link:hover {
-  opacity: 0.1;
+.carousel-first {
+  background: image-url("carrots_farmer.jpg")no-repeat center;
+      background-size: cover;
+    animation:fade 24s infinite;
+-webkit-animation:fade 24s infinite;
 }
-
-
+.carousel-second {
+  background: image-url("dairy_farmer.jpg")no-repeat center;
+      background-size: cover;
+    animation:fade2 24s infinite;
+-webkit-animation:fade2 24s infinite;
+}
+.carousel-third {
+    background: image-url("berries.jpg")no-repeat center;
+      background-size: cover;
+    animation:fade3 24s infinite;
+-webkit-animation:fade3 24s infinite;
+}
+@keyframes fade
+{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
 
 .rounded-circle {
     border-radius: 50% !important;
 }
 
+.carousel-text {
+  margin-top: 250px;
+}
 .mycontainer {
     width: 100%;
     padding-right: 15px;
@@ -79,27 +87,13 @@
   margin-right: -15px;
   margin-left: -15px;
 }
-.carousel{
-  width:100%;
-  height: 75vh;
-  background: image-url("carousel_ph.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color: #06514317;
 
-
-}
 
 .mycontainer .col-xs-12, .col-sm-4 {
     margin-bottom:2em;
     flex: 0 0 20%;
     max-width: 20%;}
 
-.selected_ingredients {
-
-}
 .about.textbox{
   width:60%;
   padding: 10px 20px;
