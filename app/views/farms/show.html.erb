@@ -22,17 +22,24 @@
 
   <h3><%= "Here we find all the ingredients that the farm offers." %></h3>
 
-  <div class="row">
-    <% @ingredients.each do |ingredient| %>
-      <div class="col-xs-12 col-sm-3">
-        <div class="category-card">
-          <%=cl_image_tag ingredient.photo%>
-          <%= link_to ingredient.name, ingredient_path(ingredient) %> |
-          <%= ingredient.price %> |
-          <%= ingredient.rating %>
+  <div class="card-container">
+    <div class="row">
+      <% @ingredients.each do |ingredient| %>
+        <div class="col-xs-6 col-sm-3">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%=cl_image_path ingredient.photo%>');">
+            <%= link_to "", ingredient_path(ingredient), class: "card-link" %>
+          </div>
+
+          <div class="card-show-text">
+            <p>
+              <%= link_to ingredient.name, ingredient_path(ingredient) %> |
+              <%= ingredient.price %> |
+              <%= ingredient.rating %>
+            </p>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 
   <%#= cl_image_tag @farm.farm_photo, height: 300, width: 400, crop: :fill %>
@@ -45,6 +52,7 @@
     height: 600px;"
     data-markers="<%= @markers.to_json %>"
   ></div>
+
 </div>
 
 

@@ -85,7 +85,12 @@ farm1.save!
 farm1= Farm.new(location:'Schapenlaan 20, 1862 PW Bergen',farm_name:'Van der Stolp',farmers_name:'Greetje koren')
 
 farm1.save!
-farm2= Farm.new(location:'Hoofdvaart, Hoofddorp',farm_name:'De Witte Boerderij',farmers_name:'Bert Spruitjes')
+farm2= Farm.new(
+  location:'Hoofdvaart, Hoofddorp',
+  farm_name:'De Witte Boerderij',
+  farmers_name:'Bert Spruitjes',
+  description: '',
+  farm_photo: )
 farm2.save!
 farm3= Farm.new(location:'Burgemeester Peereboomweg, Zuiderwoude',farm_name:'de Kas',farmers_name:'Annelies de Jong')
 farm3.save!
