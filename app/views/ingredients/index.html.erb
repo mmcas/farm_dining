@@ -1,6 +1,28 @@
 
-<div class="container" style="border:1px solid green;">
-  <div class="header"> <h1>Welcome to ingredients index</h1></div>
+
+<div class="header"> <h1>Welcome to ingredients index</h1></div>
+<div class="container" style="border:1px solid red">
+<!-- .col-md-offset-2 col-xs-4 col-sm-4 col-md-4 col-lg-4 -->
+  <div class="row filter">
+      <div class="  .col-md-4 .col-md-offset-3" style="border: 1px solid blue" >
+        <%= simple_form_for @order do |o| %>
+
+        <div class="form-inline">
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find an ingredient"
+            %>
+          </div><!--form inline-->
+
+        <%#= o.input :order_quantity, label: false, input_html: { text: "TO DO: Add filter code" } %>
+        <% end %>
+      <!-- </div>
+
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" > -->
+          <button class="btn btn-farm-submit" type="submit">Filter</button>
+      </div> <!--class col-->
+  </div> <!-- row filter-->
 
   <div class="row">
 
@@ -10,10 +32,11 @@
         <div class="middle">
           <div class="category-text">
             TO DO: Fruits & Vegetables button
-          </div>
-        </div>
-      </div>
-    </div>
+          </div><!--cat text-->
+        </div> <!--middle-->
+      </div><!--category-card-->
+    </div><!--col-->
+  <!-- </div>row -->
 
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 thin-padding" >
       <div class="category-card">
@@ -21,10 +44,11 @@
         <div class="middle">
           <div class="category-text">
             TO DO: Grains & Legumes button
-          </div>
-        </div>
-      </div>
-    </div>
+          </div><!--cat text-->
+        </div> <!--middle-->
+      </div><!--category-card-->
+    </div><!--col-->
+    <!-- </div> -->
 
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 thin-padding" >
       <div class="category-card">
@@ -32,47 +56,29 @@
         <div class="middle">
           <div class="category-text">
             TO DO: Meat button
-          </div>
-        </div>
-      </div>
-    </div>
+          </div><!--cat text-->
+        </div> <!--middle-->
+      </div><!--category-card-->
+    </div><!--col-->
+   <!--  </div> -->
 
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 thin-padding" >
-      <div class="category-card rounded">
+      <div class="category-card">
         <%= image_tag("dairy_eggs.png", :alt => "picture of dairy products") %>
         <div class="middle">
           <div class="category-text">
             TO DO: Dairy & Eggs button
-          </div>
-        </div>
-      </div>
-    </div>
+          </div><!--cat text-->
+        </div> <!--middle-->
+      </div><!--category-card-->
+    </div><!--col-->
 
-  </div>  <!-- container -->
+  </div><!--row-->
+</div>
+<!--END SEARCH WITH FILTERS-->
+<!--START SEARCH RESUULT-->
 
-  <div class="row filter">
-      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" >
-        <%= simple_form_for @order do |o| %>
-
-<div class="form-inline">
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find an ingredient"
-    %>
-  </div>
-
-        <%#= o.input :order_quantity, label: false, input_html: { text: "TO DO: Add filter code" } %>
-        <% end %>
-      </div>
-
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" >
-
-            <button class="btn btn-farm-submit" type="submit">Filter</button>
-    </div>
-  </div>
-
-
+<div class="container" style="border:1px solid green;">
     <div class="cards-container">
       <div class="row" >
         <% @ingredients.each do |ingredient| %>
@@ -80,7 +86,11 @@
             <%= render 'shared/ingredient-card', ingredient: ingredient %>
           </div>
         <% end %>
+      </div> <!--row-->
+    </div> <!--cards-container-->
+</div> <!--container-->
 
-        <div id="map" style="width: 100%; height: 400px;" data-markers="<%= @markersto_json %>">
-      </div>
-    </div>
+
+<!--MAP-->
+
+<div id="map" style="width: 100%; height: 400px;" data-markers="<%= @markersto_json %>"></div>
