@@ -1,6 +1,4 @@
 
-
-
 <div class="container">
   <div class="header"> <h1>Welcome to ingredients index</h1>
   </div>
@@ -71,7 +69,7 @@
 
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" >
 
-            <button class="btn btn-filter-submit" type="submit">Filter</button>
+            <button class="btn btn-farm-submit" type="submit">Filter</button>
 
     </div>
   </div>
@@ -111,7 +109,7 @@
           <%= order.input :order_quantity, collection: (1..[ingredient.available_quantity, 100].min)%>
           <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => ingredient.id }  %>
           <%= order.input :price_paid, :as => :hidden, :input_html => { :value => ingredient.price  }  %>
-          <%= order.submit "add to basket", class: "btn btn-primary" %>
+          <%= order.submit "add to basket", class: "btn btn-farm-submit" %>
           <% end %>
           <% end %>
 

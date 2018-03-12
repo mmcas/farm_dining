@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="banner-farm" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1485801378227-e82f6a4be23a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b2d020d670d86e677ad8ce269a6e0e5e&auto=format&fit=crop&w=1049&q=80');">
+  <div class="banner-farm" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path @farm.farm_photo %>');">
     <!-- url('<%#= cl_image_tag @farm.farm_photo %>') -->
     <div class="banner-content">
       <h1><%=@farm.farm_name%></h1>
@@ -10,13 +10,13 @@
   <div class="row">
     <div class="col-xs-12 col-sm-6">
       <div class="farm-description">
-        <p class="text-long">Here is some text about the farm: <%= @farm.description%></p>
+        <p class="text-long"><%= @farm.description%></p>
       </div>
     </div>
     <div class="col-xs-12 col-sm-6">
-      <div class="farm-picture-farmer">
-        <p class="text-long">Here we will have the picture of the farmer</p>
-      </div>
+      <!-- <div class="farmer-picture"> -->
+        <%= cl_image_tag @farm.avatar_photo, :class => "style_image" %>
+      <!-- </div> -->
     </div>
   </div>
 
@@ -29,7 +29,6 @@
           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%=cl_image_path ingredient.photo%>');">
             <%= link_to "", ingredient_path(ingredient), class: "card-link" %>
           </div>
-
           <div class="card-show-text">
             <p>
               <%= link_to ingredient.name, ingredient_path(ingredient) %> |

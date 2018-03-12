@@ -1,15 +1,74 @@
 // Specific CSS for your home-page
+h2 {
+  font-size: 32px;
+ }
+ h3 {
+  font-size: 24px;
+ }
 
-.rounded-circle {
+ .carousel {
+  height: 75vh;
+  position: relative;
+}
+.carousel-first,.carousel-second,.carousel-third {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.carousel-first {
+  background: image-url("carrots_farmer.jpg")no-repeat center;
+      background-size: cover;
+    animation:fade 24s infinite;
+-webkit-animation:fade 24s infinite;
+}
+.carousel-second {
+  background: image-url("dairy_farmer.jpg")no-repeat center;
+      background-size: cover;
+    animation:fade2 24s infinite;
+-webkit-animation:fade2 24s infinite;
+}
+.carousel-third {
+    background: image-url("berries.jpg")no-repeat center;
+      background-size: cover;
+    animation:fade3 24s infinite;
+-webkit-animation:fade3 24s infinite;
+}
+@keyframes fade
+{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
+
+.mycontainer .rounded-circle {
     border-radius: 50% !important;
 }
 
+.carousel-text {
+  margin-top: 250px;
+}
 .mycontainer {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    padding-top:2px;
 }
 .mycontainer.team {background-color: #06514317;}
 
@@ -17,10 +76,12 @@
     margin-bottom: 1.5rem;
     text-align: center;
 
+
 }
 .mycontainer .col-lg-3 {
   flex: 0 0 25%;
   max-width: 25%;
+  margin: 10px auto;
 }
 
 .mycontainer .row {
@@ -56,6 +117,7 @@
   margin: 15px auto;
   border: 1px solid #06514317;
   background-color:white;
+  height:auto;
 }
 
 .banner {
@@ -69,4 +131,8 @@
 .onslider{
   text-align:center;
   flex: 0 1 100%;
+}
+
+.centered-img{
+ align:middle;
 }
