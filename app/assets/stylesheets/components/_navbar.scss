@@ -75,6 +75,12 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+#shopping_basket{
+  position: absolute;
+  right:10%;
+  top:0px;
+
+}
 
 #shopping_basket .p1[data-count]:after{
   position:absolute;
