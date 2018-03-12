@@ -16,19 +16,19 @@ h2 {
   height: 100%;
 }
 .carousel-first {
-  background: image-url("carrots_farmer.jpg")no-repeat center;
+  background: image-url("carrots_farmer.jpg")no-repeat center fixed;
       background-size: cover;
     animation:fade 24s infinite;
 -webkit-animation:fade 24s infinite;
 }
 .carousel-second {
-  background: image-url("dairy_farmer.jpg")no-repeat center;
+  background: image-url("dairy_farmer.jpg")no-repeat center fixed;
       background-size: cover;
     animation:fade2 24s infinite;
 -webkit-animation:fade2 24s infinite;
 }
 .carousel-third {
-    background: image-url("berries.jpg")no-repeat center;
+    background: image-url("berries.jpg")no-repeat center fixed;
       background-size: cover;
     animation:fade3 24s infinite;
 -webkit-animation:fade3 24s infinite;
@@ -75,7 +75,6 @@ h2 {
 .mycontainer .team .col-lg-3 {
     margin-bottom: 1.5rem;
     text-align: center;
-
 
 }
 .mycontainer .col-lg-3 {
@@ -135,4 +134,10 @@ h2 {
 
 .centered-img{
  align:middle;
+}
+
+.team a:visited{
+  color:#77B28C;
+  text-decoration:none;
+
 }
