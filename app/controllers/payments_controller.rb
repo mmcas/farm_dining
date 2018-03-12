@@ -16,9 +16,13 @@ class PaymentsController < ApplicationController
     description:  "Payment for Ingredient(s)  for order #{@cart.id}",
     currency:     @cart.orders.first.amount.currency
   )
-
+  @cart.orders.each do |order|
+    order.ingredient.available_quantity = order.ingredient.available_quantity - order.order_quantity
+    order.ingredient.save
+  end
   @cart.update(status: 1)
   redirect_to checkout_path
+
 
 rescue Stripe::CardError => e
   flash[:alert] = e.message

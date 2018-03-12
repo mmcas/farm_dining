@@ -33,10 +33,10 @@ class OrdersController < ApplicationController
 
   def update
     @order = Order.find(params[:id]) #keep
-    #@ingredient = Ingredient.find(@order.ingredient_id)
+    @ingredient = Ingredient.find(@order.ingredient_id)
     @order_update = @order.update(order_params) #keep
-    #@order.amount = @ingredient.price * @order.order_quantity.to_i
-    #@order.update([:order][:amount])
+    @order.amount = @ingredient.price * @order.order_quantity.to_i
+    @order.save
     redirect_back(fallback_location: checkout_path) #keep
   end
 
