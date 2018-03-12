@@ -1,64 +1,66 @@
-
+<% @carousel_class = ['carousel-first', 'carousel-second', 'carousel-third'] %>
 <div class="carousel">
-  <!-- slides carousel comes here -->
-  <div class="banner">
-    <div class="onslider" style="color:white;">
-      <h1><strong>Farm Dining</strong></h1>
-      <h2><strong>Find Ingredients at your local Farmer</strong></h2>
-      <%= link_to "CHECK IT OUT", ingredients_path, class: "btn btn-farm-submit" %>
-    </div>
-  </div><!--banner-->
-
-
+    <!-- slides carousel comes here -->
+  <div class="onslider" style="color:white;">
+    <% @carousel_class.each do |number|  %>
+      <div class=<%= "#{number}"%>>
+        <div>
+        </div>
+        <div class="carousel-text">
+          <h1><strong>Farm Dining</strong></h1>
+          <h2><strong>Find Ingredients at your local Farmer</strong></h2>
+          <%= link_to "CHECK IT OUT!", ingredients_path, class: "btn btn-farm-submit" %>
+          </div>
+      </div>
+    <% end %>
+  </div>
 </div><!--carousel-->
 
-
-
 <div class="mycontainer selected_ingredients">
-      <h1>Our Top Selection</h1>
-      <div class="row">
-        <!--display 5 results in one row-->
+  <h2>Our Top Selection</h2>
+    <div class="row">
+    <!--display 5 results in one row-->
       <div class="col-xs-12 col-sm-4">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-            <div class="card-category">rate</div>
+          <div class="card-category">rate</div>
           <div class="card-description">
-            <h2>name:</h2>
-              <p>price:</p>
-            </div>
-              <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/mmcas">
-          <a class="card-link" href="#" ></a>
+            <h3>name:</h3>
+            <p>price:</p>
+          </div>
+            <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/mmcas">
+            <a class="card-link" href="#" ></a>
         </div>
-       </div>
+      </div>
 
-        <div class="col-xs-12 col-sm-4">
+      <div class="col-xs-12 col-sm-4">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/mexico');">
-            <div class="card-category">rate</div>
+          <div class="card-category">rate</div>
           <div class="card-description">
-            <h2>name:</h2>
-              <p>price:</p>
-            </div>
-              <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/Fl00rtje">
+            <h3>name:</h3>
+            <p>price:</p>
+          </div>
+            <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/Fl00rtje">
           <a class="card-link" href="#" ></a>
         </div>
       </div>
 
       <div class="col-xs-12 col-sm-4">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/paris');">
-            <div class="card-category">rate</div>
+          <div class="card-category">rate</div>
           <div class="card-description">
-            <h2>name:</h2>
-              <p>price:</p>
-            </div>
-              <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/ies33">
+            <h3>name:</h3>
+            <p>price:</p>
+          </div>
+          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/ies33">
           <a class="card-link" href="#" ></a>
         </div>
        </div>
 
-        <div class="col-xs-12 col-sm-4">
+      <div class="col-xs-12 col-sm-4">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/marseille');">
             <div class="card-category">rate</div>
           <div class="card-description">
-            <h2>name:</h2>
+            <h3>name:</h3>
               <p>price:</p>
             </div>
               <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/MarkLeWagon">
@@ -70,22 +72,18 @@
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/stockholm');">
             <div class="card-category">rate</div>
           <div class="card-description">
-            <h2>name:</h2>
+            <h3>name:</h3>
               <p>price:</p>
             </div>
               <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/mmcas">
           <a class="card-link" href="#" ></a>
-        </div>
       </div>
-
+    </div>
   </div><!--end row-->
-
-
-
-
 </div><!--container selected ingredients-->
 
 <!-- <div class="about">
+
   <div class="textbox">
             <h1>Farm Dining</h1>
         <p>There are many, mainly small, producers, a few and big traders and retailers, and many consumers. This means that the few in the middle are the ones with the bargain power. Which means they are the ones setting the food prices and get highest marginals. </p>
@@ -98,12 +96,9 @@
 
 </div> -->
 
-
-
-
 <div class="mycontainer team">
         <!-- Four columns with team avatars -->
-        <h1>Meet the Farm-dining team</h1>
+        <h2>Meet the Farm-dining team</h2>
         <div class="row">
 
           <div class="col-lg-3">

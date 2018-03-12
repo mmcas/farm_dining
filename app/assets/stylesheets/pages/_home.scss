@@ -1,9 +1,67 @@
 // Specific CSS for your home-page
+h2 {
+  font-size: 32px;
+ }
+ h3 {
+  font-size: 24px;
+ }
+
+ .carousel {
+  height: 75vh;
+  position: relative;
+}
+.carousel-first,.carousel-second,.carousel-third {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.carousel-first {
+  background: image-url("carrots_farmer.jpg")no-repeat center;
+      background-size: cover;
+    animation:fade 24s infinite;
+-webkit-animation:fade 24s infinite;
+}
+.carousel-second {
+  background: image-url("dairy_farmer.jpg")no-repeat center;
+      background-size: cover;
+    animation:fade2 24s infinite;
+-webkit-animation:fade2 24s infinite;
+}
+.carousel-third {
+    background: image-url("berries.jpg")no-repeat center;
+      background-size: cover;
+    animation:fade3 24s infinite;
+-webkit-animation:fade3 24s infinite;
+}
+@keyframes fade
+{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
 
 .mycontainer .rounded-circle {
     border-radius: 50% !important;
 }
 
+.carousel-text {
+  margin-top: 250px;
+}
 .mycontainer {
     width: 100%;
     padding-right: 15px;
@@ -31,18 +89,6 @@
   margin-right: -15px;
   margin-left: -15px;
 }
-.carousel{
-  width:100%;
-  height: 75vh;
-  background: image-url("carousel_ph.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color: #06514317;
-
-
-}
 
 .mycontainer .col-xs-12, .col-sm-4 {
     margin-bottom:2em;
@@ -52,6 +98,7 @@
 .selected_ingredients {
 
 }
+
 .about .textbox{
   width:60%;
   padding: 10px 20px;
@@ -60,6 +107,7 @@
   background-color:white;
   height:auto;
 }
+
 .banner {
   width:100%;
   display: flex;
@@ -69,11 +117,10 @@
 }
 
 .onslider{
-
   text-align:center;
   flex: 0 1 100%;
-
 }
+
 .centered-img{
  align:middle;
 }
