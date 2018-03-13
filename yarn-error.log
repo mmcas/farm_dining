@@ -21,7 +21,8 @@ npm manifest:
       "@rails/webpacker": "^3.3.0",
       "bootstrap": "3",
       "gmaps": "^0.4.24",
-      "jquery": "^3.3.1"
+      "jquery": "^3.3.1",
+      "maps": "^0.3.3"
     },
     "devDependencies": {
       "webpack-dev-server": "^3.1.0"
@@ -3353,6 +3354,10 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/map-visit/-/map-visit-1.0.0.tgz#ecdca8f13144e660f1b5bd41f12f3479d98dfb8f"
     dependencies:
       object-visit "^1.0.0"
+  
+  maps@^0.3.3:
+    version "0.3.3"
+    resolved "https://registry.yarnpkg.com/maps/-/maps-0.3.3.tgz#97d2aefd0613d0e1fc626944b56d3680dcf300ab"
   
   math-expression-evaluator@^1.2.14:
     version "1.2.17"
