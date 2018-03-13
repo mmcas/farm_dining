@@ -12,6 +12,7 @@
     <% if @shopping_basket  %>
       <% @shopping_basket.orders.each do |order| %>
         <% ingredient = order.ingredient %>
+
         <div class="message-box">
 
           <div class="message-picture">
@@ -37,7 +38,7 @@
           </div> <!-- quantity -->
 
           <div class="total-price" id="content-to-hide">
-            <p> € <%= order.amount %></p>
+            <p> € <%= order.amount * order.order_quantity %></p>
           </div> <!-- total-price -->
 
           <div class="edit-button-and-trash">
