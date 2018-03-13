@@ -77,34 +77,46 @@
   color: white;
   position: relative;
   box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  margin-bottom: -12px;
 }
 
 .ingredient-card-text {
   padding-left: 10px;
-}
-
-.form-group.select.optional.order_order_quantity {
-  width: 45px;
-  float: left;
-}
-
-.form-control.select.optional{
-  font-size: 16px;
-  height: 30px;
-  border-radius: 10px;
-}
-.add-to-basket {
-  display: flex;
-  line-height: 80%;
-  p {
-    margin-right: 8%;
-    font-size: 16px;
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 10px;
+  h3 {
+    font-size: 18px;
+    line-height: 60%;
   }
 }
 
+.ingredient-card-paragraph {
+  p {
+    margin-top: 5px;
+    margin-bottom: 3px;
+  }
+}
+
+.add-to-basket {
+  line-height: 80%;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.quantity_ingredient {
+  font-size: 12px;
+  height: 25px;
+  width: 35px;
+}
+
+.quantity_button {
+  border: none;
+}
+
+
 .fa-plus{
-  margin-left: 5px;
-  margin-top: 6px;
   color:#555555;
 }
 
@@ -113,6 +125,15 @@
 //====================================
 
 //  card previously used for ingredient index page
+
+.card {
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+}
 
 .card-user {
   position: absolute;

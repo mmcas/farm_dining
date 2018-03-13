@@ -6,7 +6,7 @@
 
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 thin-padding" >
       <div class="category-card">
-        <%= image_tag("Fruits_veg.png", :alt => "Picture of fruits and vegetables") %>
+        <%#= image_tag("Fruits_veg.png", :alt => "Picture of fruits and vegetables") %>
         <div class="middle">
           <div class="category-text">
             TO DO: Fruits & Vegetables button
@@ -17,7 +17,7 @@
 
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 thin-padding" >
       <div class="category-card">
-        <%= image_tag("grains.png", :alt => "Picture of whole grains and fibers") %>
+        <%#= image_tag("grains.png", :alt => "Picture of whole grains and fibers") %>
         <div class="middle">
           <div class="category-text">
             TO DO: Grains & Legumes button
@@ -28,7 +28,7 @@
 
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 thin-padding" >
       <div class="category-card">
-        <%= image_tag("Meat.png", :alt => "picture of dairy products") %>
+        <%#= image_tag("Meat.png", :alt => "picture of dairy products") %>
         <div class="middle">
           <div class="category-text">
             TO DO: Meat button
@@ -39,7 +39,7 @@
 
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 thin-padding" >
       <div class="category-card rounded">
-        <%= image_tag("dairy_eggs.png", :alt => "picture of dairy products") %>
+        <%#= image_tag("dairy_eggs.png", :alt => "picture of dairy products") %>
         <div class="middle">
           <div class="category-text">
             TO DO: Dairy & Eggs button
@@ -76,7 +76,7 @@
     <div class="cards-container">
       <div class="row" >
         <% @ingredients.each do |ingredient| %>
-          <div class="col-xs-6 col-md-3" >
+          <div class="col-xs-12 col-sm-6 col-md-3" >
             <%= render 'shared/ingredient-card', ingredient: ingredient %>
           </div>
         <% end %>
