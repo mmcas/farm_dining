@@ -14,14 +14,13 @@
         <%= ingredient.farm.farm_name %>
       </p>
       <div class="add-to-basket">
-        <%= simple_form_for @order do |order| %>
+        <%= simple_form_for @order, :html => { :class => "form-inline"} do |order| %>
           <%= order.input :order_quantity, label: false, collection: (0..[ingredient.available_quantity, 100].min), input_html: { class: "quantity_ingredient" } %>
           <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => ingredient.id }  %>
           <%= order.input :price_paid, :as => :hidden, :input_html => { :value => ingredient.price  }%>
           <button type="submit" class="quantity_button">
             <i class="fas fa-plus"></i>
           </button>
-
         <% end %>
       </div>
     </div>
