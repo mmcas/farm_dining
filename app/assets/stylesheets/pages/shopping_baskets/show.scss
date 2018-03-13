@@ -4,8 +4,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
   margin-bottom: 10px;
   flex: 1;
 }
@@ -66,25 +66,49 @@
   flex: 1;
 }
 
-.total-amount {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-}
-
 @media (max-width:660px) {
    #content-to-hide {
       display: none;
    }
 }
 
-.value-total-amount {
+.total-amount {
   padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.text-total-amount {
+  margin-right: 40px;
+
 }
 
 .card-payment {
-  padding: 10px;
+  margin-right: 50px;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: flex-end;
 }
 
+.response {
+  margin-top: 15px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.stripe-button-el span {
+  border: 1px solid $green !important;
+  font-family: 'Quicksand', sans-serif !important;
+  background: $green !important;
+}
+
+.stripe-button-el {
+padding: 0px !important;
+}

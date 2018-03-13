@@ -5,7 +5,7 @@
 <div class="container">
 
   <div class="header-text">
-    <h1>Order List</h1>
+    <h1>Your Order</h1>
   </div> <!-- header-text -->
 
   <div class="row" id="white" >
@@ -57,11 +57,9 @@
   <div class="row">
     <div class="total-amount">
       <div class="text-total-amount">
-        <h1>Total amount:</h1>
+        <h1>Total amount: <span><%= humanized_money_with_symbol(@shopping_basket.total_price / 100) %></span></h1>
       </div> <!-- text-total-amount -->
-      <div class="value-total-amount">
-        <h1><span><%= humanized_money_with_symbol(@shopping_basket.total_price / 100) %></span></h1>
-      </div> <!-- value-total-amount -->
+
     </div> <!-- total-amount -->
   </div> <!-- row -->
 
