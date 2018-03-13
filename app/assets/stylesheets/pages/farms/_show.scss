@@ -10,11 +10,16 @@
   justify-content: center;
   margin-top: 30px;
   margin-bottom: 30px;
+  border-radius: 40px;
 }
+.banner-farm h1 {
+  font-weight: bold;
 
+}
 .banner-farm p {
   font-size: 25px;
-  opacity: 0.6;
+ /* font-weight: bold;*/
+  /*opacity: 0.6;*/
   margin-bottom: 30px;
 }
 
@@ -22,6 +27,26 @@
   background-color: white;
   padding: 10px;
   margin-bottom: 20px;
-  height: 300px;
-  width: 550px;
+  // height: 300px;
+  // width: 550px;
+}
+
+.rounded-corners{
+  border-radius: 40px;
+}
+.fa-home, .fa-at {
+    color: #77B28C;
+}
+
+.align-center {
+  margin: 5px auto;
+  width:100%;
+}
+
+.welc-farm{
+  /*background-color: rgba(119,178,140, 0.8);*/
+  padding: 0px 8px;
+  border-radius: 5px;
+  /*color: #77B28C;*/
+
 }

@@ -1,49 +1,63 @@
 <div class="container">
-  <div class="banner-farm" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path @farm.farm_photo %>');">
-    <!-- url('<%#= cl_image_tag @farm.farm_photo %>') -->
+  <div class="banner-farm" style="background-image: linear-gradient(-45deg,
+    rgba(204, 212, 217, 0.6) 0%,
+    rgba(118, 173, 211, 0.3) 25%),
+    url('<%= cl_image_path @farm.farm_photo %>');">
     <div class="banner-content">
       <h1><%=@farm.farm_name%></h1>
-      <p>A warm welcome from <%=@farm.farmers_name=%>.</p>
-    </div>
-  </div>
+
+    </div><!--banner content-->
+  </div><!--banner farm-->
+</div><!--container-->
+
+<div class="container">
 
   <div class="row">
-    <div class="col-xs-12 col-sm-6">
-      <div class="farm-description">
+    <div class="col-xs-12 col-sm-9">
+      <div class="welc-farm">
+        <h3>A warm welcome from <%=@farm.farmers_name=%>.</h3>
+      </div>
+      <!--  <h3>  A warm welcome from <%=@farm.farmers_name=%>.</h3> -->
+      <div class="farm-description" style="border-radius:20px;">
+       <!--  <h3>A warm welcome from <%=@farm.farmers_name=%>.</h3> -->
         <p class="text-long"><%= @farm.description%></p>
+        <i class="fas fa-home"></i> <%= @farm.location%>
+        <i class="fas fa-at"></i> <%= @farm.farmer_email%>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-6 col-sm-3">
       <!-- <div class="farmer-picture"> -->
-        <%= cl_image_tag @farm.avatar_photo, :class => "style_image" %>
+        <%= cl_image_tag @farm.avatar_photo, :class => "style_image rounded-corners" %>
       <!-- </div> -->
     </div>
   </div>
 
-  <h3><%= "Here we find all the ingredients that the farm offers." %></h3>
+  <h3><%= "All our current ingredients" %></h3>
 
   <div class="card-container">
     <div class="row">
       <% @ingredients.each do |ingredient| %>
-        <div class="col-xs-6 col-sm-3">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%=cl_image_path ingredient.photo%>');">
-            <%= link_to "", ingredient_path(ingredient), class: "card-link" %>
-          </div>
-          <div class="card-show-text">
-            <p>
-              <%= link_to ingredient.name, ingredient_path(ingredient) %> |
-              <%= ingredient.price %> |
-              <%= ingredient.rating %>
-            </p>
-          </div>
-        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+
+        <%= render 'shared/ingredient-card', ingredient: ingredient %>
+
+        </div><!--col-->
       <% end %>
+
+    </div><!--row-->
+
+
+  </div><!--card-container-->
+
+
+  <div class="container">
+    <div class="row" style="margin-bottom: 15px;">
+      <div class="col-xs-12 col-md-2 col-md-offset-5">
+        <%= link_to "SEE ALL INGREDIENTS", ingredients_path, class: "btn btn-farm" %>
+      </div>
     </div>
   </div>
 
-  <%#= cl_image_tag @farm.farm_photo, height: 300, width: 400, crop: :fill %>
-
-  <%= link_to "BACK TO INDEX", ingredients_path, class: "btn btn-farm" %>
 
   <div
     id="map"
