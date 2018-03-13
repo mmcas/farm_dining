@@ -10,8 +10,8 @@ class Ingredient < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
   include PgSearch
-  pg_search_scope :search_by_category_and_main_category,
-    against: [ :category, :main_category ],
+  pg_search_scope :search_by_category_name_main_category,
+    against: [ :name, :category, :main_category ],
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
