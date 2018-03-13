@@ -5,8 +5,8 @@
       class: "form-control",
       placeholder: "Find an ingredient"
     %>
-    <label for="filter" >Filter on:</label>
-    <%= select_tag "filter", options_for_select([ "Please select", "Rating", "Price" ],  params[:filter]), class: "form-control font-small" %>
+    <label for="filter" ><!-- Filter on: --></label>
+    <%= select_tag "filter", options_for_select([ "Filter on", "Rating", "Price" ],  params[:filter]), class: "form-control font-small" %>
     <%= submit_tag "Search", class: "btn btn-farm-submit" %>
   </div>
 <% end %>
