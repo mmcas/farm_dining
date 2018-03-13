@@ -16,4 +16,8 @@ class Ingredient < ApplicationRecord
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
   mount_uploader :photo, PhotoUploader
+
+  def blank_stars
+    5 - self.rating
+  end
 end

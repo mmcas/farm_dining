@@ -15,13 +15,22 @@
       <div class="columns">
         <div class="textbox">
         <h4>Description Ingredient + Farm</h4>
-          From farm: <%= link_to @ingredient.farm.farm_name, farm_path(@ingredient.farm) %><br>
+          <i class="fas fa-map-marker-alt"> </i> <%= link_to @ingredient.farm.farm_name, farm_path(@ingredient.farm) %><br>
           Main category: <%= @ingredient.main_category %><br>
           Ingredient: <%= @ingredient.category %><br>
           Available_quantity: <%= @ingredient.available_quantity %><br>
           SKU: <%= @ingredient.sku %><br>
           Price: <%= humanized_money_with_symbol(@ingredient.price) %>
-            <%= @ingredient.price_type %>
+          <%= @ingredient.price_type %>
+
+          <p>Rating:
+          <% @ingredient.rating.times do  %>
+            <span class="glyphicon glyphicon-star"></span>
+          <% end %>
+          <% @ingredient.blank_stars.times do  %>
+            <span class="glyphicon glyphicon-star-empty"></span>
+          <% end %></p>
+
         </div>
         <%= cl_image_tag @farm.farm_photo, :class => "style_image" %>
       </div>
