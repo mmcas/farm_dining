@@ -1,7 +1,6 @@
 <div class="ingredient-card">
   <%= link_to ingredient_path(ingredient) do %>
     <div class="ingredient-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%=cl_image_path ingredient.photo%>');">
-      <%= cl_image_tag ingredient.farm.avatar_photo, class: "card-user" %>
     </div>
   <% end %>
   <div class="ingredient-card-text">
@@ -13,16 +12,18 @@
         <i class="fas fa-map-marker-alt"> </i>
         <%= ingredient.farm.farm_name %>
       </p>
-      <div class="add-to-basket">
-        <%= simple_form_for @order, :html => { :class => "form-inline"} do |order| %>
-          <%= order.input :order_quantity, label: false, collection: (0..[ingredient.available_quantity, 100].min), input_html: { class: "quantity_ingredient" } %>
-          <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => ingredient.id }  %>
-          <%= order.input :price_paid, :as => :hidden, :input_html => { :value => ingredient.price  }%>
-          <button type="submit" class="quantity_button">
-            <i class="fas fa-plus"></i>
-          </button>
-        <% end %>
-      </div>
+      <% unless current_page?(root_path) %>
+        <div class="add-to-basket">
+          <%= simple_form_for @order, :html => { :class => "form-inline"} do |order| %>
+            <%= order.input :order_quantity, label: false, collection: (0..[ingredient.available_quantity, 100].min), input_html: { class: "quantity_ingredient" } %>
+            <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => ingredient.id }  %>
+            <%= order.input :price_paid, :as => :hidden, :input_html => { :value => ingredient.price  }%>
+            <button type="submit" class="quantity_button">
+              <i class="fas fa-plus"></i>
+            </button>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
