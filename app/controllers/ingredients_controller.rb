@@ -8,7 +8,7 @@ class IngredientsController < ApplicationController
 
     # Search
     if params[:query].present?
-      @ingredients = Ingredient.search_by_category_and_main_category(params[:query])
+      @ingredients = Ingredient.search_by_category_name_main_category(params[:query])
     else
       @ingredients = Ingredient.all
     end
