@@ -76,29 +76,6 @@
 </div>
 
 <!--END SEARCH WITH FILTERS-->
-<!-- Everything below should be reindented -->
-
-  <div class="row filter">
-      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" >
-        <%= simple_form_for @order do |o| %>
-
-<div class="form-inline">
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find an ingredient"
-    %>
-  </div>
-
-        <%#= o.input :order_quantity, label: false, input_html: { text: "TO DO: Add filter code" } %>
-        <% end %>
-      </div>
-
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" >
-
-            <button class="btn btn-farm-submit" type="submit">Filter</button>
-    </div>
-  </div>
 
 <!--START SEARCH RESULT-->
 
