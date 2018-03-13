@@ -1,4 +1,3 @@
-
 <div class="container" style="background-color: white; margin-top:40px">
 
   <div class="row filter">
@@ -83,7 +82,7 @@
     <div class="cards-container">
       <div class="row" >
         <% @ingredients.each do |ingredient| %>
-          <div class="col-xs-6 col-md-3" >
+          <div class="col-xs-12 col-sm-6 col-md-3" >
             <%= render 'shared/ingredient-card', ingredient: ingredient %>
           </div>
         <% end %>
