@@ -1,4 +1,3 @@
-<%= link_to "BACK TO INDEX", ingredients_path, class: "btn btn-farm" %>
 <div class="container">
   <h1 class="centered-bold"> <%= @ingredient.name %> </h1>
   <div class="row">
@@ -39,3 +38,11 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+    <div class="row" style="margin-bottom: 15px;">
+      <div class="col-xs-12 col-md-2 col-md-offset-5">
+        <%= link_to "SEE ALL INGREDIENTS", ingredients_path, class: "btn btn-farm" %>
+      </div>
+    </div>
+  </div>
