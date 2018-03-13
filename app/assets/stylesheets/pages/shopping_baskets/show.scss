@@ -1,0 +1,114 @@
+.message-box {
+  background: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.header-text {
+  text-align: center
+}
+
+.back-button {
+  margin: 15px;
+}
+
+.message-picture img {
+  border-radius: 25px;
+}
+
+.message-body {
+  flex: 1;
+}
+
+.list-inline.edit_button {
+  margin: 15px !important;
+}
+
+.edit-button-and-trash {
+  padding: 5px;
+  flex: 1
+}
+
+.total-price {
+  padding: 10px;
+  flex: 1;
+}
+
+.quantity {
+  padding: 5px;
+  flex: 1;
+}
+
+.unit-price {
+
+  padding: 10px;
+  flex: 1;
+}
+
+.product-body {
+  padding: 10px;
+  flex: 1;
+}
+
+.message-picture {
+  margin-left: 12px;
+  flex: 1;
+}
+
+.unit-info {
+  padding: 30px;
+  flex: 1;
+}
+
+@media (max-width:660px) {
+   #content-to-hide {
+      display: none;
+   }
+}
+
+.total-amount {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.text-total-amount {
+  margin-right: 40px;
+
+}
+
+.card-payment {
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.response {
+  margin-top: 15px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.stripe-button-el span {
+  border: 1px solid $green !important;
+  font-family: 'Quicksand', sans-serif !important;
+  background: $green !important;
+}
+
+.stripe-button-el {
+padding: 0px !important;
+}

@@ -1,59 +1,98 @@
-<%= link_to "BACK TO INDEX", ingredients_path, class: "btn btn-farm" %>
+<div class="back-button">
+  <%= link_to "BACK TO INDEX", ingredients_path, class: "btn btn-farm" %>
+</div> <!-- back-button -->
 
 <div class="container">
-  <%#= link_to "BACK TO FARM", farm_path(@farm), class: "btn btn-farm" %>
-  <% if @shopping_basket  %>
 
-    <% @shopping_basket.orders.each do |order| %>
-       <% ingredient = order.ingredient %>
-      <%= cl_image_tag ingredient.photo, :width=>100, :height=>100  %>
-      <p>  <%= link_to order.ingredient.name, ingredient_path(order.ingredient) %></p>
-      <p>  <%= link_to order.ingredient.farm.farm_name, farm_path(order.ingredient.farm) %></p>
-      <div id="lol">
-        <%= simple_form_for order do |order| %>
-          <%= order.input :order_quantity, collection: (1..[ingredient.available_quantity, 100].min)%>
-          <%= order.submit "update", class: "btn btn-primary" %>
-        <% end %>
-      </div>
-      <p>  <%= order.order_quantity %> units</p>
-      <p><%= humanized_money_with_symbol(ingredient.price) %>
-      <%= ingredient.price_type %></p>
-      <p> € <%= order.amount %>
-      </p>
-      <br />
-      <div id='editShoppingBasket'>
-        <i class="far fa-edit"> </i>
-      </div>
-      <%= link_to order, method: :delete do %>
-        <i class="far fa-trash-alt"> </i>
-      <% end %>
-      <hr>
-    <% end %>
+  <div class="header-text">
+    <h1>Your Order</h1>
+  </div> <!-- header-text -->
 
-    <h1>Total amount:</h1>
-    <%= form_tag shopping_basket_payments_path(@shopping_basket) do %>
-      <article>
-        <label class="amount">
-          <span>Amount: <%= humanized_money_with_symbol(@shopping_basket.total_price / 100) %></span>
-        </label>
-      </article>
+  <div class="row" id="white" >
+    <% if @shopping_basket  %>
+      <% @shopping_basket.orders.each do |order| %>
+        <% ingredient = order.ingredient %>
+
+        <div class="message-box">
+
+          <div class="message-picture">
+            <%= cl_image_tag ingredient.photo, :width=>100, :height=>100  %>
+          </div> <!-- message-picture -->
+
+          <%#= link_to "BACK TO FARM", farm_path(@farm), class: "btn btn-farm" %>
+
+          <div class='product-body' id="content-to-hide">
+            <p><%= link_to order.ingredient.name, ingredient_path(order.ingredient)%>,</p>
+            <%= link_to order.ingredient.farm.farm_name, farm_path(order.ingredient.farm) %>
+          </div> <!-- product-body -->
+
+          <div class="unit-info" data-edit_id="<%= order.id %>">
+            <%= simple_form_for order do |order| %>
+              <%= order.input :order_quantity, collection: (1..[  ingredient.available_quantity, 100].min)%>
+              <%= order.submit "update", class: "btn btn-primary" %>
+            <% end %> <!-- simple_form_for end -->
+          </div> <!-- unit-info -->
+
+          <div class="quantity">
+            <p><%= order.order_quantity %> units</p>
+          </div> <!-- quantity -->
+
+          <div class="total-price" id="content-to-hide">
+            <p> € <%= order.amount * order.order_quantity %></p>
+          </div> <!-- total-price -->
+
+          <div class="edit-button-and-trash">
+            <div class="list-inline edit_button" data-order_id="<%= order.id %>">
+              <i class="far fa-edit"> </i>
+              <%= link_to order, method: :delete do %>
+                <i class="far fa-trash-alt"> </i>
+              <% end %> <!-- link to order end -->
+            </div> <!-- edit button -->
+          </div> <!-- edit-button-and-trash -->
+
+        </div> <!-- message box -->
+    <% end %> <!-- shopping_basket orders end -->
+  </div> <!-- row -->
+
+  <div class="row">
+    <div class="total-amount">
+      <div class="text-total-amount">
+        <h1>Total amount: <span><%= humanized_money_with_symbol(@shopping_basket.total_price / 100) %></span></h1>
+      </div> <!-- text-total-amount -->
+
+    </div> <!-- total-amount -->
+  </div> <!-- row -->
+
+  <div class="row">
+
+    <div class="card-payment">
+      <%= form_tag shopping_basket_payments_path(@shopping_basket) do %>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-name="My Ingredient(s)"
+          data-email="<%= current_user.email %>"
+          data-description="Ingredient "
+          data-amount="<%= @shopping_basket.total_price %>"
+          data-currency="<%= @shopping_basket.orders.first.amount.currency %>">
+        </script>
+      <% end %> <!-- form_tag_shopping_basket end -->
+    </div> <!-- card-payment -->
+
+    <% end  %> <!-- if end -->
+
+    <div class="response">
+      <p>TODO  display Previous Purchases.<p/>
+      <p>All purchases have been paid.</p>
+      <p>Your Shopping Basket is empty<p/>
+    </div> <!-- response -->
+
+  </div> <!-- row -->
+</div> <!-- container -->
 
 
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-        data-name="My Ingredient(s)"
-        data-email="<%= current_user.email %>"
-        data-description="Ingredient "
-        data-amount="<%= @shopping_basket.total_price %>"
-        data-currency="<%= @shopping_basket.orders.first.amount.currency %>">
-      </script>
 
-    <% end %>
-    <% else  %>
-    <p>TODO  display Previous Purchases.<br />
-     All purchases have been paid.<br />
-    Your Shopping Basket is empty<br />
-    <%= link_to "Order New Ingredients", ingredients_path %>
-    </p>
-  <% end  %>
-</div>
+<!--
+<div class="unit-price">
+          <p><%#= humanized_money_with_symbol(ingredient.price) %>
+          <%#= ingredient.price_type %></p>
+        </div> -->
