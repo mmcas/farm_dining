@@ -14,12 +14,8 @@
 
   <div class="row">
     <div class="col-xs-12 col-sm-9">
-      <div class="welc-farm">
-        <h3>A warm welcome from <%=@farm.farmers_name=%>.</h3>
-      </div>
-      <!--  <h3>  A warm welcome from <%=@farm.farmers_name=%>.</h3> -->
       <div class="farm-description" style="border-radius:20px;">
-       <!--  <h3>A warm welcome from <%=@farm.farmers_name=%>.</h3> -->
+        <h3>A warm welcome from <%=@farm.farmers_name=%>.</h3>
         <p class="text-long"><%= @farm.description%></p>
         <i class="fas fa-home"></i> <%= @farm.location%>
         <i class="fas fa-at"></i> <%= @farm.farmer_email%>
