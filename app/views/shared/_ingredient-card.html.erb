@@ -6,7 +6,7 @@
   <div class="ingredient-card-text">
     <h3><%= link_to "#{ingredient.name}", ingredient_path(ingredient) %> </h3>
     <div class="ingredient-card-paragraph">
-      <p class="price-ingredient"> <%= humanized_money_with_symbol(ingredient.price) %> <%= ingredient.price_type %>
+      <p class="price-ingredient"> <%= humanized_money_with_symbol(ingredient.price) %>/<%= ingredient.price_type %>
       </p>
       <p>
         <i class="fas fa-map-marker-alt"> </i>

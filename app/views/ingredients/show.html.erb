@@ -19,8 +19,7 @@
           Ingredient: <%= @ingredient.category %><br>
           Available_quantity: <%= @ingredient.available_quantity %><br>
           SKU: <%= @ingredient.sku %><br>
-          Price: <%= humanized_money_with_symbol(@ingredient.price) %>
-          <%= @ingredient.price_type %>
+          Price: <%= humanized_money_with_symbol(@ingredient.price) %>/<%=@ingredient.price_type %>
 
           <p>Rating:
           <% @ingredient.rating.times do  %>
