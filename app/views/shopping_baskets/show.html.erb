@@ -1,4 +1,4 @@
-<div class="container cover-page" id="content-to-remove">
+<div class="container set-page-height" id="content-to-remove">
 
   <!-- Order confirmation message  -->
   <% if params[:cart] %>
@@ -70,34 +70,34 @@
           </div> <!-- edit-button-and-trash -->
 
         </div> <!-- message box -->
-    <% end %> <!-- shopping_basket orders end -->
-  </div> <!-- row -->
+      <% end %> <!-- shopping_basket orders end -->
 
-  <div class="row">
-    <div class="total-amount">
-      <div class="text-total-amount">
-        <h1>Total amount: <span><%= humanized_money_with_symbol(@shopping_basket.total_price / 100) %></span></h1>
-      </div> <!-- text-total-amount -->
+      <div class="row">
+        <div class="total-amount">
+          <div class="text-total-amount">
+            <h1>Total amount: <span><%= humanized_money_with_symbol(@shopping_basket.total_price / 100) %></span></h1>
+          </div> <!-- text-total-amount -->
 
-    </div> <!-- total-amount -->
-  </div> <!-- row -->
+        </div> <!-- total-amount -->
+      </div> <!-- row -->
 
-  <div class="row">
-    <div class="card-payment">
-      <%= form_tag shopping_basket_payments_path(@shopping_basket) do %>
-        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-name="My Ingredient(s)"
-          data-email="<%= current_user.email %>"
-          data-description="Ingredient "
-          data-amount="<%= @shopping_basket.total_price %>"
-          data-currency="<%= @shopping_basket.orders.first.amount.currency %>">
-        </script>
-      <% end %> <!-- form_tag_shopping_basket end -->
-    </div> <!-- card-payment -->
-  </div> <!-- row -->
+      <div class="row">
+        <div class="card-payment">
+          <%= form_tag shopping_basket_payments_path(@shopping_basket) do %>
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-name="My Ingredient(s)"
+              data-email="<%= current_user.email %>"
+              data-description="Ingredient "
+              data-amount="<%= @shopping_basket.total_price %>"
+              data-currency="<%= @shopping_basket.orders.first.amount.currency %>">
+            </script>
+          <% end %> <!-- form_tag_shopping_basket end -->
+        </div> <!-- card-payment -->
+      </div> <!-- row -->
 
     <% end  %> <!-- if end -->
+  </div> <!-- row -->
 
   <div class="row" id="center-items-in-row">
     <div class="back-button">
