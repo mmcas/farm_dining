@@ -1,8 +1,27 @@
 <div class="container cover-page" id="content-to-remove">
 
-  <div class="header-text">
-    <h1>Your Order</h1>
-  </div> <!-- header-text -->
+  <!-- Order confirmation message  -->
+  <% if params[:cart] %>
+    <div class= "order-confirmation">
+      <h1>Thank you for your order!</h1>
+      <p>The ingredients you have ordered will be delivered to your restaurant
+        <% if current_user.restaurant.name != nil %>
+          ,<%=current_user.restaurant.name%>,
+        <% end %>
+      within 3 days.</p>
+      <h3>Your order details are</h3>
+      <p>Reference number: <%= @last_shopping_basket.cart_number %></p>
+      <p>Price paid: <%= humanized_money_with_symbol(@last_shopping_basket.total_price / 100) %></p>
+    </div>
+  <% end %>
+  <!-- End of code for order confirmation message -->
+
+  <!-- Header for the page except for the confirmation message display  -->
+  <% unless params[:cart]  %>
+    <div class="header-text">
+      <h1>Your Order</h1>
+    </div> <!-- header-text -->
+  <% end %>
 
   <div class="row" id="white" >
     <% if @shopping_basket  %>
@@ -64,7 +83,6 @@
   </div> <!-- row -->
 
   <div class="row">
-
     <div class="card-payment">
       <%= form_tag shopping_basket_payments_path(@shopping_basket) do %>
         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
