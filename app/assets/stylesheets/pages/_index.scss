@@ -56,7 +56,50 @@
   color: white;
   padding: 10px;
 }
+.headertext{
+  text-align:center;
+  margin:10px 0px;
+}
+.outerbox{
+  border-radius:15px;
+  background-color: white;
+  padding:10px;
+  display: flex;
+  width:570px;
+  margin: 0px auto;
+  flex-direction:column;
 
-.image-opa{
-opacity: 0.8;
+}
+
+.searchbox{
+  text-align: center;
+  padding-top: 10px;
+   }
+.cat-filters{
+  display:flex;
+  justify-content: space-between;
+  //border:1px solid green;
+}
+.ffilter{
+  opacity: 0.5;
+  padding:20px;
+
+}
+
+.ffilter:hover{
+  opacity:1;
+}
+.ffilter img{height:50px;}
+
+.form-space{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.form-size {
+  width: 270px !important;
+}
+.less-padding{
+  padding-top:0px;
+  padding-bottom:0px;
 }
