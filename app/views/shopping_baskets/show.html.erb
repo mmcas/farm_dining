@@ -1,8 +1,4 @@
-<div class="container cover-page">
-
-  <div class="back-button">
-    <%= link_to "BACK TO INDEX", ingredients_path, class: "btn btn-farm" %>
-  </div> <!-- back-button -->
+<div class="container cover-page" id="content-to-remove">
 
   <!-- Order confirmation message  -->
   <% if params[:cart] %>
@@ -41,19 +37,23 @@
           <%#= link_to "BACK TO FARM", farm_path(@farm), class: "btn btn-farm" %>
 
           <div class='product-body' id="content-to-hide">
-            <p><%= link_to order.ingredient.name, ingredient_path(order.ingredient)%>,</p>
-            <%= link_to order.ingredient.farm.farm_name, farm_path(order.ingredient.farm) %>
+            <p><i class="fas fa-map-marker-alt"></i> <%= link_to order.ingredient.farm.farm_name, farm_path(order.ingredient.farm) %>:
+              <%= link_to order.ingredient.name, ingredient_path(order.ingredient)%></p>
           </div> <!-- product-body -->
 
           <div class="unit-info" data-edit_id="<%= order.id %>">
             <%= simple_form_for order do |order| %>
               <%= order.input :order_quantity, collection: (1..[  ingredient.available_quantity, 100].min)%>
-              <%= order.submit "update", class: "btn btn-primary" %>
+              <%#= order.submit "update", class: "btn btn-primary" %>
+              <button order.submit type="submit" class="quantity_button">
+                <i class="fas fa-plus"></i>
+              </button>
             <% end %> <!-- simple_form_for end -->
           </div> <!-- unit-info -->
 
           <div class="quantity">
-            <p><%= order.order_quantity %> units</p>
+            <p><%= order.order_quantity %>
+            <%= ingredient.price_type %></p>
           </div> <!-- quantity -->
 
           <div class="total-price" id="content-to-hide">
@@ -62,7 +62,7 @@
 
           <div class="edit-button-and-trash">
             <div class="list-inline edit_button" data-order_id="<%= order.id %>">
-              <i class="far fa-edit"> </i>
+              <i class="far fa-edit" id="hover"> </i>
               <%= link_to order, method: :delete do %>
                 <i class="far fa-trash-alt"> </i>
               <% end %> <!-- link to order end -->
@@ -95,16 +95,24 @@
         </script>
       <% end %> <!-- form_tag_shopping_basket end -->
     </div> <!-- card-payment -->
+  </div> <!-- row -->
 
     <% end  %> <!-- if end -->
 
-    <div class="response">
-      <p>TODO  display Previous Purchases.<p/>
-      <p>All purchases have been paid.</p>
-      <p>Your Shopping Basket is empty<p/>
-    </div> <!-- response -->
-
+  <div class="row" id="center-items-in-row">
+    <div class="back-button">
+      <%= link_to "SEE ALL INGREDIENTS", ingredients_path, class: "btn btn-farm" %>
+     </div> <!-- back-button -->
   </div> <!-- row -->
+
+  <div class="row">
+    <div class="response">
+<!--       <p>TODO  display Previous Purchases.<p/>
+      <p>All purchases have been paid.</p>
+      <p>Your Shopping Basket is empty<p/> -->
+    </div> <!-- response -->
+  </div> <!-- row -->
+
 </div> <!-- container -->
 
 

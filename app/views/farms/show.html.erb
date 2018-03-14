@@ -10,30 +10,28 @@
   </div><!--banner farm-->
 </div><!--container-->
 
-<div class="container">
+<!-- <div class="container"><div class="row"> -->
+<div class="welcomebox">
 
-  <div class="row">
-    <div class="col-xs-12 col-sm-9">
-      <div class="welc-farm">
-        <h3>A warm welcome from <%=@farm.farmers_name=%>.</h3>
-      </div>
-      <!--  <h3>  A warm welcome from <%=@farm.farmers_name=%>.</h3> -->
+    <div id="farm-description"> <!--class="col-xs-12 col-sm-9">-->
       <div class="farm-description" style="border-radius:20px;">
-       <!--  <h3>A warm welcome from <%=@farm.farmers_name=%>.</h3> -->
+        <h3>A warm welcome from <%=@farm.farmers_name=%>.</h3>
         <p class="text-long"><%= @farm.description%></p>
+      <div class="farm-details">
         <i class="fas fa-home"></i> <%= @farm.location%>
         <i class="fas fa-at"></i> <%= @farm.farmer_email%>
       </div>
+      </div>
     </div>
-    <div class="col-xs-6 col-sm-3">
-      <!-- <div class="farmer-picture"> -->
+    <div id="farmer-picture"><!--class="col-xs-6 col-sm-3">-->
+      <div class="farmer-picture">
         <%= cl_image_tag @farm.avatar_photo, :class => "style_image rounded-corners" %>
-      <!-- </div> -->
+      </div>
     </div>
-  </div>
+  </div><!--welcomebox-->
 
+<div class="container">
   <h3><%= "All our current ingredients" %></h3>
-
   <div class="card-container">
     <div class="row">
       <% @ingredients.each do |ingredient| %>
@@ -41,14 +39,14 @@
 
         <%= render 'shared/ingredient-card', ingredient: ingredient %>
 
-        </div><!--col-->
+        </div><!--id-->
       <% end %>
 
-    </div><!--row-->
+     </div><!--row-->
 
 
-  </div><!--card-container-->
-
+  </div><!--card-container -->
+</div>
 
   <div class="container">
     <div class="row" style="margin-bottom: 15px;">
@@ -58,14 +56,14 @@
     </div>
   </div>
 
-
+<% if !@markers.empty? %>
   <div
     id="map"
     style="width: 100%;
     height: 600px;"
     data-markers="<%= @markers.to_json %>"
   ></div>
-
+<% end %>
 </div>
 
 
