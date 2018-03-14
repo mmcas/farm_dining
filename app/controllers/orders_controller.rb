@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @shopping_basket = ShoppingBasket.find_or_create_by(restaurant: current_user.restaurant, status: 0)
+    @shopping_basket = ShoppingBasket.find_or_create_by(restaurant: current_user.restaurant, status: 'pending', cart_number: "#{Time.now.strftime '%Y-%m-%d %H:%M:%S'}##{current_user.id}")
     @ingredient = Ingredient.find(params[:order][:ingredient_id])
     @order = Order.new(order_params)
     @order.ingredient = @ingredient
