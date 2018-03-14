@@ -10,7 +10,7 @@
         <% end %>
       within 3 days.</p>
       <h3>Your order details are</h3>
-      <p>Reference number: <%= @last_shopping_basket.cart_number %></p>
+      <p>Reference number: <%= @last_shopping_basket.id %></p>
       <p>Price paid: <%= humanized_money_with_symbol(@last_shopping_basket.total_price / 100) %></p>
     </div>
   <% end %>
@@ -43,7 +43,7 @@
 
           <div class="unit-info" data-edit_id="<%= order.id %>">
             <%= simple_form_for order do |order| %>
-              <%= order.input :order_quantity, collection: (1..[  ingredient.available_quantity, 100].min)%>
+              <%= order.input :order_quantity, include_blank: false, include_hidden: false, collection: (1..[ingredient.available_quantity, 10].min)%>
               <%#= order.submit "update", class: "btn btn-primary" %>
               <button order.submit type="submit" class="quantity_button">
                 <i class="fas fa-plus"></i>
