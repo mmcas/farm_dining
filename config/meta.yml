@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "Farm Dining"
+meta_title: "Farm Dining - Find Ingredients at your local Farmer"
+meta_description: "A platform dedicated to sell quality local food from the farm to your restaurant table."
+meta_image: "og_carrots_farmer.jpg"           # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards

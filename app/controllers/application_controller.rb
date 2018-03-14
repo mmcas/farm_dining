@@ -10,4 +10,9 @@ class ApplicationController < ActionController::Base
     # If we want to edit the user picture add form in app/views/devise/registrations/edit.html.erb
     # devise_parameter_sanitizer.permit(:account_update, keys: [:username])
   end
+
+  # for the
+  def default_url_options
+    { host: ENV["HOST"] || "localhost:3000" }
+  end
 end
