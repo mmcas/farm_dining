@@ -1,6 +1,14 @@
 <div class="ingredient-card">
   <%= link_to ingredient_path(ingredient) do %>
     <div class="ingredient-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%=cl_image_path ingredient.photo%>');">
+      <p class="card-rating">
+        <% ingredient.rating.times do  %>
+            <span class="glyphicon glyphicon-star"></span>
+        <% end %>
+        <% ingredient.blank_stars.times do  %>
+          <span class="glyphicon glyphicon-star-empty"></span>
+        <% end %>
+      </p>
     </div>
   <% end %>
   <div class="ingredient-card-text">
