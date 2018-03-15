@@ -106,7 +106,9 @@ bert = Farm.new(
   remote_avatar_photo_url: cl_image_path("bert-squared.jpg"),
   remote_farm_photo_url: cl_image_path("farm-bert.jpg"),
   farmer_email: "bert.spruitjes@gmail.com",
-  description: 'This farm is a biological farm. We have horses on the farm as well. We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself. We make our own cheeses. Also, we produce our own sausages. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee. This farm is a biological farm. We have horses on the farm as well. We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself. We make our own cheeses. Also, we produce our own sausages. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee.')
+  description: 'This farm is a biological farm. We have horses on the farm as well. We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself.
+  We make our own cheeses. Also, we produce our own sausages. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee. This farm is a biological farm. We have horses on the farm as well.
+  We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself. We make our own cheeses. Also, we produce our own sausages. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee.')
 bert.save!
 
 annelies = Farm.new(
@@ -214,6 +216,9 @@ ingr = Ingredient.new(name:'Cabbage',description:'Cabbage cabbage lorem ipusm ',
 ingr.save!
 ingr = Ingredient.new(name:'Strawberries',description:'',main_category:'Fruit & Vegetables',category:'Berries',price:10,rating:5,sku:'17',farm_id:angela.id,  available_quantity:50,price_type:'kg',  remote_photo_url: cl_image_path('seoyytrlnsd9wuxz5cyv.png'))
 ingr.save!
+ingr = Ingredient.new(name:'Carrots',description:'Orange carrots, fresh from the land, <br />The carrot (Daucus carota subsp. sativus) is a root vegetable, usually orange in colour, though purple, black, red, white, and yellow cultivars exist.[1] Carrots are a domesticated form of the wild carrot, Daucus carota, native to Europe and southwestern Asia.',main_category:'Fruit & Vegetables',category:'Carrots',price:2,rating:5,sku:'253',farm_id:piet.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('harshal-s-hirve-44494-unsplash.jpg'))
+ingr.save!
+
 
 
 puts "Finished, yeah!"
