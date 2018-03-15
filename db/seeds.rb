@@ -86,7 +86,7 @@ piet = Farm.new(
   remote_avatar_photo_url: cl_image_path("piet-squared.jpg"),
   remote_farm_photo_url: cl_image_path("farm-piet.jpg"),
   farmer_email: "piet.de.boer@gmail.com",
-  description: "Description: needs attention :).")
+  description: "Having a farm has always been a dream for me. And that dream has come true! I started small, with only a few chickens. The eggs I use myself and I give them to friends and family. The land that I bought already had some pear trees on it, so in summer I can harvest pears. The potatoes I started growing because I'm a big fan of Dutch stamppot, stew. My friends like to come and join me for dinner when I make some. Stamppot boerenkool, kale stew, is their favorite! Maybe later I'll start growing kale as well. In my free time I love to take my dog to the forest and walk for a couple of hours. I try to do that every Sunday, we both enjoy it a lot. Apart from that I like biking, watching Netflix and having a drink with a friend.")
 piet.save!
 
 franciscus = Farm.new(
@@ -96,7 +96,7 @@ franciscus = Farm.new(
   remote_avatar_photo_url: cl_image_path("franciscus-squared.jpg"),
   remote_farm_photo_url: cl_image_path("farm-franciscus2.jpg"),
   farmer_email: 'franciscus.de.groot@gmail.com',
-  description: "Description: needs attention :).")
+  description: "Welcome to my family farm. I live here with my wife, Marie. We have 3 daughters, aged 20, 23 and 26. We've been farmers for almost 30 years now but we still enjoy it every day! Our main focus is corn. We have a big corn field. Apart from the corn field we grow berries. Maybe you've noticed that we sell blackberry jam. This is because making jam is my biggest hobby! In our free time we like to read. Marie loves to cook, she's great at making pasta's. Our daughters call often to ask if they can join in on dinner. Her other hobby is baking bread. We love getting up early, reading the newspaper and then start on the farm. In the future we'd love to have a field filled with sunflowers. Feel free to drop by! We are always happy to show you the farm or share a cup of coffee.")
 franciscus.save!
 
 bert = Farm.new(
@@ -106,9 +106,8 @@ bert = Farm.new(
   remote_avatar_photo_url: cl_image_path("bert-squared.jpg"),
   remote_farm_photo_url: cl_image_path("farm-bert2.jpg"),
   farmer_email: "bert.spruitjes@gmail.com",
-  description: 'This farm is an organic farm. We have horses on the farm as well. We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself.
-  We make our own cheeses. Also, we produce our own sausages. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee. This farm is a organic farm. We have horses on the farm as well.
-  We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself. We make our own cheeses. Also, we produce our own sausages. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee.')
+  description: 'Our farm is a organic farm. We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself. Something we are really passionate about is making our own cheeses. We have started doing this as a hobby but it has become one of our main products. Also, we produce our own sausages. They are very popular. In our free time we like to take the horses and rake a ride in the forest. Most of the time you can find us outside, we enjoy nature. The cat in the picture is Felix. He usually accompanies me or my girlfriend, Nathalie, when we are outside. Feel free to contact us, to share ideas or just for a cup of coffee. We would love to hear from you!')
+
 bert.save!
 
 annelies = Farm.new(
@@ -118,7 +117,7 @@ annelies = Farm.new(
   remote_avatar_photo_url: cl_image_path("annelies-squared2.jpg"),
   remote_farm_photo_url: cl_image_path("farm-annelies.jpg"),
   farmer_email: "annelies.de.jong@gmail.com",
-  description: "Description: needs attention :).")
+  description: "I'm the proud owner of de Kas, a family farm. I inherited the farm from my parents, who inherited it from my grandparents. It was my grandparents who started the farm. Our family consists of my husband and our 3 children, aged 7, 10 and 15. The children asked us we can have chickens, they really like collecting their eggs. We have been growing tomatoes as long as I can remember. They are great for soup and pastasauce. Apart from chicken eggs and tomatoes we have zucchini and cow-milk to offer. We are growig potatoes as well. As soon as they are ready, you can find them here as well. In our free time we love playing card games. As you maybe noticed, I'm a big fan of sunflowers. I feel they spread so much happiness.")
 annelies.save!
 
 anton = Farm.new(
