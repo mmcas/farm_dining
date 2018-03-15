@@ -106,8 +106,8 @@ bert = Farm.new(
   remote_avatar_photo_url: cl_image_path("bert-squared.jpg"),
   remote_farm_photo_url: cl_image_path("farm-bert2.jpg"),
   farmer_email: "bert.spruitjes@gmail.com",
-  description: 'This farm is a biological farm. We have horses on the farm as well. We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself.
-  We make our own cheeses. Also, we produce our own sausages. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee. This farm is a biological farm. We have horses on the farm as well.
+  description: 'This farm is an organic farm. We have horses on the farm as well. We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself.
+  We make our own cheeses. Also, we produce our own sausages. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee. This farm is a organic farm. We have horses on the farm as well.
   We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself. We make our own cheeses. Also, we produce our own sausages. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee.')
 bert.save!
 
@@ -139,7 +139,9 @@ hannes = Farm.new(
   remote_avatar_photo_url: cl_image_path("hannes-squared.jpg"),
   remote_farm_photo_url: cl_image_path("farm-hannes.jpg"),
   farmer_email: 'hannes.de.kleine@gmail.com' ,
-  description: "Description: needs attention :).")
+  description: "I am the fifth generation de Kleine to harvest the soil around Our Little place. My wife Charlotte and I have been running the farm for the past 40 years. In two years time my daughter, Johanna, will take it over with her family.
+  The farm is small and therefore we have the possibility to put in extra care into all the produce we grow. Everything is biodynamically produced. I am particularly proud of our beautiful, award winning, kale.
+  It is a true pleasure to sell our food here at Farm dining with the knowledge it will make a well tasting, high-quality meal.")
 hannes.save!
 
 angela = Farm.new(
