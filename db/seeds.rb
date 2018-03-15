@@ -106,7 +106,9 @@ bert = Farm.new(
   remote_avatar_photo_url: cl_image_path("bert-squared.jpg"),
   remote_farm_photo_url: cl_image_path("farm-bert.jpg"),
   farmer_email: "bert.spruitjes@gmail.com",
-  description: 'This farm is a biological farm. We have horses on the farm as well. We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself. We make our own cheeses. Also, we produce our own sausages. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee. This farm is a biological farm. We have horses on the farm as well. We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself. We make our own cheeses. Also, we produce our own sausages. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee.')
+  description: 'This farm is a biological farm. We have horses on the farm as well. We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself.
+  We make our own cheeses. Also, we produce our own sausages. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee. This farm is a biological farm. We have horses on the farm as well.
+  We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself. We make our own cheeses. Also, we produce our own sausages. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee.')
 bert.save!
 
 annelies = Farm.new(
@@ -184,7 +186,7 @@ puts 'Creating ingredients..'
 # ingr.save!
 
 
-ingr = Ingredient.new(name:'Carrots',description:'Orange carrots, fresh from the land, The carrot (Daucus carota subsp. sativus) is a root vegetable, usually orange in colour, though purple, black, red, white, and yellow cultivars exist.[1] Carrots are a domesticated form of the wild carrot, Daucus carota, native to Europe and southwestern Asia.',main_category:'Fruit & Vegetables',category:'Carrots',price:2,rating:5,sku:'1',farm_id:piet.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('harshal-s-hirve-44494-unsplash.jpg'))
+ingr = Ingredient.new(name:'Carrots',description:'Orange carrots, fresh from the land. The carrot (Daucus carota subsp. sativus) is a root vegetable, usually orange in colour, though purple, black, red, white, and yellow cultivars exist. Carrots are a domesticated form of the wild carrot, Daucus carota, native to Europe and southwestern Asia.',main_category:'Fruit & Vegetables',category:'Carrots',price:2,rating:5,sku:'1',farm_id:piet.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('harshal-s-hirve-44494-unsplash.jpg'))
 ingr.save!
 ingr = Ingredient.new(name:'Dried Chickpeas',description:'chickpeas dried Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',main_category:'Grains & Legumes',category:'Legumes',price:3,rating:4,sku:'3',farm_id:franciscus.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-273838.jpg'))
 ingr.save!
@@ -214,6 +216,43 @@ ingr = Ingredient.new(name:'Cabbage',description:'Cabbage cabbage lorem ipusm ',
 ingr.save!
 ingr = Ingredient.new(name:'Strawberries',description:'',main_category:'Fruit & Vegetables',category:'Berries',price:10,rating:5,sku:'17',farm_id:angela.id,  available_quantity:50,price_type:'kg',  remote_photo_url: cl_image_path('seoyytrlnsd9wuxz5cyv.png'))
 ingr.save!
+ingr = Ingredient.new(name:'Apples',description:'',main_category:'Fruit & Vegetables',category:'Apples',price:4,rating:4,sku:'18',farm_id:john.id,  available_quantity:60,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-635705.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Pear',description:'',main_category:'Fruit & Vegetables',category:'Pears',price:3,rating:3,sku:'19',farm_id:piet.id,  available_quantity:60,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-568471_1.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Pepper',description:'',main_category:'Fruit & Vegetables',category:'vegetables',price:3,rating:5,sku:'20',farm_id:franciscus.id,  available_quantity:100,price_type:'kg',  remote_photo_url: cl_image_path('pepper-and-vegetables-3-1322872-1278x855.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Chicken',description:'',main_category:'Meat',category:'poultry',price:8,rating:4,sku:'21',farm_id:bert.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-616354.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Zucchini',description:'',main_category:'Fruit & Vegetables',category:'Vegetables',price:4,rating:3,sku:'22',farm_id:annelies.id,  available_quantity:80,price_type:'kg',  remote_photo_url: cl_image_path('italian-zucchine-1562358.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Beets',description:'',main_category:'Fruit & Vegetables',category:'Vegetables',price:3,rating:5,sku:'23',farm_id:anton.id,  available_quantity:56,price_type:'kg',  remote_photo_url: cl_image_path('beets-for-sale-2-1326248-1280x960.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Green Peas',description:'',main_category:'Grains & Legumes',category:'Peas',price:3.5,rating:4,sku:'24',farm_id:hannes.id,  available_quantity:40,price_type:'kg',  remote_photo_url: cl_image_path('peas-in-a-pod-1574302-1279x889.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Quail Eggs',description:'',main_category:'Dairy & Eggs',category:'Eggs',price:4,rating:3,sku:'25',farm_id:angela.id,  available_quantity:10,price_type:'Dose(20)',  remote_photo_url: cl_image_path('pexels-photo-810320.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Fresh Cheese',description:'',main_category:'Dairy & Eggs',category:'Cheese',price:5,rating:5,sku:'26',farm_id:john.id,  available_quantity:10,price_type:'kg',  remote_photo_url: cl_image_path('fresh-cheese-1516657.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Spare-ribs',description:'',main_category:'Meat',category:'Porc',price:18,rating:4,sku:'27',farm_id:piet.id,  available_quantity:60,price_type:'kg',  remote_photo_url: cl_image_path('silhouette-of-summer-garden-bbq-isolated-against-fire-1632139-1278x800.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Blackberry Jam',description:'Homemade blackberry jam, harvest of summer 2017,  taste the sweet and sour. Nice with cheese or  salads or meat.',main_category:'Fruit & Vegetables',category:'confituur',price:2,rating:3,sku:'28',farm_id:franciscus.id,  available_quantity:15,price_type:'jar',  remote_photo_url: cl_image_path('jam-jars-1257491-1280x960.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Haricots',description:'',main_category:'Fruit & Vegetables',category:'Beans',price:3.5,rating:5,sku:'29',farm_id:bert.id,  available_quantity:25,price_type:'kg',  remote_photo_url: cl_image_path('fruits-and-veggies-1191769-1280x960.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Tomatoes',description:'',main_category:'Fruit & Vegetables',category:'Vegetables',price:4,rating:4,sku:'30',farm_id:annelies.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('tomatoes-1323819-1279x852.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Parsnip',description:'Parsnips, rich taste, fresly harvested. For soups, stews…',main_category:'Fruit & Vegetables',category:'Vegetables',price:4,rating:3,sku:'31',farm_id:anton.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('healthy-white-parsnip-with-green-beans-isolated-1632298-1279x853.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Minced Meat',description:'',main_category:'Meat',category:'Beef',price:18,rating:5,sku:'32',farm_id:hannes.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('minced-meat-2-1547786-1279x902.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Quail',description:'',main_category:'Meat',category:'poultry',price:18,rating:4,sku:'33',farm_id:angela.id,  available_quantity:10,price_type:'kg',  remote_photo_url: cl_image_path('quail-2-1312897-1279x913.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Rye',description:'',main_category:'Grains & Legumes',category:'Grains',price:4,rating:3,sku:'34',farm_id:john.id,  available_quantity:25,price_type:'kg',  remote_photo_url: cl_image_path('wheat-in-summer-1566168-1279x913.jpg'))
+ingr.save!
+
+
+
 
 
 puts "Finished, yeah!"
