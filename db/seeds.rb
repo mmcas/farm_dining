@@ -148,7 +148,7 @@ angela = Farm.new(
   remote_avatar_photo_url: cl_image_path("angela-squared.jpg"),
   remote_farm_photo_url: cl_image_path("farm-angela.jpg"),
   farmer_email: 'angela.tok@gmail.com',
-  description: "Description: needs attention :).")
+  description: "Our Farm is located in the Weiver in the watery Zaanstreek, me and my family of six grow Fruits, Vegetables Grains and we breed Quails and Turkeys, mainly Eggs and Poultry. We also can provide hay bales on request.  All seasons you can find us mostly outdoors. Our farm is open for visits - please contact us beforehand, see below our contact information. We are happy to show you around  In spring it is really nice to visit our blossoming cherry orchard. in summer in our strawberry fields and harvest your own. In autumn we always organize a big harvest festival. It is also possible to organize parties, outside-dinners or weddings on our farm ground. We host guests from time-to-time welcome to our Bed & Farmers Breakfast.")
 angela.save!
 
 john = Farm.new(
@@ -158,7 +158,7 @@ john = Farm.new(
   remote_avatar_photo_url: cl_image_path("john-squared.jpg"),
   remote_farm_photo_url: cl_image_path("farm-john.jpg"),
   farmer_email: 'john.van.de.akker@gmail.com',
-  description: "Description: needs attention :).")
+  description: "We are the family van de Akker, Located in Uithoorn, just beneath Amsterdam, we are specialized in grains, like rye, we make our own cheese, fresh cheese and old farmers cheese. We have a big orchard, where our cows and goats can run freely.  Every second summer we grow strawberries and blueberries on our fields. In the rare case of spare time, we like to ride our horse and carriage, which my grandfather used long time ago, and have nice sunday afternoon trips. Once every while we  take part in the horse and carriage competitions, Our whole family enjoyes it to dress up in authentic Dutch clothing and wooden shoes than. Our farm is open for visits - please contact us beforehand, see below our contact information. We are happy to show you around.")
 john.save!
 
 
