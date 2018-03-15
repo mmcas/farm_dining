@@ -81,7 +81,7 @@ puts 'Creating farms'
 
 piet = Farm.new(
   location: "Overhoeksplein 2, Amsterdam",
-  farm_name: "Boerderij Amsterdam Centraal",
+  farm_name: "Boerderij Nooitgenoeg",
   farmers_name: "Piet de Boer",
   remote_avatar_photo_url: cl_image_path("piet-squared.jpg"),
   remote_farm_photo_url: cl_image_path("farm-piet.jpg"),
@@ -94,7 +94,7 @@ franciscus = Farm.new(
   farm_name: 'Van de Stolp',
   farmers_name: 'Franciscus de Groot',
   remote_avatar_photo_url: cl_image_path("franciscus-squared.jpg"),
-  remote_farm_photo_url: cl_image_path("farm-franciscus.jpg"),
+  remote_farm_photo_url: cl_image_path("farm-franciscus2.jpg"),
   farmer_email: 'franciscus.de.groot@gmail.com',
   description: "Description: needs attention :).")
 franciscus.save!
@@ -104,7 +104,7 @@ bert = Farm.new(
   farm_name: 'De Witte Boerderij',
   farmers_name: 'Bert Spruitjes',
   remote_avatar_photo_url: cl_image_path("bert-squared.jpg"),
-  remote_farm_photo_url: cl_image_path("farm-bert.jpg"),
+  remote_farm_photo_url: cl_image_path("farm-bert2.jpg"),
   farmer_email: "bert.spruitjes@gmail.com",
   description: 'This farm is a biological farm. We have horses on the farm as well. We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself.
   We make our own cheeses. Also, we produce our own sausages. They are very popular. Feel free to contact us, to share ideas or just for a cup of coffee. This farm is a biological farm. We have horses on the farm as well.
@@ -115,7 +115,7 @@ annelies = Farm.new(
   location: 'Burgemeester Peereboomweg 200, Zuiderwoude',
   farm_name: 'de Kas',
   farmers_name: 'Annelies de Jong',
-  remote_avatar_photo_url: cl_image_path("annelies-squared.jpg"),
+  remote_avatar_photo_url: cl_image_path("annelies-squared2.jpg"),
   remote_farm_photo_url: cl_image_path("farm-annelies.jpg"),
   farmer_email: "annelies.de.jong@gmail.com",
   description: "Description: needs attention :).")
