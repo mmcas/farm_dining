@@ -23,19 +23,21 @@ h2 {
   height: 100%;
 }
 .carousel-first {
-  background: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.2) 50%), image-url("carrots_farmer.jpg")  no-repeat center fixed;
+  background: image-url("rsz_potato_farmer.jpg")  no-repeat center fixed;
       background-size: cover;
+      background-position-y: 0px;
     animation:fade 24s infinite;
 -webkit-animation:fade 24s infinite;
 }
 .carousel-second {
-  background: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.2) 50%), image-url("dairy_farmer.jpg")  no-repeat center fixed;
+  background: image-url("Livestock_farmer.jpg")  no-repeat center fixed;
       background-size: cover;
+      background-position-y: 0px;
     animation:fade2 24s infinite;
 -webkit-animation:fade2 24s infinite;
 }
 .carousel-third {
-    background: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), image-url("berries.jpg")  no-repeat center fixed;
+    background: image-url("Couple_farmer.jpg")  no-repeat center fixed;
       background-size: cover;
     animation:fade3 24s infinite;
 -webkit-animation:fade3 24s infinite;
