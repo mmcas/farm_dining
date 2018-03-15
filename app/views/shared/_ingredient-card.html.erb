@@ -18,7 +18,7 @@
       </p>
       <p>
         <i class="fas fa-map-marker-alt"> </i>
-        <%=link_to "#{ingredient.farm.farm_name}", ingredient_path(ingredient)  %>
+        <%=link_to "#{ingredient.farm.farm_name}", farm_path(ingredient.farm)  %>
       </p>
       <% unless current_page?(root_path) %>
         <div class="add-to-basket" title="Add to basket">
