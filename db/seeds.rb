@@ -107,9 +107,9 @@ annelies = Farm.new(
   remote_avatar_photo_url: cl_image_path("annelies-squared2.jpg"),
   remote_farm_photo_url: cl_image_path("farm-annelies.jpg"),
   farmer_email: "annelies.de.jong@gmail.com",
-  description: "I started farming 10 years ago after a career in banking. Having visited my uncle's farm, i fell in love with the profession. More than anything, farming is one of the only careers I know of that is at once physically, mentally, and spiritually fulfilling. A hard day’s work under the sun (or more times than not rain in Holland) does a body good; not only that, it stimulates the mind and nourishes the soul.
-  Naturally, as cherry on the cake it is great to see the work i put into the field being rewarded by fresh, healthy plants which provide a good healthy diet and put a smile on my customers faces")
+  description: "I'm the proud owner of de Kas, a family farm. I inherited the farm from my parents, who inherited it from my grandparents. It was my grandparents who started the farm. Our family consists of my husband and our 3 children, aged 7, 10 and 15. The children asked us we can have chickens, they really like collecting their eggs. We have been growing tomatoes as long as I can remember. They are great for soup and pastasauce. Apart from chicken eggs and tomatoes we have zucchini and cow-milk to offer. We are growig potatoes as well. As soon as they are ready, you can find them here as well. In our free time we love playing card games. As you maybe noticed, I'm a big fan of sunflowers. I feel they spread so much happiness.")
 annelies.save!
+
 
 anton = Farm.new(
   location: 'Den Ilp 63, 1127 PE Den Ilp',
@@ -131,7 +131,7 @@ hannes = Farm.new(
   farmer_email: 'hannes.de.kleine@gmail.com' ,
   description: "I am the fifth generation de Kleine to harvest the soil around Our Little place. My wife Charlotte and I have been running the farm for the past 40 years. In two years time my daughter, Johanna, will take it over with her family.
   The farm is small and therefore we have the possibility to put in extra care into all the produce we grow. Everything is biodynamically produced. I am particularly proud of our beautiful, award winning, kale.
-  It is a true pleasure to sell our food here at Farm dining with the knowledge it will make a well tasting, high-quality meal.")
+  It is a true pleasure to sell our food here at Farm dining with the knowledge it will make a well tasting, high-quality meal. Our farm is open for visits - please contact us beforehand, see below our contact information. We are happy to show you around.")
 hannes.save!
 
 angela = Farm.new(
@@ -162,13 +162,13 @@ ingr = Ingredient.new(name:'Carrots',description:'These carrots have a bright or
 ingr.save!
 ingr = Ingredient.new(name:'Dried Chickpeas',description:'Dried chickpeas. We get orders from all over the country because they are perfect for making falafel. These chickpeas are good for making hummus as well. Available per kilo.',main_category:'Grains & Legumes',category:'Legumes',price:3,rating:4,sku:'3',farm_id:franciscus.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-273838.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Steak',description:'This true Dutch original has robust flavor and is tender enough to simply sear to a perfect velvety pink. Or try marinating to impart even more juicy tenderness. You might know this well-marbled loin cut as a Amsterdam City strip. Always performs well — broiled, grilled or pan-fried.',main_category:'Meat',category:'Beef',price:6,rating:3,sku:'5',farm_id:bert.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-112781.jpg'))
+ingr = Ingredient.new(name:'Steak',description:'This true Dutch original has robust flavor and is tender enough to simply sear to a perfect velvety pink. Or try marinating to impart even more juicy tenderness. You might know this well-marbled loin cut as a Amsterdam City strip. Always performs well — broiled, grilled or pan-fried.',main_category:'Meat',category:'Beef',price:12,rating:3,sku:'5',farm_id:bert.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-112781.jpg'))
 ingr.save!
 ingr = Ingredient.new(name:'Chicken Eggs',description:'When chickens begin laying, they lay small pullet-sized eggs, often only a fraction of the size they will lay as adults. It can take three or four months for a chicken to start laying their adult sized eggs. As the bird ages, they lay less often. It is not uncommon for the eggs to be larger when they are laid less often. My Ameraucana is of prime age to provide you the biggest eggs',main_category:'Dairy & Eggs',category:'Eggs',price:2,rating:2,sku:'6',farm_id:annelies.id,  available_quantity:20,price_type:'Dose(20)',  remote_photo_url: cl_image_path('Metal-easter-eggs-basket.jpg'))
 ingr.save!
 ingr = Ingredient.new(name:'Wheat grains',description:'No cakes test better than cakes made by the flour from Harvest art’s grains. The grains are cultivated both during the fall and during the spring. After the grains are harvested they are sent to a local mill to produce both whole wheat flour and flour to use in baked goods. Try it!',main_category:'Grains & Legumes',category:'Grains',price:2,rating:4,sku:'7',farm_id:anton.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('Food-grains-bread-wheat-cereals-41959.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Kale',description:'For seven generations has de Klein family been cultivating kale at Our Little place farm and perfected their process. Our Little place’s kale is famous and has won awards across the Netherlands. This kale is what you need if you want to give your kale pesto or kale soup that something extra!',main_category:'Fruit & Vegetables',category:'Vegetables',price:0.5,rating:5,sku:'8',farm_id:hannes.id,  available_quantity:40,price_type:'kg',  remote_photo_url: cl_image_path('Kale-vegetables-brassica-oleracea-var-sabellica-l-51372.jpg'))
+ingr = Ingredient.new(name:'Kale',description:'For seven generations has de Klein family been cultivating kale at Our Little place farm and perfected their process. Our Little place’s kale is famous and has won awards across the Netherlands. This kale is what you need if you want to give your kale pesto or kale soup that something extra!',main_category:'Fruit & Vegetables',category:'Vegetables',price:1,rating:5,sku:'8',farm_id:hannes.id,  available_quantity:40,price_type:'kg',  remote_photo_url: cl_image_path('Kale-vegetables-brassica-oleracea-var-sabellica-l-51372.jpg'))
 ingr.save!
 ingr = Ingredient.new(name:'Sausages',description:'Old farmers cheese matured for  14 months  at our farm,  made from raw milk. Tast is sweet sour. Nice for cheese desserts but all other combinations are perfect.',main_category:'Meat',category:'Porc',price:8,rating:4,sku:'9',farm_id:angela.id,  available_quantity:40,price_type:'Set(10)',  remote_photo_url: cl_image_path('meat-fridge-food-sausage-84267.jpg'))
 ingr.save!
