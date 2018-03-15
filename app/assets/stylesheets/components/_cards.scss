@@ -67,6 +67,8 @@
   background-color: white;
   margin-bottom: 30px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  padding-bottom: 1px;
+
 }
 
 .ingredient-card-image {
@@ -84,7 +86,6 @@
   padding-left: 10px;
   position: relative;
   font-size: 14px;
-  margin-bottom: 15px;
   h3 {
     font-size: 18px;
     line-height: 60%;
@@ -96,6 +97,9 @@
     margin-top: 5px;
     margin-bottom: 3px;
   }
+  a {
+    font-size: 14px;
+  }
 }
 
 .add-to-basket {
@@ -103,6 +107,12 @@
   position: absolute;
   bottom: 20px;
   right: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  padding: 3px;
+  border-radius: 5px;
+  &:hover {
+    background-color: rgba(0,0,0,0.2)
+  }
 }
 
 .quantity_ingredient {
@@ -116,12 +126,9 @@
   border: none;
 }
 
-
 .fa-plus{
   color:#555555;
 }
-
-
 
 //====================================
 

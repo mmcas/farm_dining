@@ -10,10 +10,10 @@
       </p>
       <p>
         <i class="fas fa-map-marker-alt"> </i>
-        <%= ingredient.farm.farm_name %>
+        <%=link_to "#{ingredient.farm.farm_name}", ingredient_path(ingredient)  %>
       </p>
       <% unless current_page?(root_path) %>
-        <div class="add-to-basket">
+        <div class="add-to-basket" title="Add to basket">
           <%= simple_form_for @order, :html => { :class => "form-inline"} do |order| %>
             <%= order.input :order_quantity, label: false, include_blank: false, include_hidden: false, collection: (1..[ingredient.available_quantity, 10].min), input_html: { class: "quantity_ingredient" } %>
             <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => ingredient.id }  %>
