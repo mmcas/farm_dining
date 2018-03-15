@@ -184,225 +184,36 @@ puts 'Creating ingredients..'
 # ingr.save!
 
 
-carrot = Ingredient.new(
-  name:'carrot',
-  description:'Mixed colored carrots, fresh from the land, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',
-  main_category:'Fruit & Vegetables',
-  category:'Carrots',
-  price:2,rating: 2,
-  sku:'1',
-  farm_id: piet.id,
-  available_quantity:20,price_type:'kg',
-  remote_photo_url: cl_image_path('harshal-s-hirve-44494-unsplash.jpg'))
-carrot.save!
+ingr = Ingredient.new(name:'Carrots',description:'Orange carrots, fresh from the land, The carrot (Daucus carota subsp. sativus) is a root vegetable, usually orange in colour, though purple, black, red, white, and yellow cultivars exist.[1] Carrots are a domesticated form of the wild carrot, Daucus carota, native to Europe and southwestern Asia.',main_category:'Fruit & Vegetables',category:'Carrots',price:2,rating:5,sku:'1',farm_id:piet.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('harshal-s-hirve-44494-unsplash.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Dried Chickpeas',description:'chickpeas dried Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',main_category:'Grains & Legumes',category:'Legumes',price:3,rating:4,sku:'3',farm_id:franciscus.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-273838.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Steak',description:'Fresh Steak  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',main_category:'Meat',category:'Beef',price:6,rating:3,sku:'5',farm_id:bert.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-112781.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Chicken Eggs',description:'Wheat  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',main_category:'Dairy & Eggs',category:'Eggs',price:2,rating:2,sku:'6',farm_id:annelies.id,  available_quantity:20,price_type:'Dose(20)',  remote_photo_url: cl_image_path('Metal-easter-eggs-basket.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Wheat grains',description:'Wheat grains Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',main_category:'Grains & Legumes',category:'Grains',price:2,rating:4,sku:'7',farm_id:anton.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('Food-grains-bread-wheat-cereals-41959.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Kale',description:'Kale lorem ipsum  and so on ',main_category:'Fruit & Vegetables',category:'Vegetables',price:0.5,rating:5,sku:'8',farm_id:hannes.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('Kale-vegetables-brassica-oleracea-var-sabellica-l-51372.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Sausages',description:'Sausages lorem ipsum  and so on ',main_category:'Meat',category:'Porc',price:2,rating:4,sku:'9',farm_id:angela.id,  available_quantity:20,price_type:'Set(10)',  remote_photo_url: cl_image_path('meat-fridge-food-sausage-84267.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Old Farmers Cheese',description:'The best and very tasty cheese  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',main_category:'Dairy & Eggs',category:'Cheese',price:17,rating:3,sku:'10',farm_id:john.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('Pexels-photo-277276.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Potatoes',description:'all potatoes',main_category:'Fruit & Vegetables',category:'Vegetables',price:4,rating:2,sku:'11',farm_id:piet.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('Potatoes-vegetables-erdfrucht-bio-144248.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Corn',description:'Corn lorem ipsum lorem loriadad',main_category:'Grains & Legumes',category:'Grains',price:3,rating:1,sku:'12',farm_id:franciscus.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('Pexels-photo-206653.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Smoked Bacon',description:'Speck ',main_category:'Meat',category:'Porc',price:10,rating:5,sku:'13',farm_id:bert.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('Pexels-photo-306799.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Cow-milk',description:'Fresh raw cowmilk',main_category:'Dairy & Eggs',category:'Milk',price:2,rating:4,sku:'14',farm_id:annelies.id,  available_quantity:30,price_type:'liters',  remote_photo_url: cl_image_path('Pexels-photo-248337.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Fresh Yoghurt',description:'The best Goat’s milk yoghurt.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',main_category:'Dairy & Eggs',category:'Yoghurt',price:2,rating:3,sku:'15',farm_id:anton.id,  available_quantity:30,price_type:'liters',  remote_photo_url: cl_image_path('Pexels-photo-373882.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Cabbage',description:'Cabbage cabbage lorem ipusm ',main_category:'Fruit & Vegetables',category:'Vegetables',price:2,rating:2,sku:'16',farm_id:hannes.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('Cabbage-vegetable-power-green.jpg'))
+ingr.save!
+ingr = Ingredient.new(name:'Strawberries',description:'',main_category:'Fruit & Vegetables',category:'Berries',price:10,rating:5,sku:'17',farm_id:angela.id,  available_quantity:50,price_type:'kg',  remote_photo_url: cl_image_path('seoyytrlnsd9wuxz5cyv.png'))
+ingr.save!
 
-chickpeas = Ingredient.new(
-  name: 'Dried Chickpeas',
-  description: 'chickpeas dried Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',
-  main_category: 'Grains & Legumes',
-  category: 'Legumes',
-  price: 3,
-  rating: 4,
-  sku: '3',
-  farm_id: piet.id,
-  available_quantity: 20,
-  price_type: 'kg',
-  remote_photo_url: cl_image_path('pexels-photo-273838.jpg'))
-chickpeas.save!
-
-steak = Ingredient.new(
-  name:'Steak',
-  description:'Steak Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',
-  main_category:'Meat',
-  category:'Beef',
-  price: 6,
-  rating:3,
-  sku:'5',
-  farm_id: piet.id,
-  available_quantity: 30,
-  price_type: 'kg',
-  remote_photo_url: cl_image_path('pexels-photo-112781.jpg'))
-steak.save!
-
-eggs = Ingredient.new(
-  name:'Chicken Eggs',
-  description:'Wheat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',
-  main_category:'Dairy & Eggs',
-  category:'Eggs',
-  price: 2,
-  rating:1,
-  sku:'6',
-  farm_id: piet.id,
-  available_quantity: 20,
-  price_type:'Dose(20)',
-  remote_photo_url: cl_image_path('Metal-easter-eggs-basket.jpg'))
-eggs.save!
-
-wheat_grains = Ingredient.new(
-  name:'Wheat grains',
-  description:'Wheat grains Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',
-  main_category:'Grains & Legumes',
-  category:'Grains',
-  price: 2,
-  rating: 1,
-  sku:'7',
-  farm_id: franciscus.id,
-  available_quantity: 20,
-  price_type: 'kg',
-  remote_photo_url: cl_image_path('Cabbage-vegetable-power-green.jpg'))
-wheat_grains.save!
-
-kale = Ingredient.new(
-  name:'Kale',
-  description:'Sausages lorem ipsum and so on ',
-  main_category:'Grains & Legumes',
-  category:'Vegetables',
-  price: 0.5,
-  rating:1,
-  sku:'8',
-  farm_id: franciscus.id,
-  available_quantity: 30,
-  price_type:'kg',
-  remote_photo_url: cl_image_path('Kale-vegetables-brassica-oleracea-var-sabellica-l-51372.jpg'))
-kale.save!
-
-sausages = Ingredient.new(
-  name:'Sausages',
-  description:'Sausages lorem ipsum  and so on',
-  main_category: 'Meat',
-  category:'Porc',
-  price:2,
-  rating:1,
-  sku:'9',
-  farm_id: franciscus.id,
-  available_quantity: 20,
-  price_type:'Package(10)',
-  remote_photo_url: cl_image_path('meat-fridge-food-sausage-84267.jpg'))
-sausages.save!
-
-old_farmers_cheese = Ingredient.new(
-  name:'Old Farmers Cheese',
-  description:'The best and very tasty cheese Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',
-  main_category:'Dairy & Eggs',
-  category:'Cheese',
-  price:17,
-  rating:1,
-  sku:'10',
-  farm_id: franciscus.id,
-  available_quantity:20,
-  price_type:'kg',
-  remote_photo_url: cl_image_path('Pexels-photo-277276.jpg'))
-old_farmers_cheese.save!
-
-potato = Ingredient.new(
-  name:'Potato',
-  description:'This potato is perfect for making fries. They are also perfect to make Dutch stamppot. Actually, the potatoes are good for all sorts of cooking',
-  main_category:'Fruit & Vegetables',
-  category:'Vegetables',
-  price:4,
-  rating:1,
-  sku:'11',
-  farm_id: bert.id,
-  available_quantity: 30,
-  price_type:'kg',
-  remote_photo_url: cl_image_path('Potatoes-vegetables-erdfrucht-bio-144248.jpg'))
-potato.save!
-
-corn = Ingredient.new(
-  name:'Corn',
-  description:'Corny Corn',
-  main_category:'Grains & Legumes',
-  category: 'Grains',
-  price: 3,
-  rating:1,
-  sku:'12',
-  farm_id: bert.id,
-  available_quantity: 20,
-  price_type:'kg',
-  remote_photo_url: cl_image_path('Pexels-photo-206653.jpg'))
-corn.save!
-
-smoked_bacon = Ingredient.new(
-  name:'Smoked Bacon',
-  description:'Bacon',
-  main_category:'Meat',
-  category:'Porc',
-  price: 10,
-  rating: 1,
-  sku:'13',
-  farm_id: bert.id,
-  available_quantity:20,
-  price_type:'kg',
-  remote_photo_url: cl_image_path('Pexels-photo-306799.jpg'))
-smoked_bacon.save!
-
-cow_milk = Ingredient.new(
-  name:'Cow-milk',
-  description:'fresh raw cowmilk',
-  main_category:'Dairy & Eggs',
-  category:'Milk',
-  price: 2,
-  rating: 1,
-  sku: '14',
-  farm_id: annelies.id,
-  available_quantity: 30,
-  price_type: 'liters',
-  remote_photo_url: cl_image_path('Pexels-photo-248337.jpg'))
-cow_milk.save!
-
-yoghurt = Ingredient.new(
-  name:'Fresh Yoghurt',
-  description:'The best Goat’s milk yoghurt.',
-  main_category:'Dairy & Eggs',
-  category:'Yoghurt',
-  price: 2,
-  rating:1,
-  sku:'15',
-  farm_id: annelies.id,
-  available_quantity: 30,
-  price_type:'liters',
-  remote_photo_url: cl_image_path('Pexels-photo-373882.jpg'))
-yoghurt.save!
-
-cabbage = Ingredient.new(
-  name:'Cabbage',
-  description:'Great Cabbage',
-  main_category:'Fruit & Vegetables',
-  category:'Vegetables',
-  price:2,
-  rating:1,
-  sku:'16',
-  farm_id: annelies.id,
-  available_quantity: 30,
-  price_type:'kg',
-  remote_photo_url: cl_image_path('Cabbage-vegetable-power-green.jpg'))
-cabbage.save!
-
-sweet_carrots = Ingredient.new(
-  name: "Sweet Carrots"  ,
-  description: "Sweet carrots, lovely to make carrotsoup."   ,
-  main_category: "Fruits & Vegetables " ,sku:"pot-01",
-  category: "Carrots" ,
-  price: 4,
-  rating: "1",
-  available_quantity: 50,
-  farm_id: annelies.id,
-  price_type: "kg",
-  remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg"))
-sweet_carrots.save!
-
-strawberries = Ingredient.new(
-  name: "Sweet Strawberry",
-  description: "Sweet sweet taste and colors"  ,
-  main_category: "Fruits & Vegetables",
-  sku:"straw-01",
-  category: "Strawberry",
-  price: 8,
-  rating: "1",
-  available_quantity: 50,
-  farm_id: annelies.id,
-  price_type: "kg",
-  remote_photo_url: cl_image_path("rexnm5rdwtqb35nphkcg.png") )
-strawberries.save!
 
 puts "Finished, yeah!"
