@@ -148,9 +148,30 @@ padding: 0px !important;
 }
 
 //confirmation message styling
+.order-confirmation-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+}
+
 .order-confirmation {
   width: 60%;
   background: white;
-  margin: auto auto;
   padding: 20px;
 }
+
+//empty basket styling
+.basket-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.empty-basket {
+  width: 300px;
+  margin: 50px auto;
+  img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+  }
+}
+
