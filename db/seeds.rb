@@ -107,6 +107,7 @@ bert = Farm.new(
   remote_farm_photo_url: cl_image_path("farm-bert2.jpg"),
   farmer_email: "bert.spruitjes@gmail.com",
   description: 'Our farm is a organic farm. We treat our plants with love and only harvest them when they are ready to shine. You are always welcome to see this for yourself. Something we are really passionate about is making our own cheeses. We have started doing this as a hobby but it has become one of our main products. Also, we produce our own sausages. They are very popular. In our free time we like to take the horses and rake a ride in the forest. Most of the time you can find us outside, we enjoy nature. The cat in the picture is Felix. He usually accompanies me or my girlfriend, Nathalie, when we are outside. Feel free to contact us, to share ideas or just for a cup of coffee. We would love to hear from you!')
+
 bert.save!
 
 annelies = Farm.new(
@@ -126,7 +127,8 @@ anton = Farm.new(
   remote_avatar_photo_url: cl_image_path("anton-squared.jpg"),
   remote_farm_photo_url: cl_image_path("farm-anton.jpg"),
   farmer_email: 'anton.heyboer@gmail.com',
-  description: "Description: needs attention :).")
+  description: "Harvest art farm and its scenary is as breathtaking as beutiful art. Hence the name. Here I have been growing well-tasting grains, vegetables and rootfruits for the past 30 years. Even though I use conventional methods, I minimize the use of resources to cherish the soil I am the care taker of.
+  But beyond growing vegetables I also have an impressive number of livestock. As a livestock farmer I like my cows the same way I like my women: the more the merrier. In my own dairy I produce a well tasting, natural yoghurt perfect for a restaurant brunch tabel. And I spoil them rotten. Do you happen to pass by the area? Please come by and look how I produce the food served at your restaurant.")
 anton.save!
 
 hannes = Farm.new(
@@ -136,7 +138,9 @@ hannes = Farm.new(
   remote_avatar_photo_url: cl_image_path("hannes-squared.jpg"),
   remote_farm_photo_url: cl_image_path("farm-hannes.jpg"),
   farmer_email: 'hannes.de.kleine@gmail.com' ,
-  description: "Description: needs attention :).")
+  description: "I am the fifth generation de Kleine to harvest the soil around Our Little place. My wife Charlotte and I have been running the farm for the past 40 years. In two years time my daughter, Johanna, will take it over with her family.
+  The farm is small and therefore we have the possibility to put in extra care into all the produce we grow. Everything is biodynamically produced. I am particularly proud of our beautiful, award winning, kale.
+  It is a true pleasure to sell our food here at Farm dining with the knowledge it will make a well tasting, high-quality meal.")
 hannes.save!
 
 angela = Farm.new(
@@ -146,7 +150,7 @@ angela = Farm.new(
   remote_avatar_photo_url: cl_image_path("angela-squared.jpg"),
   remote_farm_photo_url: cl_image_path("farm-angela.jpg"),
   farmer_email: 'angela.tok@gmail.com',
-  description: "Description: needs attention :).")
+  description: "Our Farm is located in the Weiver in the watery Zaanstreek, me and my family of six grow Fruits, Vegetables Grains and we breed Quails and Turkeys, mainly Eggs and Poultry. We also can provide hay bales on request.  All seasons you can find us mostly outdoors. Our farm is open for visits - please contact us beforehand, see below our contact information. We are happy to show you around  In spring it is really nice to visit our blossoming cherry orchard. in summer in our strawberry fields and harvest your own. In autumn we always organize a big harvest festival. It is also possible to organize parties, outside-dinners or weddings on our farm ground. We host guests from time-to-time welcome to our Bed & Farmers Breakfast.")
 angela.save!
 
 john = Farm.new(
@@ -156,7 +160,7 @@ john = Farm.new(
   remote_avatar_photo_url: cl_image_path("john-squared.jpg"),
   remote_farm_photo_url: cl_image_path("farm-john.jpg"),
   farmer_email: 'john.van.de.akker@gmail.com',
-  description: "Description: needs attention :).")
+  description: "We are the family van de Akker, Located in Uithoorn, just beneath Amsterdam, we are specialized in grains, like rye, we make our own cheese, fresh cheese and old farmers cheese. We have a big orchard, where our cows and goats can run freely.  Every second summer we grow strawberries and blueberries on our fields. In the rare case of spare time, we like to ride our horse and carriage, which my grandfather used long time ago, and have nice sunday afternoon trips. Once every while we  take part in the horse and carriage competitions, Our whole family enjoyes it to dress up in authentic Dutch clothing and wooden shoes than. Our farm is open for visits - please contact us beforehand, see below our contact information. We are happy to show you around.")
 john.save!
 
 

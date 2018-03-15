@@ -1,6 +1,14 @@
 <div class="ingredient-card">
   <%= link_to ingredient_path(ingredient) do %>
     <div class="ingredient-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%=cl_image_path ingredient.photo%>');">
+      <p class="card-rating">
+        <% ingredient.rating.times do  %>
+            <span class="glyphicon glyphicon-star"></span>
+        <% end %>
+        <% ingredient.blank_stars.times do  %>
+          <span class="glyphicon glyphicon-star-empty"></span>
+        <% end %>
+      </p>
     </div>
   <% end %>
   <div class="ingredient-card-text">
@@ -10,10 +18,10 @@
       </p>
       <p>
         <i class="fas fa-map-marker-alt"> </i>
-        <%= ingredient.farm.farm_name %>
+        <%=link_to "#{ingredient.farm.farm_name}", farm_path(ingredient.farm)  %>
       </p>
       <% unless current_page?(root_path) %>
-        <div class="add-to-basket">
+        <div class="add-to-basket" title="Add to basket">
           <%= simple_form_for @order, :html => { :class => "form-inline"} do |order| %>
             <%= order.input :order_quantity, label: false, include_blank: false, include_hidden: false, collection: (1..[ingredient.available_quantity, 10].min), input_html: { class: "quantity_ingredient" } %>
             <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => ingredient.id }  %>
