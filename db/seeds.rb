@@ -118,7 +118,8 @@ annelies = Farm.new(
   remote_avatar_photo_url: cl_image_path("annelies-squared2.jpg"),
   remote_farm_photo_url: cl_image_path("farm-annelies.jpg"),
   farmer_email: "annelies.de.jong@gmail.com",
-  description: "Description: needs attention :).")
+  description: "I started farming 10 years ago after a career in banking. Having visited my uncle's farm, i fell in love with the profession. More than anything, farming is one of the only careers I know of that is at once physically, mentally, and spiritually fulfilling. A hard day’s work under the sun (or more times than not rain in Holland) does a body good; not only that, it stimulates the mind and nourishes the soul.
+  Naturally, as cherry on the cake it is great to see the work i put into the field being rewarded by fresh, healthy plants which provide a good healthy diet and put a smile on my customers faces")
 annelies.save!
 
 anton = Farm.new(
@@ -193,9 +194,9 @@ ingr = Ingredient.new(name:'Carrots',description:'Orange carrots, fresh from the
 ingr.save!
 ingr = Ingredient.new(name:'Dried Chickpeas',description:'chickpeas dried Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',main_category:'Grains & Legumes',category:'Legumes',price:3,rating:4,sku:'3',farm_id:franciscus.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-273838.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Steak',description:'Fresh Steak  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',main_category:'Meat',category:'Beef',price:6,rating:3,sku:'5',farm_id:bert.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-112781.jpg'))
+ingr = Ingredient.new(name:'Steak',description:'This true Dutch original has robust flavor and is tender enough to simply sear to a perfect velvety pink. Or try marinating to impart even more juicy tenderness. You might know this well-marbled loin cut as a Amsterdam City strip. Always performs well — broiled, grilled or pan-fried.',main_category:'Meat',category:'Beef',price:6,rating:3,sku:'5',farm_id:bert.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-112781.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Chicken Eggs',description:'Wheat  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',main_category:'Dairy & Eggs',category:'Eggs',price:2,rating:2,sku:'6',farm_id:annelies.id,  available_quantity:20,price_type:'Dose(20)',  remote_photo_url: cl_image_path('Metal-easter-eggs-basket.jpg'))
+ingr = Ingredient.new(name:'Chicken Eggs',description:'When chickens begin laying, they lay small pullet-sized eggs, often only a fraction of the size they will lay as adults. It can take three or four months for a chicken to start laying their adult sized eggs. As the bird ages, they lay less often. It is not uncommon for the eggs to be larger when they are laid less often. My Ameraucana is of prime age to provide you the biggest eggs',main_category:'Dairy & Eggs',category:'Eggs',price:2,rating:2,sku:'6',farm_id:annelies.id,  available_quantity:20,price_type:'Dose(20)',  remote_photo_url: cl_image_path('Metal-easter-eggs-basket.jpg'))
 ingr.save!
 ingr = Ingredient.new(name:'Wheat grains',description:'Wheat grains Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',main_category:'Grains & Legumes',category:'Grains',price:2,rating:4,sku:'7',farm_id:anton.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('Food-grains-bread-wheat-cereals-41959.jpg'))
 ingr.save!
@@ -209,9 +210,9 @@ ingr = Ingredient.new(name:'Potatoes',description:'all potatoes',main_category:'
 ingr.save!
 ingr = Ingredient.new(name:'Corn',description:'Corn lorem ipsum lorem loriadad',main_category:'Grains & Legumes',category:'Grains',price:3,rating:1,sku:'12',farm_id:franciscus.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('Pexels-photo-206653.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Smoked Bacon',description:'Speck ',main_category:'Meat',category:'Porc',price:10,rating:5,sku:'13',farm_id:bert.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('Pexels-photo-306799.jpg'))
+ingr = Ingredient.new(name:'Smoked Bacon',description:'Whether you use it in strips or in bits, bacon offers big, smoky flavor to a wide variety of dishes. Add to your greens, your omelettes, your beans, salads, and sauces. Its always just the right thing to give meals rich, meaty flavor. This flavorful smoked, and uncured, nitrate/nitrite-free bacon offers all the flavor you want with none of the extras you dont.',main_category:'Meat',category:'Porc',price:10,rating:5,sku:'13',farm_id:bert.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('Pexels-photo-306799.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Cow-milk',description:'Fresh raw cowmilk',main_category:'Dairy & Eggs',category:'Milk',price:2,rating:4,sku:'14',farm_id:annelies.id,  available_quantity:30,price_type:'liters',  remote_photo_url: cl_image_path('Pexels-photo-248337.jpg'))
+ingr = Ingredient.new(name:'Cow-milk',description:'Gold Taste of the West 2015. Straight from our own Shorthorn and Friesian cows, this raw, unhomogenised milk is full cream and packed full of goodness. Our milk comes from the cow, chilled then bottled for you. With so many highly processed foods, this natural product is a must try - once you have tried processed, milk will never taste the same again!',main_category:'Dairy & Eggs',category:'Milk',price:2,rating:4,sku:'14',farm_id:annelies.id,  available_quantity:30,price_type:'liters',  remote_photo_url: cl_image_path('Pexels-photo-248337.jpg'))
 ingr.save!
 ingr = Ingredient.new(name:'Fresh Yoghurt',description:'The best Goat’s milk yoghurt.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',main_category:'Dairy & Eggs',category:'Yoghurt',price:2,rating:3,sku:'15',farm_id:anton.id,  available_quantity:30,price_type:'liters',  remote_photo_url: cl_image_path('Pexels-photo-373882.jpg'))
 ingr.save!
@@ -225,9 +226,9 @@ ingr = Ingredient.new(name:'Pear',description:'',main_category:'Fruit & Vegetabl
 ingr.save!
 ingr = Ingredient.new(name:'Pepper',description:'',main_category:'Fruit & Vegetables',category:'vegetables',price:3,rating:5,sku:'20',farm_id:franciscus.id,  available_quantity:100,price_type:'kg',  remote_photo_url: cl_image_path('pepper-and-vegetables-3-1322872-1278x855.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Chicken',description:'',main_category:'Meat',category:'poultry',price:8,rating:4,sku:'21',farm_id:bert.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-616354.jpg'))
+ingr = Ingredient.new(name:'Chicken',description:'Certified organic Smart Chicken are fed an organic grain diet, are free-range, and certified humane by the Humane Farm Animal Care. All Smart Chicken products are raised without the use of antibiotics, animal byproducts, growth hormones, and are 100 percent all-natural. Theyre processed using purified cold air instead of water — thats the air-chilled difference.',main_category:'Meat',category:'poultry',price:8,rating:4,sku:'21',farm_id:bert.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-616354.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Zucchini',description:'',main_category:'Fruit & Vegetables',category:'Vegetables',price:4,rating:3,sku:'22',farm_id:annelies.id,  available_quantity:80,price_type:'kg',  remote_photo_url: cl_image_path('italian-zucchine-1562358.jpg'))
+ingr = Ingredient.new(name:'Zucchini',description:'This flavorful squash is available at its peak all year round. It is a mild and extremely versatile vegetable. Slice, chop, stuff, or grate it. Zucchini adds a fresh garden flavor to breads, soups, and pastas, and its great by itself as a simply sautéed side dish.', main_category:'Fruit & Vegetables',category:'Vegetables',price:4,rating:3,sku:'22',farm_id:annelies.id,  available_quantity:80,price_type:'kg',  remote_photo_url: cl_image_path('italian-zucchine-1562358.jpg'))
 ingr.save!
 ingr = Ingredient.new(name:'Beets',description:'',main_category:'Fruit & Vegetables',category:'Vegetables',price:3,rating:5,sku:'23',farm_id:anton.id,  available_quantity:56,price_type:'kg',  remote_photo_url: cl_image_path('beets-for-sale-2-1326248-1280x960.jpg'))
 ingr.save!
@@ -241,9 +242,9 @@ ingr = Ingredient.new(name:'Spare-ribs',description:'',main_category:'Meat',cate
 ingr.save!
 ingr = Ingredient.new(name:'Blackberry Jam',description:'Homemade blackberry jam, harvest of summer 2017,  taste the sweet and sour. Nice with cheese or  salads or meat.',main_category:'Fruit & Vegetables',category:'confituur',price:2,rating:3,sku:'28',farm_id:franciscus.id,  available_quantity:15,price_type:'jar',  remote_photo_url: cl_image_path('jam-jars-1257491-1280x960.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Haricots',description:'',main_category:'Fruit & Vegetables',category:'Beans',price:3.5,rating:5,sku:'29',farm_id:bert.id,  available_quantity:25,price_type:'kg',  remote_photo_url: cl_image_path('fruits-and-veggies-1191769-1280x960.jpg'))
+ingr = Ingredient.new(name:'Haricots',description:'Slim and sophisticated, haricots verts have a brighter, more concentrated flavor than string beans, but the biggest difference is texture. The petite French beans are tender and delicate. Tie up bundles with chives and steam, or add to a salade niçoise.',main_category:'Fruit & Vegetables',category:'Beans',price:3.5,rating:5,sku:'29',farm_id:bert.id,  available_quantity:25,price_type:'kg',  remote_photo_url: cl_image_path('fruits-and-veggies-1191769-1280x960.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Tomatoes',description:'',main_category:'Fruit & Vegetables',category:'Vegetables',price:4,rating:4,sku:'30',farm_id:annelies.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('tomatoes-1323819-1279x852.jpg'))
+ingr = Ingredient.new(name:'Tomatoes',description:'Juicy and firm, bursting with tangy, sweet, concentrated tomato flavor. The warm sun has coaxed these fire-engine red beauties to the peak of ripeness. Showcase vine-ripened tomatoes peerless freshness in dishes such as tomato and basil bruschetta. Or dice and toss with olive oil, garlic, and basil for a simple yet unforgettable pasta topping.',main_category:'Fruit & Vegetables',category:'Vegetables',price:4,rating:4,sku:'30',farm_id:annelies.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('tomatoes-1323819-1279x852.jpg'))
 ingr.save!
 ingr = Ingredient.new(name:'Parsnip',description:'Parsnips, rich taste, fresly harvested. For soups, stews…',main_category:'Fruit & Vegetables',category:'Vegetables',price:4,rating:3,sku:'31',farm_id:anton.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('healthy-white-parsnip-with-green-beans-isolated-1632298-1279x853.jpg'))
 ingr.save!
