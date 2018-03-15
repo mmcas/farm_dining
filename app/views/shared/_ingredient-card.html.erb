@@ -15,7 +15,7 @@
       <% unless current_page?(root_path) %>
         <div class="add-to-basket">
           <%= simple_form_for @order, :html => { :class => "form-inline"} do |order| %>
-            <%= order.input :order_quantity, label: false, collection: (0..[ingredient.available_quantity, 100].min), input_html: { class: "quantity_ingredient" } %>
+            <%= order.input :order_quantity, label: false, include_blank: false, include_hidden: false, collection: (1..[ingredient.available_quantity, 10].min), input_html: { class: "quantity_ingredient" } %>
             <%= order.input :ingredient_id, :as => :hidden, :input_html => { :value => ingredient.id }  %>
             <%= order.input :price_paid, :as => :hidden, :input_html => { :value => ingredient.price  }%>
             <button type="submit" class="quantity_button">
@@ -27,4 +27,6 @@
     </div>
   </div>
 </div>
+
+
 

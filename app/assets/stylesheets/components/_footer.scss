@@ -6,7 +6,9 @@
   height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+  border-top: 1px solid #77B28C;
 }
+
 .footer-links {
   display: flex;
   align-items: center;
@@ -18,9 +20,16 @@
   font-size: 24px;
   padding: 0px 10px;
 }
-.footer-links a:hover {
-  opacity: 1;
+.footer a{
+   color: #77B28C;
 }
-.footer .fa-github, .fa-linkedin, .fa-facebook, .fa-twitter, .fa-instagram {
+.footer a:hover {
+  opacity: 1;
+   color: #499F68;
+}
+.footer a:visited{
+  color: #77B28C;
+}
+.footer .fa-github, .fa-linkedin {
   color: #77B28C;
 }
