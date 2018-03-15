@@ -69,16 +69,6 @@ restaurant_iris.save!
 
 puts 'Creating farms'
 
-# example = Farm.new(
-#   location: ,
-#   farm_name: ,
-#   farmers_name: ,
-#   remote_avatar_photo_url: ,
-#   remote_farm_photo_url: ,
-#   farmer_email: ,
-#   description: )
-# example.save!
-
 piet = Farm.new(
   location: "Overhoeksplein 2, Amsterdam",
   farm_name: "Boerderij Nooitgenoeg",
@@ -164,28 +154,7 @@ john = Farm.new(
 john.save!
 
 
-# farm9= Farm.new(location:'Waverveen',farm_name:'The Big Barn',farmers_name:'Maik de Boer')
-# farm9.save!
-
-# farm4= Farm.new(
-#   location:'Laan, Broek in Waterland',
-#   farm_name:'Under The Willows',
-#   farmers_name:'')
-# farm4.save!
-
 puts 'Creating ingredients..'
-# ingr = Ingredient.new( name: "Test carrot" ,
-#   description: "Mixed colors",
-#   main_category: "Fruits & Vegetables "  ,sku:"car-01",
-#   category: "Carrots"   ,
-#   price: 5,
-#   rating: "1",
-#   available_quantity: 500000,
-#   farm_id: farm1.id,
-#   price_type: "per unit1",
-#   remote_photo_url: cl_image_path("harshal-s-hirve-44494-unsplash.jpg"))
-
-# ingr.save!
 
 
 ingr = Ingredient.new(name:'Carrots',description:'These carrots have a bright orange color and are medium in size. The taste is a little sweet and full of vitamin A. Ready to eat as a snack, but also great for cooking. We sell them per kilo.',main_category:'Fruit & Vegetables',category:'Carrots',price:2,rating:5,sku:'1',farm_id:piet.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('harshal-s-hirve-44494-unsplash.jpg'))
@@ -198,11 +167,11 @@ ingr = Ingredient.new(name:'Chicken Eggs',description:'Wheat  Lorem ipsum dolor 
 ingr.save!
 ingr = Ingredient.new(name:'Wheat grains',description:'Wheat grains Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',main_category:'Grains & Legumes',category:'Grains',price:2,rating:4,sku:'7',farm_id:anton.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('Food-grains-bread-wheat-cereals-41959.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Kale',description:'Kale lorem ipsum  and so on ',main_category:'Fruit & Vegetables',category:'Vegetables',price:0.5,rating:5,sku:'8',farm_id:hannes.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('Kale-vegetables-brassica-oleracea-var-sabellica-l-51372.jpg'))
+ingr = Ingredient.new(name:'Kale',description:'Kale lorem ipsum  and so on ',main_category:'Fruit & Vegetables',category:'Vegetables',price:0.5,rating:5,sku:'8',farm_id:hannes.id,  available_quantity:40,price_type:'kg',  remote_photo_url: cl_image_path('Kale-vegetables-brassica-oleracea-var-sabellica-l-51372.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Sausages',description:'Sausages lorem ipsum  and so on ',main_category:'Meat',category:'Porc',price:2,rating:4,sku:'9',farm_id:angela.id,  available_quantity:20,price_type:'Set(10)',  remote_photo_url: cl_image_path('meat-fridge-food-sausage-84267.jpg'))
+ingr = Ingredient.new(name:'Sausages',description:'Old farmers cheese matured for  14 months  at our farm,  made from raw milk. Tast is sweet sour. Nice for cheese desserts but all other combinations are perfect.',main_category:'Meat',category:'Porc',price:8,rating:4,sku:'9',farm_id:angela.id,  available_quantity:40,price_type:'Set(10)',  remote_photo_url: cl_image_path('meat-fridge-food-sausage-84267.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Old Farmers Cheese',description:'The best and very tasty cheese  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices eros vel augue vulputate, nec. ',main_category:'Dairy & Eggs',category:'Cheese',price:17,rating:3,sku:'10',farm_id:john.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('Pexels-photo-277276.jpg'))
+ingr = Ingredient.new(name:'Old Farmers Cheese',description:'Old farmers cheese matured for  14 months  at our farm,  made from raw milk. Tast is sweet sour. Nice for cheese desserts but all other combinations are perfect.',main_category:'Dairy & Eggs',category:'Cheese',price:17,rating:3,sku:'10',farm_id:john.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('Pexels-photo-277276.jpg'))
 ingr.save!
 ingr = Ingredient.new(name:'Potatoes',description:'Floury potatoes. The overall size is medium, with a few big ones. We harvest them all year around, so they usually are available. These potatoes are widely used for making stews.',main_category:'Fruit & Vegetables',category:'Vegetables',price:4,rating:2,sku:'11',farm_id:piet.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('Potatoes-vegetables-erdfrucht-bio-144248.jpg'))
 ingr.save!
@@ -216,9 +185,9 @@ ingr = Ingredient.new(name:'Fresh Yoghurt',description:'The best Goat’s milk y
 ingr.save!
 ingr = Ingredient.new(name:'Cabbage',description:'Cabbage cabbage lorem ipusm ',main_category:'Fruit & Vegetables',category:'Vegetables',price:2,rating:2,sku:'16',farm_id:hannes.id,  available_quantity:30,price_type:'kg',  remote_photo_url: cl_image_path('Cabbage-vegetable-power-green.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Strawberries',description:'',main_category:'Fruit & Vegetables',category:'Berries',price:10,rating:5,sku:'17',farm_id:angela.id,  available_quantity:50,price_type:'kg',  remote_photo_url: cl_image_path('seoyytrlnsd9wuxz5cyv.png'))
+ingr = Ingredient.new(name:'Strawberries',description:'Tasty Sweet sun-ripened red strawberries, fresh from the land. Like the dutch call them zomer-koninkjes, bring the summer into your restaurant with these little highlighting fruits!',main_category:'Fruit & Vegetables',category:'Berries',price:10,rating:5,sku:'17',farm_id:angela.id,  available_quantity:50,price_type:'kg',  remote_photo_url: cl_image_path('seoyytrlnsd9wuxz5cyv.png'))
 ingr.save!
-ingr = Ingredient.new(name:'Apples',description:'',main_category:'Fruit & Vegetables',category:'Apples',price:4,rating:4,sku:'18',farm_id:john.id,  available_quantity:60,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-635705.jpg'))
+ingr = Ingredient.new(name:'Apples',description:'Last autumn we had a very rich harvest of red malus apples,  Very very  juicy, fresh with a sour flowery aftertaste. Nice with ginger, salty dishes, salads or for cakes.',main_category:'Fruit & Vegetables',category:'Apples',price:4,rating:4,sku:'18',farm_id:john.id,  available_quantity:60,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-635705.jpg'))
 ingr.save!
 ingr = Ingredient.new(name:'Pear',description:'These pears are perfect to make stewed pears. When you cook them they get really sweat with a beautiful red color. Available from October until February, unfortunately only then!',main_category:'Fruit & Vegetables',category:'Pears',price:3,rating:3,sku:'19',farm_id:piet.id,  available_quantity:60,price_type:'kg',  remote_photo_url: cl_image_path('pexels-photo-568471_1.jpg'))
 ingr.save!
@@ -232,9 +201,9 @@ ingr = Ingredient.new(name:'Beets',description:'',main_category:'Fruit & Vegetab
 ingr.save!
 ingr = Ingredient.new(name:'Green Peas',description:'',main_category:'Grains & Legumes',category:'Peas',price:3.5,rating:4,sku:'24',farm_id:hannes.id,  available_quantity:40,price_type:'kg',  remote_photo_url: cl_image_path('peas-in-a-pod-1574302-1279x889.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Quail Eggs',description:'',main_category:'Dairy & Eggs',category:'Eggs',price:4,rating:3,sku:'25',farm_id:angela.id,  available_quantity:10,price_type:'Dose(20)',  remote_photo_url: cl_image_path('pexels-photo-810320.jpg'))
+ingr = Ingredient.new(name:'Quail Eggs',description:'Nice Quail eggs, eastern is right around the corner, so why not choose differently for ones,  Nice eggs can be cooked  and eaten in scale. Very nice in salads, as amuses. ',main_category:'Dairy & Eggs',category:'Eggs',price:4,rating:3,sku:'25',farm_id:angela.id,  available_quantity:10,price_type:'Dose(20)',  remote_photo_url: cl_image_path('pexels-photo-810320.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Fresh Cheese',description:'',main_category:'Dairy & Eggs',category:'Cheese',price:5,rating:5,sku:'26',farm_id:john.id,  available_quantity:10,price_type:'kg',  remote_photo_url: cl_image_path('fresh-cheese-1516657.jpg'))
+ingr = Ingredient.new(name:'Fresh Cheese',description:'Homemade white creamy fresh cheese,very tasty, can be used in sweet and salty dishes, especially with union, garlic and a whole lot of herbs.',main_category:'Dairy & Eggs',category:'Cheese',price:5,rating:5,sku:'26',farm_id:john.id,  available_quantity:10,price_type:'kg',  remote_photo_url: cl_image_path('fresh-cheese-1516657.jpg'))
 ingr.save!
 ingr = Ingredient.new(name:'Spare-ribs',description:'Juicy spare-ribs. Perfect for grilling, but easy to cook in the oven as well. The pigs had a very happy life, with lots of space and mud to wash themselves in.',main_category:'Meat',category:'Porc',price:18,rating:4,sku:'27',farm_id:piet.id,  available_quantity:60,price_type:'kg',  remote_photo_url: cl_image_path('silhouette-of-summer-garden-bbq-isolated-against-fire-1632139-1278x800.jpg'))
 ingr.save!
@@ -248,13 +217,10 @@ ingr = Ingredient.new(name:'Parsnip',description:'Parsnips, rich taste, fresly h
 ingr.save!
 ingr = Ingredient.new(name:'Minced Meat',description:'',main_category:'Meat',category:'Beef',price:18,rating:5,sku:'32',farm_id:hannes.id,  available_quantity:20,price_type:'kg',  remote_photo_url: cl_image_path('minced-meat-2-1547786-1279x902.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Quail',description:'',main_category:'Meat',category:'poultry',price:18,rating:4,sku:'33',farm_id:angela.id,  available_quantity:10,price_type:'kg',  remote_photo_url: cl_image_path('quail-2-1312897-1279x913.jpg'))
+ingr = Ingredient.new(name:'Quail',description:'Fresh Quails, combine with almost any dish, nice and soft poultry, strong  savagy taste, almost need no seasoning. Grilled, stuffed or in soups very nice. ',main_category:'Meat',category:'poultry',price:18,rating:4,sku:'33',farm_id:angela.id,  available_quantity:10,price_type:'kg',  remote_photo_url: cl_image_path('quail-2-1312897-1279x913.jpg'))
 ingr.save!
-ingr = Ingredient.new(name:'Rye',description:'',main_category:'Grains & Legumes',category:'Grains',price:4,rating:3,sku:'34',farm_id:john.id,  available_quantity:25,price_type:'kg',  remote_photo_url: cl_image_path('wheat-in-summer-1566168-1279x913.jpg'))
+ingr = Ingredient.new(name:'Rye',description:'Rye -Secale cereale-  a grass grown extensively as a grain, a cover crop and a forage crop. It is a member of the wheat tribe and is closely related to barley . Nice to make porridge. ',main_category:'Grains & Legumes',category:'Grains',price:4,rating:3,sku:'34',farm_id:john.id,  available_quantity:25,price_type:'kg',  remote_photo_url: cl_image_path('wheat-in-summer-1566168-1279x913.jpg'))
 ingr.save!
-
-
-
 
 
 puts "Finished, yeah!"
