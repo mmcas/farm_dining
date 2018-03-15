@@ -128,7 +128,8 @@ anton = Farm.new(
   remote_avatar_photo_url: cl_image_path("anton-squared.jpg"),
   remote_farm_photo_url: cl_image_path("farm-anton.jpg"),
   farmer_email: 'anton.heyboer@gmail.com',
-  description: "Description: needs attention :).")
+  description: "Harvest art farm and its scenary is as breathtaking as beutiful art. Hence the name. Here I have been growing well-tasting grains, vegetables and rootfruits for the past 30 years. Even though I use conventional methods, I minimize the use of resources to cherish the soil I am the care taker of.
+  But beyond growing vegetables I also have an impressive number of livestock. As a livestock farmer I like my cows the same way I like my women: the more the merrier. In my own dairy I produce a well tasting, natural yoghurt perfect for a restaurant brunch tabel. And I spoil them rotten. Do you happen to pass by the area? Please come by and look how I produce the food served at your restaurant.")
 anton.save!
 
 hannes = Farm.new(
