@@ -7,8 +7,8 @@
         <%= cl_image_tag @ingredient.photo , :class => "style_image"%>
       </div> <!-- topflex left -->
       <div class="bottomflex-text">
-        <div class="padding">
-          <h4>Description Ingredient</h4>
+        <div class="text-long" id="padding">
+          <h3>Description Ingredient</h3>
           Description: <%= @ingredient.description %>
         </div> <!-- padding -->
       </div> <!-- bottomflex-text -->
@@ -21,7 +21,7 @@
         <div id="ingredients-description" class="flexChild">
 
           <div class="topflex">
-            <div class="padding">
+            <div id="padding">
               <i class="fas fa-map-marker-alt"> </i>
               <%= link_to @ingredient.farm.farm_name, farm_path(@ingredient.farm) %><br>
               Main category: <%= @ingredient.main_category %><br>
@@ -45,7 +45,7 @@
                 <i class="fas fa-plus"></i>
               </button>
             <% end %>
-            </div> <!-- padding -->
+            </div> <!-- text-long -->
           </div> <!-- topflex A-->
 
           <div class="bottomflex">
