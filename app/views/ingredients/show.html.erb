@@ -3,13 +3,15 @@
   <div id="flexcontainer" class="flexMother rowParent">
 
     <div class="flexChild">
-      <div class="topflex">
-        <%= cl_image_tag @ingredient.photo , :class => "style_image"%>
+      <div class="topflex" id="left-top-corner" style="background-image: url( <%= cl_image_path @ingredient.photo %>);">
+
       </div> <!-- topflex left -->
-      <div class="bottomflex-text">
+        <div class="bottomflex-text">
         <div class="text-long" id="padding">
           <h3>Description Ingredient</h3>
-          Description: <%= @ingredient.description %>
+
+
+          Description: <%#= @ingredient.description %>
         </div> <!-- padding -->
       </div> <!-- bottomflex-text -->
     </div> <!-- flexchild -->
@@ -20,7 +22,7 @@
       <div class="flexChild columnParent">
         <div id="ingredients-description" class="flexChild">
 
-          <div class="topflex">
+          <div class="topflex" id="top-right-corner">
             <div id="padding">
               <i class="fas fa-map-marker-alt"> </i>
               <%= link_to @ingredient.farm.farm_name, farm_path(@ingredient.farm) %><br>
